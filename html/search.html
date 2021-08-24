@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Car In Kolkata |  Rent Cars @ Most Affordable Rates - Zoomcar</title>
+    <link rel = "icon" href = 
+    "https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" 
+            type = "image">
+
+            <style>
+                .title{
+                    font-size: 28px;
+                    font-weight: 400;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    margin-bottom: 30px;
+                    color: #323a44;}
+                #input_part{
+                  display: flex;
+                  flex-direction: row;  
+                        }
+                #input_part_2{
+                    display: flex;
+                  flex-direction: row; 
+                  visibility: hidden;
+                }
+                .city_list{
+                    overflow-y:scroll;
+                    height: 200px;
+                    visibility: hidden;
+                }
+                
+                .switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+    height: 21px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#add{
+    display: flex;
+    flex-direction: row;
+}
+.tr-box{
+    width: 45px;
+    height: 0px;
+    border-top: 42px solid transparent;
+    border-left: 17px solid white;
+    border-bottom: 53px solid transparent;
+}
+#status_bottom{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #323a44;
+}
+.first_box{
+    background-color: #555;
+    width: 300px;
+    padding: 0 0px;
+    height: 90px;
+}
+#circle_box{
+    display: flex;
+    flex-direction: row;
+}
+.first_circle{
+    height: 16px;
+    width: 16px;
+  border: 1px solid #70ad4d;
+  background-color: white;
+  border-radius: 50%;
+}
+.first_fillup{
+    height: 11px;
+    width: 11px;
+    margin-top: 2px;
+    margin-left: 2px;
+    border: 1px solid #70ad4d;
+    background-color: #70ad4d;
+    border-radius: 50%;
+}
+
+.second_circle{
+    height: 16px;
+    width: 16px;
+    
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.third_circle{
+    height: 16px;
+    width: 16px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.line{
+    height: 1px;
+    width: 100px;
+    margin-left: 0px;
+    margin-top: 9px;
+    background-color: #555;
+}
+#status_head{
+    display: flex;
+    flex-direction: row;
+}
+.start{
+    color:#bdbdbd;
+}
+.first_box_location{
+    color: #f8f8f8;
+  
+}
+.trwhite-box{
+    width: 45px;
+    height: 0px;
+    margin-left: -63px;
+    border-top: 42px solid transparent;
+    border-left: 17px solid #555;
+    border-bottom: 53px solid transparent;
+}
+            </style>
+</head>
+<body>
+    <div id="status_head"><div id="circle_box">
+        <div class="first_circle"><div class="first_fillup"></div></div>
+    </div><div class="line"></div><div id="circle_box">
+        <div class="second_circle"></div>
+    </div><div class="line"></div>
+    <div id="circle_box">
+        <div class="third_circle"></div>
+    </div>
+</div>
+    <div id="search">
+        <h1 class="title">Tell us your Starting Point</h1></div>
+        <div id="input_part">
+            <div><input type="text" placeholder="Enter city" id="city_input" list="city_list">
+            <datalist id="city_list">
+                <option>banglore</option>
+                <option>Kolkata</option>
+                <option>Chennai</option>
+                <option>Ahemdabad</option>
+                <option>Vadododra</option>
+                <option>Mubmai</option>
+                <option>Mssubmai</option>
+            </datalist> </div>
+        <div><input type="text" placeholder="Enter city" id="city_input" list="city_list_2">
+            <datalist id="city_list_2">
+                <option>banglore,</option>
+                <option>Kolkata</option>
+                <option>Chennai</option>
+                <option>Ahemdabad</option>
+                <option>Vadododra</option>
+                <option>Mubmai</option></div></div>
+        </div>
+        <div id="add"><p>I want to drop my car in a different city</p>
+            <label class="switch">
+                <input type="checkbox" id="checkbox">
+                <span class="slider round"></span>
+              </label></div>
+        <div id="input_part_2">
+            <div><input type="text" placeholder="Enter city" id="city_input" list="city_list">
+                <datalist id="city_list">
+                    <option>banglore</option>
+                    <option>Kolkata</option>
+                    <option>Chennai</option>
+                    <option>Ahemdabad</option>
+                    <option>Vadododra</option>
+                    <option>Mubmai</option>
+                    <option>Mssubmai</option>
+                </datalist> </div>
+            <div><input type="text" placeholder="Enter city" id="city_input" list="city_list_2">
+                <datalist id="city_list_2">
+                    <option>banglore,</option>
+                    <option>Kolkata</option>
+                    <option>Chennai</option>
+                    <option>Ahemdabad</option>
+                    <option>Vadododra</option>
+                    <option>Mubmai</option></div></div>
+            </div>
+        </div>
+    <div id="status_bottom"><div class="first_box"><p class="start">STARTING POINT</p><p class="first_box_location">Select Pick-up Location</p></div><div class="tr-box"></div><div class="trwhite-box"></div></div>
+</body>
+            <script>
+                    var box=document.querySelector('input[id="checkbox"]')
+                    box.addEventListener("click",add)
+                                 function add() {
+                                    if(box.checked){
+                                        var boxpart=document.getElementById("input_part_2")
+                                        boxpart.style.visibility="visible"
+                                    }
+                                    if(box.checked!==true){
+                                        var boxpart=document.getElementById("input_part_2")
+                                        boxpart.style.visibility="hidden"
+                                    }
+                                     
+                                 }
+                       
+                  
+                       
+            </script>
+</html>
