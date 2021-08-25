@@ -29,11 +29,16 @@
                   flex-direction: row; 
                   visibility: hidden;
                 }
-                .city_list{
-                    overflow-y:scroll;
+                #city_list{
+                    overflow-x:scroll;
                     height: 200px;
                     visibility: hidden;
+                    background-color: white;
+                    border: .5px solid #70ad4d;
                 }
+                option {
+    background: red;
+}
                 div#search {
     padding-left: 19px;
     width: 1143px;
@@ -100,7 +105,7 @@ input:checked + .slider:before {
 #add{
     display: flex;
     flex-direction: row;
-    margin-top: 35px;
+    margin-top: 0px;
     margin-bottom: 15px;
     font-size: 20px;
     font-family: 'Open Sans';
@@ -109,25 +114,29 @@ input:checked + .slider:before {
 .tr-box{
     width: 45px;
     height: 0px;
+    margin-left: 0px;
     border-top: 42px solid transparent;
     border-left: 17px solid white;
-    border-bottom: 53px solid transparent;
+    border-bottom: 40px solid transparent;
 }
 #status_bottom{
    
-    width: 100%;
+    width: 99%;
     height: 82px;
    position: absolute;
     display: flex;
+   
     flex-direction: row;
-    background-color: #323a44;
+    background-color: #414f5e;;
     position: absolute;
 }
+
 #div_space{
-    height: 260px;
+    height: 246px;
 }
 .first_box{
-    background-color: #555;
+    background-color: #33414f;
+
     width: 300px;
     padding: 0 0px;
     height: 82px;
@@ -217,6 +226,7 @@ input:checked + .slider:before {
 }
 #status_head{
     display: flex;
+    width: 1147px;
     flex-direction: row;
     height: 44px;
     margin: 0px 0px 50px;
@@ -234,21 +244,21 @@ input:checked + .slider:before {
   
 }
 .trwhite-box{
-    width: 45px;
-    height: 0px;
-    margin-left: -63px;
+    width: 41px;
+    height: -5px;
+    margin-left: -62px;
     border-top: 42px solid transparent;
-    border-left: 17px solid #555;
-    border-bottom: 53px solid transparent;
-}
+    border-left: 17px solid #33414f;
+
+    border-bottom: 41px solid transparent;}
 #page{
-    width: 92%;
+    width: 1147px;
     height: 100%;
     padding-top: 12px;
     padding-left: 60px;
     padding-right: 60px;
 }
-input#city_input {
+input#first_1 {
     height: 48px;
     width: 168px;
     padding-right: 18px;
@@ -260,7 +270,30 @@ input#city_input {
     position: relative;
     border: .5px solid #70ad4d;
 }
-input#city_input_2 {
+input#second_1{
+    height: 48px;
+    width: 168px;
+    padding-right: 18px;
+    display: inline-block;
+    color: #33414f;
+    text-indent: 10px;
+    white-space: nowrap;
+    font-size: 20px;
+    position: relative;
+    border: .5px solid #70ad4d;
+}
+input#first_2 {
+    width: 400px;
+    text-indent: 10px;
+    height: 48px;
+    font-size: 20px;
+    padding-right: 10px;
+    line-height: 20px;
+    border: .5px solid #70ad4d;
+    border-right: none;
+    white-space: nowrap;
+}
+input#second_2 {
     width: 400px;
     text-indent: 10px;
     height: 48px;
@@ -300,6 +333,56 @@ img {
     margin: 2px 0px 0px -2px;
     font-family: 'Open Sans', sans-serif;
 }
+.bottom_p_location{
+    color: #f8f8f8;
+    margin: -13px 0px 2px 60px;
+}
+button{
+    padding: 10px 60px;
+    color: #fff;
+    border-radius: 3px;
+   
+    border: none;
+   
+    background-color:#70ad4d;
+    font-size: 20px;
+ 
+   height: 47px;
+   width: 170px;
+    
+    
+    margin-left: 50px;
+    position: relative;
+    font-weight: 600;
+}
+
+
+.box_shadow,#box_shadow{
+    box-shadow: 0 2px 6px rgb(0 0 0 / 30%);
+}
+#btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.trwhite-box_3,.tr-box_3,.trwhite-box_2,.tr-box_2{
+    visibility: hidden;
+}
+#alert_wrong_input,#alert_wrong_input_2{
+    height: 30px;
+}
+.class_alert{
+    margin: 0px 0px 0px 0px;
+    padding: 3px 0px 1px 194px;
+    color: red;
+}
+.two_city{
+    color: #f8f8f8;
+    font-size: 12px;
+margin: 1px 0px 2px 60px;
+}
             </style>
 </head>
 <body id="body">
@@ -324,26 +407,26 @@ img {
     <div id="search">
         <h1 class="title">Tell us your Starting Point</h1>
         <div id="input_part">
-            <div><input type="text" placeholder="Enter city" id="city_input" list="city_list">
+            <div class="box_shadow"><input type="text" placeholder="Enter city" id="first_1" list="city_list" oninput="city_1()">
             <datalist id="city_list">
                 <option value="Banglore"></option>
-                <option>Kolkata</option>
+                <option>Kolkata</option>    
                 <option>Chennai</option>
                 <option>Ahemdabad</option>
                 <option>Vadododra</option>
-                <option>Mubmai</option>
-                <option>Mssubmai</option>
             </datalist> </div>
-        <div><input type="text" placeholder="Enter city" id="city_input_2" list="city_list_2">
-            <datalist id="city_list_2">
-                <option>banglore,</option>
-                <option>Kolkata</option>
-                <option>Chennai</option>
-                <option>Ahemdabad</option>
-                <option>Vadododra</option>
-                <option>Mubmai</option></div>
-            <div class="map"><img src="https://www.zoomcar.com/assets/component-images/location.4f83fc7a3f686c9a14dc757b7a0b9b07.png" alt="" srcset=""> <div class="map_locate">Locate me</div></div>
+        <div  class="box_shadow"><input type="text" placeholder="Enter city in banglore" id="first_2" list="city_list_2" oninput="bang()">
+            <datalist id="city_list_2"  >
+                <option value="Bangalore Palace" >Banglore</option>
+                <option value="U R Rao Satellite Centre">Banglore</option>
+                <option value="Kempegowda International Airport">Banglore</option>
+                <option value="Chennai International Airport">Chennai</option>
+                <option value="University of Madras">Chennai</option>
+                <option value="Netaji Subhash Chandra Bose International Airport">Kolkata</option>
+            </div>
+            <div class="map"  id="box_shadow"><img src="https://www.zoomcar.com/assets/component-images/location.4f83fc7a3f686c9a14dc757b7a0b9b07.png" alt="" srcset=""> <div class="map_locate">Locate me</div></div>
            </div>
+           <div id="alert_wrong_input"></div>
      
         <div id="add"><p>I want to drop my car in a different city</p>
            <div id="switch"> <label class="switch">
@@ -353,57 +436,178 @@ img {
             </div>
             </div>
         <div id="input_part_2">
-            <div><input type="text" placeholder="Enter city" id="city_input" list="city_list">
-                <datalist id="city_list_2">
-                    <option value="Banglore">Banglore</option>
+            <div  class="box_shadow"><input type="text" placeholder="Enter city" id="second_1" list="city_list_2_1" oninput="city_2()">
+                <datalist id="city_list_2_1">
+                  
                     <option>Kolkata</option>
                     <option>Chennai</option>
-                    <option>Ahemdabad</option>
-                    <option>Vadododra</option>
-                    <option>Mubmai</option>
-                    <option>Mssubmai</option>
+                   
                 </datalist> </div>
-            <div><input type="text" placeholder="Enter city" id="city_input_2" list="city_list_2">
+            <div  class="box_shadow"><input type="text" placeholder="Enter city" id="second_2" list="city_list_2_2"  oninput="bang_2()">
                 <datalist id="city_list_2_2">
-                    <option>banglore,</option>
-                    <option>Kolkata</option>
-                    <option>Chennai</option>
-                    <option>Ahemdabad</option>
-                    <option>Vadododra</option>
-                    <option>Mubmai</option></div></div>
+                <option value="Chennai International Airport">Chennai</option>
+                <option value="University of Madras">Chennai</option>
+                <option value="Netaji Subhash Chandra Bose International Airport">Kolkata</option></div>
+                <div class="map"  id="box_shadow"><img src="https://www.zoomcar.com/assets/component-images/location.4f83fc7a3f686c9a14dc757b7a0b9b07.png" alt="" srcset=""> <div class="map_locate">Locate me</div></div>
             </div>
+            <div id="alert_wrong_input_2"></div>
             <div id="div_space"></div>
         </div>
-        
-    <div id="status_bottom"><div class="first_box"><p class="start">STARTING POINT</p><p class="first_box_location">Select Pick-up Location</p></div><div class="tr-box"></div><div class="trwhite-box"></div></div>
+        </div>
+    <div id="status_bottom">
+        <div class="first_box">
+            <p class="start">STARTING POINT</p>
+            <p class="first_box_location">Select Pick-up Location</p>
+        </div>
+        <div class="tr-box"></div>
+        <div class="trwhite-box"></div>
+        <div class="second_box">
+            <p class="start"></p>
+            <p class="first_box_location"></p>
+        </div>
+        <div class="tr-box_2"></div>
+        <div class="trwhite-box_2"></div>
+        <div class="third_box">
+            <p class="start"></p>
+            <p class="first_box_location"></p>
+        </div>
+        <div class="tr-box_3"></div>
+        <div class="trwhite-box_3"></div>
+        <div id="btn"><button >NEXT</button> </div>
+       
+    </div>
 
 </body >
             <script>
-                document.getElementById("city_input").value="Banglore"
-                   
+                  var city_array=["Bangalore Palace","U R Rao Satellite Centre","Kempegowda International Airport","Chennai International Airport","University of Madras","Netaji Subhash Chandra Bose International Airport"]
+                  var city_array_first_input=["Banglore","Kolkata","Chennai","Ahemdabad","Vadododra"]
+                  function city_1() {
+                    
+                    let count=0
+                        for (let i = 0; i < city_array_first_input.length; i++) {
+                           if(document.getElementById("first_1").value!==city_array_first_input[i] ) {
+                            count++
+                           }
+                        }
+                        let box=document.getElementById("alert_wrong_input")
+                            let p=document.createElement("p")
+                            box.innerHTML=""
+                        if(count==city_array_first_input.length){
+                       
+                           
+                        p.innerText="Sorry! This location is out of your pickup city"
+                        p.setAttribute("class","class_alert")
+                            box.append(p)
+                        }
+                       
+                    }
+                  var city_array_second_input=["Kolkata" ,"Chennai"]
+                  function city_2() {
+                    
+                    let count=0
+                        for (let i = 0; i < city_array_second_input.length; i++) {
+                           if(document.getElementById("second_1").value!==city_array_second_input[i] ) {
+                            count++
+                           }
+                        }
+                        let box=document.getElementById("alert_wrong_input_2")
+                            let p=document.createElement("p")
+                            box.innerHTML=""
+                        if(count==city_array_second_input.length){
+                       
+                           
+                        p.innerText="Sorry! This location is out of your pickup city"
+                        p.setAttribute("class","class_alert")
+                            box.append(p)
+                        }
+                       
+                    }
+                  var city_array_2=["Chennai International Airport","University of Madras","Netaji Subhash Chandra Bose International Airport"]
+                function bang() {
+                    
+                    let count=0
+                        for (let i = 0; i < city_array.length; i++) {
+                           if(document.getElementById("first_2").value!==city_array[i] ) {
+                            count++
+                           }
+                           if(document.getElementById("first_2").value==city_array[i] ){
+                            bottom_p_location.textContent=document.getElementById("first_2").value
+                           }
+                        }
+                        let box=document.getElementById("alert_wrong_input")
+                            let p=document.createElement("p")
+                            box.innerHTML=""
+                        if(count==city_array.length){
+                       
+                           
+                        p.innerText="Sorry! This location is out of your pickup city"
+                        p.setAttribute("class","class_alert")
+                            box.append(p)
+                        }
+                       
+                    }
+
+                    function bang_2() {
+                    
+                    let count=0
+                        for (let i = 0; i < city_array_2.length; i++) {
+                           if(document.getElementById("second_2").value!==city_array_2[i]) {
+                            count++
+                           }
+                           if(document.getElementById("second_2").value==city_array_2[i]) {
+                            bottom_p_location.innerText=document.getElementById("first_2").value+" To "+document.getElementById("second_2").value
+                            bottom_p_location.setAttribute("class","two_city")
+                           }
+                        }
+                        let box=document.getElementById("alert_wrong_input_2")
+                            let p=document.createElement("p")
+                            box.innerHTML=""
+                        if(count==city_array_2.length){
+                       
+                           
+                        p.innerText="Sorry! This location is out of your pickup city"
+                        p.setAttribute("class","class_alert")
+                            box.append(p)
+                        }
+                       
+                    }
+      
+                 document.getElementById("first_1").value="Banglore"
+                     
                     var box=document.querySelector('input[id="checkbox"]')
+                    var position=document.querySelector('p[class="circle_p"]')
+                    var bottom_p_head=document.querySelector('p[class="start"]')
+                    var bottom_p_location=document.querySelector('p[class="first_box_location"]')
                     box.addEventListener("click",add)
                                  function add() {
                                     if(box.checked){
                                         var boxpart=document.getElementById("input_part_2")
                                         boxpart.style.visibility="visible"
-                                      var position=document.getElementsByClassName("circle_p")
-                                        position[0].innerHTML="Start & Destination"
-                                        position[0].setAttribute("class","add_p")
-                                        
+                                       
+                                        position.textContent="Start & Destination"
+                                        position.setAttribute("class","add_p")
+                                        bottom_p_head.textContent="START & DESTINATION"
+                                        bottom_p_location.innerHTML="<p>select starting point and<br>Destiantion</p>"
+                                        bottom_p_location.setAttribute("class","bottom_p_location")
 
                                     }
                                     if(box.checked!==true){
                                         
                                         var boxpart=document.getElementById("input_part_2")
                                         boxpart.style.visibility="hidden"
-                                        var position=document.getElementsByClassName("circle_p")
-                                        position[0].textContent="Starting Point"
+                                       
+                                        position.textContent="Starting Point"
+                                        position.setAttribute("class","circle_p")
+                                        bottom_p_head.textContent="STARTING POINT"
+                                        bottom_p_location.textContent="elect Pick-up Location"
+                                        bottom_p_location.setAttribute("class","first_box_location")
+
+                            
                                     }
                                      
                                  }
-                                console.log( document.getElementById("city_input").value)
+                                console.log( document.getElementById("first_1").value)
                   
-                       
+                              
             </script>
 </html>
