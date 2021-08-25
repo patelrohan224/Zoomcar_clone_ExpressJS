@@ -125,14 +125,17 @@ input:checked + .slider:before {
     height: 82px;
    position: absolute;
     display: flex;
-   
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 3000;
     flex-direction: row;
     background-color: #414f5e;;
     position: absolute;
 }
 
 #div_space{
-    height: 246px;
+    height: 231.5px;
 }
 .first_box{
     background-color: #33414f;
@@ -156,6 +159,14 @@ input:checked + .slider:before {
   background-color: #70ad4d;
   border-radius: 50%;
 }
+.first_circle_fillup{
+    width: 25px;
+    height: 25px;
+    margin-left: 43px;
+    border: 1px solid #bdbdbd;
+  background-color: white;  
+  border-radius: 50%;
+}
 .first_fillup{
     width: 19px;
     height: 19px;
@@ -164,6 +175,16 @@ input:checked + .slider:before {
     margin-left: 2px;
     border: 1px solid #bdbdbd;
     background-color: white;
+    border-radius: 50%;
+}
+.first_fillup_fillup{
+    width: 19px;
+    height: 19px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    border: 1px solid #bdbdbd;
+    background-color: #70ad4d;
     border-radius: 50%;
 }
 .second_fillup{
@@ -209,13 +230,26 @@ input:checked + .slider:before {
         border: 1px solid #bdbdbd;
     border-radius: 50%;
 }
-
+.second_circle_fillup{
+        height: 25px;
+        width: 25px;
+        border: 1px solid #bdbdbd;
+        background-color: #70ad4d;
+    border-radius: 50%;
+}
 .line{
     height: 1px;
     width: 218px;
     margin-left: -40px;
     margin-top: 13px;
     background-color: #bdbdbd;
+}
+.line_fillup{
+    height: 1px;
+    width: 218px;
+    margin-left: -40px;
+    margin-top: 13px;
+    background-color: #70ad4d;
 }
 .line_2{
     height: 1px;
@@ -227,6 +261,7 @@ input:checked + .slider:before {
 #status_head{
     display: flex;
     width: 1147px;
+    padding-left: 60px;
     flex-direction: row;
     height: 44px;
     margin: 0px 0px 50px;
@@ -383,11 +418,14 @@ button{
     font-size: 12px;
 margin: 1px 0px 2px 60px;
 }
+#pickup_page{
+    visibility: hidden;
+}
             </style>
 </head>
 <body id="body">
-    <div id="page">
-    <div id="status_head">
+    
+<div id="status_head">
     <div id="circle_box">
         <div class="first_circle"><div class="first_fillup"></div></div>
         <p class="circle_p">Starting Point</p>
@@ -404,13 +442,14 @@ margin: 1px 0px 2px 60px;
         <p class="circle_p_2">Dropoff Time</p>
     </div>
 </div>
-    <div id="search">
+<div id="page">
+        <div id="search">
         <h1 class="title">Tell us your Starting Point</h1>
         <div id="input_part">
             <div class="box_shadow"><input type="text" placeholder="Enter city" id="first_1" list="city_list" oninput="city_1()">
             <datalist id="city_list">
                 <option value="Banglore"></option>
-                <option>Kolkata</option>    
+                <option >Kolkata</option>    
                 <option>Chennai</option>
                 <option>Ahemdabad</option>
                 <option>Vadododra</option>
@@ -453,8 +492,9 @@ margin: 1px 0px 2px 60px;
             <div id="alert_wrong_input_2"></div>
             <div id="div_space"></div>
         </div>
-        </div>
-    <div id="status_bottom">
+</div>
+<div id="pickup_page">wfnewf</div>
+<div id="status_bottom">
         <div class="first_box">
             <p class="start">STARTING POINT</p>
             <p class="first_box_location">Select Pick-up Location</p>
@@ -473,9 +513,9 @@ margin: 1px 0px 2px 60px;
         </div>
         <div class="tr-box_3"></div>
         <div class="trwhite-box_3"></div>
-        <div id="btn"><button >NEXT</button> </div>
+        <div id="btn"><button onclick="time_page()">NEXT</button> </div>
        
-    </div>
+</div>
 
 </body >
             <script>
@@ -606,7 +646,21 @@ margin: 1px 0px 2px 60px;
                                     }
                                      
                                  }
-                                console.log( document.getElementById("first_1").value)
+                              function time_page() {
+                                let pickup_point=document.getElementById("first_2").value
+                                let dropoff_point=document.getElementById("second_2").value
+  
+                                  document.getElementById('page').innerHTML='';
+                                document.getElementById("pickup_page").style.visibility="visible"
+  
+                                 
+                               
+                                 document.querySelector('div[class="first_fillup"]').setAttribute("class","first_fillup_fillup")
+                                 document.querySelector('div[class="first_circle"]').setAttribute("class","first_circle_fillup")
+                                document.querySelector('div[class="second_circle"]').setAttribute("class","second_circle_fillup")
+                                document.querySelector('div[class="line"]').setAttribute("class","line_fillup")
+
+                              }
                   
                               
             </script>
