@@ -256,7 +256,7 @@ input:checked + .slider:before {
     width: 218px;
     margin-left: -83px;
     margin-top: 13px;
-    background-color: #bdbdbd;
+    background-color: #70ad4d;
 }
 #status_head{
     display: flex;
@@ -284,7 +284,7 @@ input:checked + .slider:before {
     margin-left: -62px;
     border-top: 42px solid transparent;
     border-left: 17px solid #33414f;
-
+    visibility: visible;
     border-bottom: 41px solid transparent;}
 #page{
     width: 1147px;
@@ -438,11 +438,23 @@ width: 1147px;
     padding-left: 70px;
     padding-right: 60px;
     margin-bottom: -10px;
-
+}
+#pick_date_div_2{
+visibility: visible;
+width: 1147px;
+    height: 100%;
+    padding-top: 12px;
+    padding-left: 70px;
+    padding-right: 60px;
+    margin-bottom: -10px;
 }
 
-
 #month{
+    display: flex;
+    font-display: row;
+    
+}
+#month_2{
     display: flex;
     font-display: row;
     
@@ -460,6 +472,19 @@ width: 1147px;
     position: relative;
     overflow: hidden;
 }
+#month_2>div{
+   
+   width: 90px;
+   border: 1px solid #323a44;
+   margin: 0 25px 5px 0;
+   padding: 8px 0;
+   text-transform: uppercase;
+   border-radius: 3px;
+   text-align: center;
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;
+}
 #aug_date{
     width: 1200px;
     height: 300px;
@@ -469,7 +494,29 @@ width: 1147px;
     grid-template-columns: 8.8% 8.8% 8.7% 8.8% 8.7% 8.7% 8.8% 8.8% 10%; 
     margin-bottom: -45px;
 }
+#aug_date_2{
+    width: 1200px;
+    height: 300px;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-columns: 8.8% 8.8% 8.7% 8.8% 8.7% 8.7% 8.8% 8.8% 10%; 
+    margin-bottom: -45px;
+}
 #aug_date>div{
+    width: 90px;
+    border: 1px solid #323a44;
+    margin: 0 25px 5px 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#aug_date_2>div{
     width: 90px;
     border: 1px solid #323a44;
     margin: 0 25px 5px 0;
@@ -503,6 +550,27 @@ width: 1147px;
     position: relative;
     overflow: hidden;
 }
+#sep_date_2{
+    width: 1200px;
+    height: 300px;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-columns: 8.8% 8.8% 8.7% 8.8% 8.7% 8.7% 8.8% 8.8% 10%; 
+    margin-bottom: -45px;
+}
+#sep_date_2>div{
+    width: 90px;
+    border: 1px solid #323a44;
+    margin: 0 25px 5px 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
 #oct_date{
     width: 1200px;
     height: 300px;
@@ -513,6 +581,28 @@ width: 1147px;
     margin-bottom: -45px;
 }
 #oct_date>div{
+    width: 90px;
+    border: 1px solid #323a44;
+    margin: 0 25px 5px 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    
+}
+#oct_date_2{
+    width: 1200px;
+    height: 300px;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-columns: 8.8% 8.8% 8.7% 8.8% 8.7% 8.7% 8.8% 8.8% 10%; 
+    margin-bottom: -45px;
+}
+#oct_date_2>div{
     width: 90px;
     border: 1px solid #323a44;
     margin: 0 25px 5px 0;
@@ -546,7 +636,31 @@ h6 {
     position: relative;
     overflow: hidden;
 }
+#time_pickup_2{
+    display: flex;
+    font-display: row;
+}
+#time_pickup_2>div{
+    width: 90px;
+    border: 1px solid #323a44;
+    margin: 0 25px 5px 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
 .date_pick{
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323a44;
+}
+.date_pick_2{
     font-size: 28px;
     font-weight: 300;
     margin-bottom: 10px;
@@ -570,11 +684,78 @@ h6 {
 #time_select_id{
     border: 2px solid #70ad4d!important;
    box-shadow: 0 4px 12px rgb(0 0 0 / 18%);
-   color: goldenrod;
+   color: goldenrod;}
 #unselect_time{
     border: 1px solid #323a44;
    
    box-shadow: none;
+}
+.first_box_fillup{
+    background-color: #33414f;
+    
+
+width: 300px;
+padding: 0 0px;
+height: 82px;
+}
+.first_box_fillup_2{
+     background-color: #33414f;
+    
+
+width: 300px;
+padding: 0 0px;
+height: 82px;
+}
+.fill_tr_box{
+    width: 45px;
+    height: 0px;
+    margin-left: 0px;
+    background: #33414f;
+    border-top: 42px solid transparent;
+    border-left: 17px solid white;
+    border-bottom: 40px solid transparent;
+}
+#dropoff_page{
+    display: none;
+}
+#tr-box_3 {
+    visibility: visible!important;
+    width: 45px;
+    height: 0px;
+    margin-left: 0px;
+    /* background: #33414f; */
+    border-top: 42px solid transparent;
+    border-left: 17px solid white;
+    border-bottom: 40px solid transparent;
+}
+#trwhite-box_3{
+    visibility: visible!important;
+    width: 41px;
+    height: -5px;
+    margin-left: -62px;
+    border-top: 42px solid transparent;
+    border-left: 17px solid #33414f;
+    visibility: visible;
+    border-bottom: 41px solid transparent;
+}
+.last_circle{
+    width: 25px;
+    height: 25px;
+  
+    margin-left: 0px;
+    border: 1px solid #bdbdbd;
+    background-color: white;
+    border-radius: 50%;
+}
+.last_circle_ffup{
+    width: 19px;
+    height: 19px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    border: 1px solid #bdbdbd;
+    background-color: #70ad4d;
+    border-radius: 50%;
 }
             </style>
 </head>
@@ -752,6 +933,109 @@ h6 {
     </div>
     </div>
 </div>
+<div id="dropoff_page">
+    <div><p class="date_pick_2">From When do you neww a Zoomcar?</p></div>
+    <div id="month_div_2">
+        <p class="month_p_2">SELECT A MONTH</p>
+        <div id="month_2">
+            <div id="aug_2"  onclick="aug_month_2()">AUG</div>
+            <div id="sep_2"  onclick="Sep_month_2()">SEP</div>
+            <div id="oct_2" onclick="oct_month_2()">OCT</div>
+            <div id="nov_2">NOV</div>
+            <div id="dec_2">DEC</div>
+            <div id="jan_2">JAN</div>
+            <div id="feb_2">FEB</div>
+        </div>
+    </div>  
+    <div id="date_div_2">
+        <div><p class="date_p_2">START DATE (Prices will be higher than usual on Weekends/Festive days)</p></div>
+       <div id="aug_date_2">        
+        <div>SAT<br><h6>28</h6></div>
+        <div>SUN<br><h6>29</h6></div>
+        <div>MON<br><h6>30</h6></div>
+        <div>TUE<br><h6>31</h6></div>
+       </div>
+       <div id="sep_date_2">
+        <div>WED<br><h6>1</h6></div>
+        <div>THU<br><h6>2</h6></div>
+        <div>FRI<br><h6>3</h6></div>
+        <div>SAT<br><h6>4</h6></div>
+        <div>SUN<br><h6>5</h6></div>
+        <div>MON<br><h6>6</h6></div>
+        <div>TUE<br><h6>7</h6></div>
+        <div>WED<br><h6>8</h6></div>
+        <div>THU<br><h6>9</h6></div>
+        <div>FRI<br><h6>10</h6></div>
+        <div>SAT<br><h6>11</h6></div>
+        <div>SUN<br><h6>12</h6></div>
+        <div>MON<br><h6>11</h6></div>
+        <div>TUE<br><h6>14</h6></div>
+        <div>WED<br><h6>15</h6></div>
+        <div>THU<br><h6>16</h6></div>
+        <div>FRI<br><h6>17</h6></div>
+        <div>SAT<br><h6>18</h6></div>
+        <div>SUN<br><h6>19</h6></div>
+        <div>MON<br><h6>20</h6></div>
+        <div>TUE<br><h6>21</h6></div>
+        <div>WED<br><h6>22</h6></div>
+        <div>THU<br><h6>23</h6></div>
+        <div>FRI<br><h6>24</h6></div>
+        <div>SAT<br><h6>25</h6></div>
+        <div>SUN<br><h6>26</h6></div>
+        <div>MON<br><h6>27</h6></div>
+        <div>TUE<br><h6>28</h6></div>
+        <div>WED<br><h6>29</h6></div>
+        <div>THU<br><h6>30</h6></div>
+       </div>
+       
+       <div id="oct_date_2">
+        <div>FRI<br><h6>1</h6></div>
+        <div>SAT<br><h6>2</h6></div>
+        <div>SUN<br><h6>3</h6></div>
+        <div>MON<br><h6>4</h6></div>
+        <div>TUE<br><h6>5</h6></div>
+        <div>WED<br><h6>6</h6></div>
+        <div>THU<br><h6>7</h6></div>
+        <div>FRI<br><h6>8</h6></div>
+        <div>SAT<br><h6>9</h6></div>
+        <div>SUN<br><h6>10</h6></div>
+        <div>MON<br><h6>11</h6></div>
+        <div>TUE<br><h6>12</h6></div>
+        <div>WED<br><h6>11</h6></div>
+        <div>THU<br><h6>14</h6></div>
+        <div>FRI<br><h6>15</h6></div>
+        <div>SAT<br><h6>16</h6></div>
+        <div>SUN<br><h6>17</h6></div>
+        <div>MON<br><h6>18</h6></div>
+        <div>TUE<br><h6>19</h6></div>
+        <div>WED<br><h6>20</h6></div>
+        <div>THU<br><h6>21</h6></div>
+        <div>FRI<br><h6>22</h6></div>
+        <div>SAT<br><h6>23</h6></div>
+        <div>SUN<br><h6>24</h6></div>
+        <div>MON<br><h6>25</h6></div>
+        <div>TUE<br><h6>26</h6></div>
+        <div>WED<br><h6>27</h6></div>
+        <div>THU<br><h6>28</h6></div>
+        <div>FRI<br><h6>29</h6></div>
+        <div>SAT<br><h6>30</h6></div>
+        <div>SUN<br><h6>31</h6></div>
+       </div>
+    </div>
+    <div id="time_div_pickup_2">
+        <div><p class="time_p_2">SELECT TIME</p></div>
+        <div id="time_pickup_2">
+        <div onclick="on_pickup_time_a_2()" id="a_2">09:00 PM</div>
+        <div onclick="on_pickup_time_b_2()" id="b_2">12:00 PM</div>
+        <div onclick="on_pickup_time_c_2()" id="c_2">03:00 PM</div>
+        <div onclick="on_pickup_time_d_2()" id="d_2">06:00 PM</div>
+        <div onclick="on_pickup_time_e_2()" id="e_2">09:00 AM</div>
+        <div onclick="on_pickup_time_f_2()" id="f_2">12:00 AM</div>
+        <div onclick="on_pickup_time_g_2()" id="g_2">03:00 AM</div>
+        <div onclick="on_pickup_time_h_2()" id="h_2">06:00 AM</div>
+    </div>
+    </div>
+</div>
 <div id="status_bottom">
         <div class="first_box">
             <p class="start">STARTING POINT</p>
@@ -760,14 +1044,14 @@ h6 {
         <div class="tr-box"></div>
         <div class="trwhite-box"></div>
         <div class="second_box">
-            <p class="start"></p>
-            <p class="first_box_location"></p>
+            <p class="start_2"></p>
+            <p class="second_box_location"></p>
         </div>
         <div class="tr-box_2"></div>
         <div class="trwhite-box_2"></div>
         <div class="third_box">
-            <p class="start"></p>
-            <p class="first_box_location"></p>
+            <p class="start_3"></p>
+            <p class="third_box_location_3"></p>
         </div>
         <div class="tr-box_3"></div>
         <div class="trwhite-box_3"></div>
@@ -847,7 +1131,8 @@ h6 {
                             box.append(p)
                         }
                        
-                    }
+                    }  document.querySelector(".trwhite-box_3").style.visibility="hidden"
+                                   document.querySelector(".tr-box_3").style.visibility="hidden"
 
                     function bang_2() {
                     
@@ -909,6 +1194,7 @@ h6 {
                                      
                                  }
                                  var page_1=0
+                                 let pick_date=document.getElementById("pickup_page")
                               function time_page() {
                                   if(page_1==0){
                                  var c=0
@@ -934,23 +1220,40 @@ h6 {
 
                                     document.getElementById('page').style.display="none"
 
-                                    let pick_date=document.getElementById("pickup_page")
+ 
                                     pick_date.setAttribute("id","pick_date_div");
                                     document.querySelector('div[class="first_fillup"]').setAttribute("class","first_fillup_fillup")
                                     document.querySelector('div[class="first_circle"]').setAttribute("class","first_circle_fillup")
                                     document.querySelector('div[class="second_circle"]').setAttribute("class","second_circle_fillup")
                                     document.querySelector('div[class="line"]').setAttribute("class","line_fillup")
-                                   }
+
+
+                                    document.querySelector(".start_2").innerText="PICKUP TIME"
+                                   document.querySelector(".start_2").setAttribute("class","start")
+                                   document.querySelector(".second_box").setAttribute("class","first_box")
+                                   document.querySelector(".first_box").setAttribute("class","first_box_fillup")
+                                   document.querySelector(".tr-box").setAttribute("class","fill_tr_box")
+                                   document.querySelector(".tr-box_2").setAttribute("class","tr-box")
+                                   document.querySelector(".trwhite-box_2").setAttribute("class","trwhite-box")
+                                   document.querySelector(".trwhite-box_3").style.visibility="hidden"
+                                   document.querySelector(".tr-box_3").style.visibility="hidden"
                                    page_1++
+                                   }
+
+
+                                   
+                                  
                                 }
                                   else{
-                                      console.log("nhby");
+                                  
                                       last_page()
+
                                   }
 
 
                                 }
-                                   
+
+                               
                                     
                                     
                                 document.getElementById("aug_date").style.display="grid"
@@ -978,7 +1281,7 @@ h6 {
                                    
                                     
                                     pick_month_value=sep.value
-               
+                                    document.querySelector(".second_box_location").innerText=pick_month_value
                                    
                                 }
                                 function aug_month() {
@@ -989,9 +1292,10 @@ h6 {
                                    
                                     sep.setAttribute("id","unslect_month")
                                     oct.setAttribute("id","unslect_month")
-                                    sep.value="aug"
-                                    pick_month_value=  aug.value
-                                }
+                                    aug.value="aug"
+                                    pick_month_value=aug.value
+                                    document.querySelector(".second_box_location").innerText=pick_month_value
+                                } 
                                 function oct_month() {
                                     document.getElementById("aug_date").style.display="none"
                                     document.getElementById("sep_date").style.display="none"
@@ -999,9 +1303,9 @@ h6 {
                                     aug.setAttribute("id","unslect_month")
                                     sep.setAttribute("id","unslect_month")
                                     oct.setAttribute("id","shad_month_btn")
-                                    sep.value="oct"
+                                    oct.value="oct"
                                     pick_month_value=  oct.value
-                             
+                                    document.querySelector(".second_box_location").innerText=pick_month_value
                                 }
                                let time_a=document.getElementById("a")
                                let time_b=document.getElementById("b")
@@ -1030,6 +1334,7 @@ h6 {
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="09:00 pm"
+                               document.querySelector(".second_box_location").innerText=pick_month_value+""+pick_time_value
                               }
                               function on_pickup_time_b() {
                                 time_a.setAttribute("id","unselect_time")
@@ -1041,6 +1346,7 @@ h6 {
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="12:00 pm"
+                               document.querySelector(".second_box_location").innerText=pick_month_value+""+pick_time_value
                                 }
                                 function on_pickup_time_c() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1052,6 +1358,7 @@ h6 {
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="03:00 pm"
+                               document.querySelector(".second_box_location").innerText=pick_month_value+""+pick_time_value
                                 }
                                 function on_pickup_time_d() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1063,6 +1370,7 @@ h6 {
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="06:00 pm"
+                               document.querySelector(".second_box_location").innerText=pick_month_value+""+pick_time_value
                                 }
                                 function on_pickup_time_e() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1074,6 +1382,7 @@ h6 {
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="09:00 am"
+                               document.querySelector(".second_box_location").innerText=pick_month_value+""+pick_time_value
                                 }
                                 function on_pickup_time_f() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1085,6 +1394,7 @@ h6 {
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="12:00am"
+                               document.querySelector(".second_box_location").innerText=pick_month_value+""+pick_time_value
                                 }
                                 function on_pickup_time_g() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1096,7 +1406,7 @@ h6 {
                                time_g.setAttribute("id","time_select_id")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="03:00 am"
-                               
+                               document.querySelector(".second_box_location").innerText=pick_month_value+""+pick_time_value
                                 } function on_pickup_time_h() {
                                     time_a.setAttribute("id","unselect_time")
                                time_b.setAttribute("id","unselect_time")
@@ -1107,8 +1417,195 @@ h6 {
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","time_select_id")
                                pick_time_value="06:00 am"
-                              
+                               document.querySelector(".second_box_location").innerText=pick_month_value+""+pick_time_value
                                 }
                          
+                            function last_page() {
+                                if(pick_time_value!=="" && pick_month_value!==""){
+                                
+                                
+                                pick_date.style.display="none"
+
+                                document.getElementById("dropoff_page").setAttribute("id","pick_date_div_2")
+                                let secon_p_bottom=document.querySelector(".start_3")
+                                secon_p_bottom.innerText="DROP OFF TIME"
+                                secon_p_bottom.setAttribute("class","start")
+                                document.querySelector(".third_box").setAttribute("class","first_box")
+                                document.querySelector(".first_box").setAttribute("class","first_box_fillup_2")
+                                document.querySelector(".tr-box").setAttribute("class","fill_tr_box")
+                                // document.querySelector("first_box_fillup").setAttribute("class","first_box_fillup_2")
+                                  
+                                   document.querySelector(".trwhite-box_3").setAttribute("id","trwhite-box_3")
+                                   
+                                   document.querySelector(".tr-box_3").setAttribute("id","tr-box_3")
+                                   
+                                   document.querySelector(".second_circle_fillup").setAttribute("class","last_circle")
+                                   document.querySelector(".second_fillup").setAttribute("class","last_circle_ffup")
+                                   document.querySelector(".line_2").setAttribute("class","line_2")
+                                   second_fillup
+                                }
+                            }
+                            document.getElementById("aug_date_2").style.display="grid"
+                                    document.getElementById("oct_date_2").style.display="none"
+                                    document.getElementById("sep_date_2").style.display="none"
+                                    let aug_2=document.getElementById("aug_2")
+                                    let oct_2=document.getElementById("oct_2")
+                                    let sep_2=document.getElementById("sep_2")
+                                    aug_2.setAttribute("id","unslect_month")
+                                    sep_2.setAttribute("id","unslect_month")
+                                    oct_2.setAttribute("id","unslect_month")
+                            var pick_month_value_2=""
+                            function Sep_month_2() {
+
+                                document.getElementById("aug_date_2").style.display="none"
+                                    document.getElementById("oct_date_2").style.display="none"
+                                   let a=document.getElementById("sep_date_2").style.display="grid"
+                                   aug_2.setAttribute("id","unslect_month")
+                                    oct_2.setAttribute("id","unslect_month")
+                                    sep_2.setAttribute("id","shad_month_btn")
+                                    sep_2.value="sep"
+                                   
+                                    
+                                    pick_month_value_2=sep_2.value
+                                     document.querySelector(".third_box_location_3").innerText=pick_month_value_2
+                                   
+                                }
+                                function aug_month_2() {
+                                   
+                                    document.getElementById("aug_date_2").style.display="grid"
+                                    document.getElementById("oct_date_2").style.display="none"
+                                    document.getElementById("sep_date_2").style.display="none"
+                                   
+                                    sep_2.setAttribute("id","unslect_month")
+                                    oct_2.setAttribute("id","unslect_month")
+                                    aug_2.setAttribute("id","shad_month_btn")
+                                    aug_2.value="aug"
+                                    pick_month_value_2=aug_2.value
+                                     document.querySelector(".third_box_location_3").innerText=pick_month_value_2
+                                } 
+                                function oct_month_2() {
+                                    document.getElementById("aug_date_2").style.display="none"
+                                    document.getElementById("sep_date_2").style.display="none"
+                                    document.getElementById("oct_date_2").style.display="grid"
+                                    aug_2.setAttribute("id","unslect_month")
+                                    sep_2.setAttribute("id","unslect_month")
+                                    oct_2.setAttribute("id","shad_month_btn")
+                                    oct_2.value="oct"
+                                    pick_month_value_2=  oct_2.value
+                                     document.querySelector(".third_box_location_3").innerText=pick_month_value_2
+                                }
+                                let time_a_2=document.getElementById("a_2")
+                               let time_b_2=document.getElementById("b_2")
+                               let time_c_2=document.getElementById("c_2")
+                               let time_d_2=document.getElementById("d_2")
+                               let time_e_2=document.getElementById("e_2")
+                               let time_f_2=document.getElementById("f_2")
+                               let time_g_2=document.getElementById("g_2")
+                               let time_h_2=document.getElementById("h_2")
+                               var pick_time_value_2=""
+                               time_a_2.setAttribute("id","unselect_time")
+                               time_b_2.setAttribute("id","unselect_time")
+                               time_c_2.setAttribute("id","unselect_time")
+                               time_d_2.setAttribute("id","unselect_time")
+                               time_e_2.setAttribute("id","unselect_time")
+                               time_f_2.setAttribute("id","unselect_time")
+                               time_g_2.setAttribute("id","unselect_time")
+                               time_h_2.setAttribute("id","unselect_time")
+                              function on_pickup_time_a_2() {
+                                time_a_2.setAttribute("id","time_select_id")
+                               time_b_2.setAttribute("id","unselect_time")
+                               time_c_2.setAttribute("id","unselect_time")
+                               time_d_2.setAttribute("id","unselect_time")
+                               time_e_2.setAttribute("id","unselect_time")
+                               time_f_2.setAttribute("id","unselect_time")
+                               time_g_2.setAttribute("id","unselect_time")
+                               time_h_2.setAttribute("id","unselect_time")
+                               pick_time_value_2="09:00 pm"
+                               document.querySelector(".third_box_location_3").innerText=pick_month_value_2+""+pick_time_value_2
+                              }
+                              function on_pickup_time_b_2() {
+                                time_a_2.setAttribute("id","unselect_time")
+                               time_b_2.setAttribute("id","time_select_id")
+                               time_c_2.setAttribute("id","unselect_time")
+                               time_d_2.setAttribute("id","unselect_time")
+                               time_e_2.setAttribute("id","unselect_time")
+                               time_f_2.setAttribute("id","unselect_time")
+                               time_g_2.setAttribute("id","unselect_time")
+                               time_h_2.setAttribute("id","unselect_time")
+                               pick_time_value_2="12:00 pm"
+                               document.querySelector(".third_box_location_3").innerText=pick_month_value_2+""+pick_time_value_2
+                                }
+                                function on_pickup_time_c_2() {
+                                    time_a_2.setAttribute("id","unselect_time")
+                               time_b_2.setAttribute("id","unselect_time")
+                               time_c_2.setAttribute("id","time_select_id")
+                               time_d_2.setAttribute("id","unselect_time")
+                               time_e_2.setAttribute("id","unselect_time")
+                               time_f_2.setAttribute("id","unselect_time")
+                               time_g_2.setAttribute("id","unselect_time")
+                               time_h_2.setAttribute("id","unselect_time")
+                               pick_time_value_2="03:00 pm"
+                               document.querySelector(".third_box_location_3").innerText=pick_month_value_2+""+pick_time_value_2
+                                }
+                                function on_pickup_time_d_2() {
+                                    time_a_2.setAttribute("id","unselect_time")
+                               time_b_2.setAttribute("id","unselect_time")
+                               time_c_2.setAttribute("id","unselect_time")
+                               time_d_2.setAttribute("id","time_select_id")
+                               time_e_2.setAttribute("id","unselect_time")
+                               time_f_2.setAttribute("id","unselect_time")
+                               time_g_2.setAttribute("id","unselect_time")
+                               time_h_2.setAttribute("id","unselect_time")
+                               pick_time_value_2="06:00 pm"
+                               document.querySelector(".third_box_location_3").innerText=pick_month_value_2+""+pick_time_value_2
+                                }
+                                function on_pickup_time_e_2() {
+                                    time_a_2.setAttribute("id","unselect_time")
+                               time_b_2.setAttribute("id","unselect_time")
+                               time_c_2.setAttribute("id","unselect_time")
+                               time_d_2.setAttribute("id","unselect_time")
+                               time_e_2.setAttribute("id","time_select_id")
+                               time_f_2.setAttribute("id","unselect_time")
+                               time_g_2.setAttribute("id","unselect_time")
+                               time_h_2.setAttribute("id","unselect_time")
+                               pick_time_value_2="09:00 am"
+                               document.querySelector(".third_box_location_3").innerText=pick_month_value_2+""+pick_time_value_2
+                                }
+                                function on_pickup_time_f_2() {
+                                    time_a_2.setAttribute("id","unselect_time")
+                               time_b_2.setAttribute("id","unselect_time")
+                               time_c_2.setAttribute("id","unselect_time")
+                               time_d_2.setAttribute("id","unselect_time")
+                               time_e_2.setAttribute("id","unselect_time")
+                               time_f_2.setAttribute("id","time_select_id")
+                               time_g_2.setAttribute("id","unselect_time")
+                               time_h_2.setAttribute("id","unselect_time")
+                               pick_time_value_2="12:00am"
+                               document.querySelector(".third_box_location_3").innerText=pick_month_value_2+""+pick_time_value_2
+                                }
+                                function on_pickup_time_g_2() {
+                                    time_a_2.setAttribute("id","unselect_time")
+                               time_b_2.setAttribute("id","unselect_time")
+                               time_c_2.setAttribute("id","unselect_time")
+                               time_d_2.setAttribute("id","unselect_time")
+                               time_e_2.setAttribute("id","unselect_time")
+                               time_f_2.setAttribute("id","unselect_time")
+                               time_g_2.setAttribute("id","time_select_id")
+                               time_h_2.setAttribute("id","unselect_time")
+                               pick_time_value_2="03:00 am"
+                               document.querySelector(".third_box_location_3").innerText=pick_month_value_2+""+pick_time_value_2
+                                } function on_pickup_time_h_2() {
+                                    time_a_2.setAttribute("id","unselect_time")
+                               time_b_2.setAttribute("id","unselect_time")
+                               time_c_2.setAttribute("id","unselect_time")
+                               time_d_2.setAttribute("id","unselect_time")
+                               time_e_2.setAttribute("id","unselect_time")
+                               time_f_2.setAttribute("id","unselect_time")
+                               time_g_2.setAttribute("id","unselect_time")
+                               time_h_2.setAttribute("id","time_select_id")
+                               pick_time_value_2="06:00 am"
+                               document.querySelector(".third_box_location_3").innerText=pick_month_value_2+""+pick_time_value_2
+                                }
+                                console.log(page_1);
             </script>
 </html>
