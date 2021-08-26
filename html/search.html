@@ -121,7 +121,7 @@ input:checked + .slider:before {
 }
 #status_bottom{
    
-    width: 99%;
+    width: 100%;
     height: 82px;
    position: absolute;
     display: flex;
@@ -260,11 +260,11 @@ input:checked + .slider:before {
 }
 #status_head{
     display: flex;
-    width: 1147px;
+    width: 1404px;
     padding-left: 60px;
     flex-direction: row;
     height: 44px;
-    margin: 0px 0px 50px;
+    margin: 16px 0px 50px;
 }
 .start{
     color:#bdbdbd;
@@ -395,11 +395,13 @@ button{
 .box_shadow,#box_shadow{
     box-shadow: 0 2px 6px rgb(0 0 0 / 30%);
 }
-#btn{
+#click_month_btn{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-right: 60px;
+    margin-left: auto;
+    order: 2;
 }
 
 .trwhite-box_3,.tr-box_3,.trwhite-box_2,.tr-box_2{
@@ -419,11 +421,164 @@ button{
 margin: 1px 0px 2px 60px;
 }
 #pickup_page{
-    visibility: hidden;
+    display: none;
+}
+
+.home{
+    margin-left: auto;
+    order: 3;
+    height: 25px;
+    width: 30px;
+}
+#pick_date_div{
+visibility: visible;
+width: 1147px;
+    height: 100%;
+    padding-top: 12px;
+    padding-left: 70px;
+    padding-right: 60px;
+    margin-bottom: -10px;
+
+}
+
+
+#month{
+    display: flex;
+    font-display: row;
+    
+}
+#month>div{
+   
+    width: 90px;
+    border: 1px solid #323a44;
+    margin: 0 25px 5px 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+#aug_date{
+    width: 1200px;
+    height: 300px;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-columns: 8.8% 8.8% 8.7% 8.8% 8.7% 8.7% 8.8% 8.8% 10%; 
+    margin-bottom: -45px;
+}
+#aug_date>div{
+    width: 90px;
+    border: 1px solid #323a44;
+    margin: 0 25px 5px 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#sep_date{
+    width: 1200px;
+    height: 300px;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-columns: 8.8% 8.8% 8.7% 8.8% 8.7% 8.7% 8.8% 8.8% 10%; 
+    margin-bottom: -45px;
+}
+#sep_date>div{
+    width: 90px;
+    border: 1px solid #323a44;
+    margin: 0 25px 5px 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+#oct_date{
+    width: 1200px;
+    height: 300px;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-columns: 8.8% 8.8% 8.7% 8.8% 8.7% 8.7% 8.8% 8.8% 10%; 
+    margin-bottom: -45px;
+}
+#oct_date>div{
+    width: 90px;
+    border: 1px solid #323a44;
+    margin: 0 25px 5px 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    
+}
+h6 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 22px;
+}
+#time_pickup{
+    display: flex;
+    font-display: row;
+}
+#time_pickup>div{
+    width: 90px;
+    border: 1px solid #323a44;
+    margin: 0 25px 5px 0;
+    padding: 8px 0;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.date_pick{
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323a44;
+}
+
+#unslect_month{
+    border: 1px solid #323a44;
+   
+   box-shadow: none;
+    
+}
+#shad_month_btn{
+   
+   border: 2px solid #70ad4d!important;
+   box-shadow: 0 4px 12px rgb(0 0 0 / 18%);
+   color: goldenrod;
+}
+#time_select_id{
+    border: 2px solid #70ad4d!important;
+   box-shadow: 0 4px 12px rgb(0 0 0 / 18%);
+   color: goldenrod;
+#unselect_time{
+    border: 1px solid #323a44;
+   
+   box-shadow: none;
 }
             </style>
 </head>
-<body id="body">
+<body>
     
 <div id="status_head">
     <div id="circle_box">
@@ -441,6 +596,7 @@ margin: 1px 0px 2px 60px;
         <div class="third_circle"><div class="third_fillup"></div></div>
         <p class="circle_p_2">Dropoff Time</p>
     </div>
+    <img src="https://www.zoomcar.com/assets/component-images/home-icon.148123dbffda052b1327ffd47f245138.png" class="home" onclick="Home()">
 </div>
 <div id="page">
         <div id="search">
@@ -493,7 +649,109 @@ margin: 1px 0px 2px 60px;
             <div id="div_space"></div>
         </div>
 </div>
-<div id="pickup_page">wfnewf</div>
+<div id="pickup_page">
+    <div><p class="date_pick">From When do you neww a Zoomcar?</p></div>
+    <div id="month_div">
+        <p class="month_p">SELECT A MONTH</p>
+        <div id="month">
+            <div id="aug"  onclick="aug_month()">AUG</div>
+            <div id="sep"  onclick="Sep_month()">SEP</div>
+            <div id="oct" onclick="oct_month()">OCT</div>
+            <div id="nov">NOV</div>
+            <div id="dec">DEC</div>
+            <div id="jan">JAN</div>
+            <div id="feb">FEB</div>
+        </div>
+    </div>  
+    <div id="date_div">
+        <div><p class="date_p">START DATE (Prices will be higher than usual on Weekends/Festive days)</p></div>
+       <div id="aug_date">        
+        <div>SAT<br><h6>28</h6></div>
+        <div>SUN<br><h6>29</h6></div>
+        <div>MON<br><h6>30</h6></div>
+        <div>TUE<br><h6>31</h6></div>
+       </div>
+       <div id="sep_date">
+        <div>WED<br><h6>1</h6></div>
+        <div>THU<br><h6>2</h6></div>
+        <div>FRI<br><h6>3</h6></div>
+        <div>SAT<br><h6>4</h6></div>
+        <div>SUN<br><h6>5</h6></div>
+        <div>MON<br><h6>6</h6></div>
+        <div>TUE<br><h6>7</h6></div>
+        <div>WED<br><h6>8</h6></div>
+        <div>THU<br><h6>9</h6></div>
+        <div>FRI<br><h6>10</h6></div>
+        <div>SAT<br><h6>11</h6></div>
+        <div>SUN<br><h6>12</h6></div>
+        <div>MON<br><h6>11</h6></div>
+        <div>TUE<br><h6>14</h6></div>
+        <div>WED<br><h6>15</h6></div>
+        <div>THU<br><h6>16</h6></div>
+        <div>FRI<br><h6>17</h6></div>
+        <div>SAT<br><h6>18</h6></div>
+        <div>SUN<br><h6>19</h6></div>
+        <div>MON<br><h6>20</h6></div>
+        <div>TUE<br><h6>21</h6></div>
+        <div>WED<br><h6>22</h6></div>
+        <div>THU<br><h6>23</h6></div>
+        <div>FRI<br><h6>24</h6></div>
+        <div>SAT<br><h6>25</h6></div>
+        <div>SUN<br><h6>26</h6></div>
+        <div>MON<br><h6>27</h6></div>
+        <div>TUE<br><h6>28</h6></div>
+        <div>WED<br><h6>29</h6></div>
+        <div>THU<br><h6>30</h6></div>
+       </div>
+       
+       <div id="oct_date">
+        <div>FRI<br><h6>1</h6></div>
+        <div>SAT<br><h6>2</h6></div>
+        <div>SUN<br><h6>3</h6></div>
+        <div>MON<br><h6>4</h6></div>
+        <div>TUE<br><h6>5</h6></div>
+        <div>WED<br><h6>6</h6></div>
+        <div>THU<br><h6>7</h6></div>
+        <div>FRI<br><h6>8</h6></div>
+        <div>SAT<br><h6>9</h6></div>
+        <div>SUN<br><h6>10</h6></div>
+        <div>MON<br><h6>11</h6></div>
+        <div>TUE<br><h6>12</h6></div>
+        <div>WED<br><h6>11</h6></div>
+        <div>THU<br><h6>14</h6></div>
+        <div>FRI<br><h6>15</h6></div>
+        <div>SAT<br><h6>16</h6></div>
+        <div>SUN<br><h6>17</h6></div>
+        <div>MON<br><h6>18</h6></div>
+        <div>TUE<br><h6>19</h6></div>
+        <div>WED<br><h6>20</h6></div>
+        <div>THU<br><h6>21</h6></div>
+        <div>FRI<br><h6>22</h6></div>
+        <div>SAT<br><h6>23</h6></div>
+        <div>SUN<br><h6>24</h6></div>
+        <div>MON<br><h6>25</h6></div>
+        <div>TUE<br><h6>26</h6></div>
+        <div>WED<br><h6>27</h6></div>
+        <div>THU<br><h6>28</h6></div>
+        <div>FRI<br><h6>29</h6></div>
+        <div>SAT<br><h6>30</h6></div>
+        <div>SUN<br><h6>31</h6></div>
+       </div>
+    </div>
+    <div id="time_div_pickup">
+        <div><p class="time_p">SELECT TIME</p></div>
+        <div id="time_pickup">
+        <div onclick="on_pickup_time_a()" id="a">09:00 PM</div>
+        <div onclick="on_pickup_time_b()" id="b">12:00 PM</div>
+        <div onclick="on_pickup_time_c()" id="c">03:00 PM</div>
+        <div onclick="on_pickup_time_d()" id="d">06:00 PM</div>
+        <div onclick="on_pickup_time_e()" id="e">09:00 AM</div>
+        <div onclick="on_pickup_time_f()" id="f">12:00 AM</div>
+        <div onclick="on_pickup_time_g()" id="g">03:00 AM</div>
+        <div onclick="on_pickup_time_h()" id="h">06:00 AM</div>
+    </div>
+    </div>
+</div>
 <div id="status_bottom">
         <div class="first_box">
             <p class="start">STARTING POINT</p>
@@ -513,12 +771,16 @@ margin: 1px 0px 2px 60px;
         </div>
         <div class="tr-box_3"></div>
         <div class="trwhite-box_3"></div>
-        <div id="btn"><button onclick="time_page()">NEXT</button> </div>
+        <div id="click_month_btn"><button onclick="time_page()">NEXT</button> </div>
        
 </div>
 
 </body >
             <script>
+                function Home() {
+                    window.open("search.html","_top")    
+                }
+                
                   var city_array=["Bangalore Palace","U R Rao Satellite Centre","Kempegowda International Airport","Chennai International Airport","University of Madras","Netaji Subhash Chandra Bose International Airport"]
                   var city_array_first_input=["Banglore","Kolkata","Chennai","Ahemdabad","Vadododra"]
                   function city_1() {
@@ -627,7 +889,7 @@ margin: 1px 0px 2px 60px;
                                         position.textContent="Start & Destination"
                                         position.setAttribute("class","add_p")
                                         bottom_p_head.textContent="START & DESTINATION"
-                                        bottom_p_location.innerHTML="<p>select starting point and<br>Destiantion</p>"
+                                        bottom_p_location.innerHTML="<p>Select Starting Point And<br>Destiantion</p>"
                                         bottom_p_location.setAttribute("class","bottom_p_location")
 
                                     }
@@ -646,22 +908,207 @@ margin: 1px 0px 2px 60px;
                                     }
                                      
                                  }
+                                 var page_1=0
                               function time_page() {
-                                let pickup_point=document.getElementById("first_2").value
-                                let dropoff_point=document.getElementById("second_2").value
-  
-                                  document.getElementById('page').innerHTML='';
-                                document.getElementById("pickup_page").style.visibility="visible"
-  
-                                 
-                               
-                                 document.querySelector('div[class="first_fillup"]').setAttribute("class","first_fillup_fillup")
-                                 document.querySelector('div[class="first_circle"]').setAttribute("class","first_circle_fillup")
-                                document.querySelector('div[class="second_circle"]').setAttribute("class","second_circle_fillup")
-                                document.querySelector('div[class="line"]').setAttribute("class","line_fillup")
+                                  if(page_1==0){
+                                 var c=0
+                                    if(document.getElementById("first_2").value!=="")
+                                    {
+                                       
+                                        c++
+                                    }
+                                
+                                if(box.checked!==true){
+                                    if(document.getElementById("first_2").value!=="" && document.getElementById("second_2").value!==""){
+                                      
+                                        c++
+                                    }
+                                }
+                                   if(c>0){
+                                       
+                                    let pickup_point=document.getElementById("first_2").value
+                                    console.log('pickup_point:', pickup_point)
 
+                                    let dropoff_point=document.getElementById("second_2").value
+                                    console.log('dropoff_point:', dropoff_point)
+
+                                    document.getElementById('page').style.display="none"
+
+                                    let pick_date=document.getElementById("pickup_page")
+                                    pick_date.setAttribute("id","pick_date_div");
+                                    document.querySelector('div[class="first_fillup"]').setAttribute("class","first_fillup_fillup")
+                                    document.querySelector('div[class="first_circle"]').setAttribute("class","first_circle_fillup")
+                                    document.querySelector('div[class="second_circle"]').setAttribute("class","second_circle_fillup")
+                                    document.querySelector('div[class="line"]').setAttribute("class","line_fillup")
+                                   }
+                                   page_1++
+                                }
+                                  else{
+                                      console.log("nhby");
+                                      last_page()
+                                  }
+
+
+                                }
+                                   
+                                    
+                                    
+                                document.getElementById("aug_date").style.display="grid"
+                                    document.getElementById("oct_date").style.display="none"
+                                    document.getElementById("sep_date").style.display="none"
+                                    let aug=document.getElementById("aug")
+                                    let oct=document.getElementById("oct")
+                                    let sep=document.getElementById("sep")
+                                    aug.setAttribute("id","unslect_month")
+                                    sep.setAttribute("id","unslect_month")
+                                    oct.setAttribute("id","unslect_month")
+                                    
+                                    
+                                    var pick_month_value=""
+                                   
+                                function Sep_month() {
+
+                                document.getElementById("aug_date").style.display="none"
+                                    document.getElementById("oct_date").style.display="none"
+                                   let a=document.getElementById("sep_date").style.display="grid"
+                                   aug.setAttribute("id","unslect_month")
+                                    oct.setAttribute("id","unslect_month")
+                                    sep.setAttribute("id","shad_month_btn")
+                                    sep.value="sep"
+                                   
+                                    
+                                    pick_month_value=sep.value
+               
+                                   
+                                }
+                                function aug_month() {
+                                    aug.setAttribute("id","shad_month_btn")
+                                    document.getElementById("aug_date").style.display="grid"
+                                    document.getElementById("oct_date").style.display="none"
+                                    document.getElementById("sep_date").style.display="none"
+                                   
+                                    sep.setAttribute("id","unslect_month")
+                                    oct.setAttribute("id","unslect_month")
+                                    sep.value="aug"
+                                    pick_month_value=  aug.value
+                                }
+                                function oct_month() {
+                                    document.getElementById("aug_date").style.display="none"
+                                    document.getElementById("sep_date").style.display="none"
+                                    document.getElementById("oct_date").style.display="grid"
+                                    aug.setAttribute("id","unslect_month")
+                                    sep.setAttribute("id","unslect_month")
+                                    oct.setAttribute("id","shad_month_btn")
+                                    sep.value="oct"
+                                    pick_month_value=  oct.value
+                             
+                                }
+                               let time_a=document.getElementById("a")
+                               let time_b=document.getElementById("b")
+                               let time_c=document.getElementById("c")
+                               let time_d=document.getElementById("d")
+                               let time_e=document.getElementById("e")
+                               let time_f=document.getElementById("f")
+                               let time_g=document.getElementById("g")
+                               let time_h=document.getElementById("h")
+                               var pick_time_value=""
+                               time_a.setAttribute("id","unselect_time")
+                               time_b.setAttribute("id","unselect_time")
+                               time_c.setAttribute("id","unselect_time")
+                               time_d.setAttribute("id","unselect_time")
+                               time_e.setAttribute("id","unselect_time")
+                               time_f.setAttribute("id","unselect_time")
+                               time_g.setAttribute("id","unselect_time")
+                               time_h.setAttribute("id","unselect_time")
+                              function on_pickup_time_a() {
+                                time_a.setAttribute("id","time_select_id")
+                               time_b.setAttribute("id","unselect_time")
+                               time_c.setAttribute("id","unselect_time")
+                               time_d.setAttribute("id","unselect_time")
+                               time_e.setAttribute("id","unselect_time")
+                               time_f.setAttribute("id","unselect_time")
+                               time_g.setAttribute("id","unselect_time")
+                               time_h.setAttribute("id","unselect_time")
+                               pick_time_value="09:00 pm"
                               }
-                  
+                              function on_pickup_time_b() {
+                                time_a.setAttribute("id","unselect_time")
+                               time_b.setAttribute("id","time_select_id")
+                               time_c.setAttribute("id","unselect_time")
+                               time_d.setAttribute("id","unselect_time")
+                               time_e.setAttribute("id","unselect_time")
+                               time_f.setAttribute("id","unselect_time")
+                               time_g.setAttribute("id","unselect_time")
+                               time_h.setAttribute("id","unselect_time")
+                               pick_time_value="12:00 pm"
+                                }
+                                function on_pickup_time_c() {
+                                    time_a.setAttribute("id","unselect_time")
+                               time_b.setAttribute("id","unselect_time")
+                               time_c.setAttribute("id","time_select_id")
+                               time_d.setAttribute("id","unselect_time")
+                               time_e.setAttribute("id","unselect_time")
+                               time_f.setAttribute("id","unselect_time")
+                               time_g.setAttribute("id","unselect_time")
+                               time_h.setAttribute("id","unselect_time")
+                               pick_time_value="03:00 pm"
+                                }
+                                function on_pickup_time_d() {
+                                    time_a.setAttribute("id","unselect_time")
+                               time_b.setAttribute("id","unselect_time")
+                               time_c.setAttribute("id","unselect_time")
+                               time_d.setAttribute("id","time_select_id")
+                               time_e.setAttribute("id","unselect_time")
+                               time_f.setAttribute("id","unselect_time")
+                               time_g.setAttribute("id","unselect_time")
+                               time_h.setAttribute("id","unselect_time")
+                               pick_time_value="06:00 pm"
+                                }
+                                function on_pickup_time_e() {
+                                    time_a.setAttribute("id","unselect_time")
+                               time_b.setAttribute("id","unselect_time")
+                               time_c.setAttribute("id","unselect_time")
+                               time_d.setAttribute("id","unselect_time")
+                               time_e.setAttribute("id","time_select_id")
+                               time_f.setAttribute("id","unselect_time")
+                               time_g.setAttribute("id","unselect_time")
+                               time_h.setAttribute("id","unselect_time")
+                               pick_time_value="09:00 am"
+                                }
+                                function on_pickup_time_f() {
+                                    time_a.setAttribute("id","unselect_time")
+                               time_b.setAttribute("id","unselect_time")
+                               time_c.setAttribute("id","unselect_time")
+                               time_d.setAttribute("id","unselect_time")
+                               time_e.setAttribute("id","unselect_time")
+                               time_f.setAttribute("id","time_select_id")
+                               time_g.setAttribute("id","unselect_time")
+                               time_h.setAttribute("id","unselect_time")
+                               pick_time_value="12:00am"
+                                }
+                                function on_pickup_time_g() {
+                                    time_a.setAttribute("id","unselect_time")
+                               time_b.setAttribute("id","unselect_time")
+                               time_c.setAttribute("id","unselect_time")
+                               time_d.setAttribute("id","unselect_time")
+                               time_e.setAttribute("id","unselect_time")
+                               time_f.setAttribute("id","unselect_time")
+                               time_g.setAttribute("id","time_select_id")
+                               time_h.setAttribute("id","unselect_time")
+                               pick_time_value="03:00 am"
+                               
+                                } function on_pickup_time_h() {
+                                    time_a.setAttribute("id","unselect_time")
+                               time_b.setAttribute("id","unselect_time")
+                               time_c.setAttribute("id","unselect_time")
+                               time_d.setAttribute("id","unselect_time")
+                               time_e.setAttribute("id","unselect_time")
+                               time_f.setAttribute("id","unselect_time")
+                               time_g.setAttribute("id","unselect_time")
+                               time_h.setAttribute("id","time_select_id")
+                               pick_time_value="06:00 am"
                               
+                                }
+                         
             </script>
 </html>
