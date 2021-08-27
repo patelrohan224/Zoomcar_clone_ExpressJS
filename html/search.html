@@ -765,7 +765,6 @@ height: 82px;
     margin-bottom: 10px;
     font-weight: 600;
 }
-
             </style>
 </head>
 <body>
@@ -1927,18 +1926,22 @@ height: 82px;
                                      console.log(p_point);
                                      console.log(d_ponit);
                                      if(d_ponit!=="" && p_point!==""){
+                                        let first_one=document.getElementById("first_1").value
+                                        let second_one=document.getElementById("second_1").value
                                         Object={
                                             p_location:p_point,
                                             p_time:pick_time_value,
                                             p_date:date_final_picked,
                                             p_day:day_final_picked,
                                             p_month:pick_month_value,
+                                            p_city:first_one,
 
                                             d_location:d_ponit,
                                             d_time:pick_time_value_2,
                                             d_date:date_final_drop,
                                             d_day:day_final_drop,
                                             d_month:pick_month_value_2,
+                                            d_city:second_one,
                                         }
                                         db_array.push(Object)
                                         console.log(db_array);
@@ -1947,22 +1950,26 @@ height: 82px;
                                     }
 
                                        if(d_ponit==""){
+                                        let first_one=document.getElementById("first_1").value
                                         Object={
                                             p_location:p_point,
                                             p_time:pick_time_value,
                                             p_date:date_final_picked,
                                             p_day:day_final_picked,
                                             p_month:pick_month_value,
+                                            p_city:first_one,
 
                                             d_location:p_point,
                                             d_time:pick_time_value_2,
                                             d_date:date_final_drop,
                                             d_day:day_final_drop,
                                             d_month:pick_month_value_2,
+                                            d_city:first_one,
                                         } 
                                         db_array.push(Object)
                                         console.log(db_array);
                                         const db_locations=JSON.stringify(db_array) 
+                                       
                                        localStorage.setItem("pick_drop_points",db_locations);
 
                                        }

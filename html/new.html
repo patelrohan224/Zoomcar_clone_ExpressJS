@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <style>
+
+        body * {
+            font-family: "Open Sans",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif!important;
+        }
+
+        #nav{
+            
+        height: 80px;
+        }
+        #nav div {
+        background-color: rgb(245, 169, 115);
+        height: 35px;
+        width: 100px;
+        float: right;
+        margin: 10px;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        } 
+
+        .cont {
+            width: 100%;
+            height: 100%;;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+        } 
+       
+        #main {
+            max-width: 70%;
+            width: 100%;
+            min-height: 400px;
+            padding: 30px;
+            background-color:#EEEEEE;
+            border-radius: 8px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            color: #33414f;
+            position: relative;
+            overflow: hidden;
+            /* display: none; */
+            
+        }
+        .left_cont {
+            box-shadow: 0 0 1px 2px #c4c2c2;
+            width: 45%;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+            background: #fff;
+        }
+        .promo {
+            height: 400px;
+            padding: 35px;
+            text-align: center;
+            font-size: 16px;
+           
+            display: flex;
+           
+            flex-direction: column;
+           
+            align-items: center;
+           
+            justify-content: center;
+        }
+      
+        .close {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 30px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+        .right_cont {
+            
+            width: 55%;
+            padding: 20px;
+            text-align: center;
+
+        }
+        .right_cont p {
+            font-weight: 600;
+        }
+        .facebook {
+            width: 65%;
+            height: 30px;
+            margin: auto;
+            padding: 10px;
+            background-color: #4267B2;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 1px 2px #e0dfdf;
+        }
+        .google {
+            width: 65%;
+            height: 30px;
+            margin: auto;
+            padding: 10px;
+            background-color: #f4425a;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 1px 2px #e0dfdf;
+        }
+        input {
+            width: 67%;
+            height: 30px;
+            border-radius: 3px;
+            margin-top: 50px;
+            border: 1px solid black; 
+        }
+
+        #next {
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="signup">Signup</div>
+        <div>Login</div>
+        <div>home</div>
+    </div>
+
+    <div class="cont" >
+        <div id="main">
+            <div class="close">+</div>
+            <div class="left_cont">
+                <div class="promo">
+                    <div class="promo1">
+                        <img src="https://www.zoomcar.com/build/img/promo-1.1a6e5812962b16014f7311ed801fbf71.png" alt="zoom1">
+                        <h1>REFER & EARN</h1>
+                        <p>Refer or invite your friends to zoomcar and earn free rides, free Z points and more.</p>
+                    </div>
+                    <div class="promo2">
+                        <img src="https://www.zoomcar.com/build/img/promo_supermiler.7a597371bd16587f1d46a66dbff6b72e.svg" alt="zoom2">
+                        <h1>SUPERMILER CLUB</h1>
+                        <p>Premium club which rewards you everytime you drive with us.</p>
+                    </div>
+                    <div class="promo3">
+                        <img src="https://www.zoomcar.com/build/img/promo-3.f243fadd09ecdd1d9cb70694fa1be058.png" alt="zoom3">
+                        <h1>FREE FUEL</h1>
+                        <p>The fuel is on us for your complete trip.In case you re-fuel a zoomcar, we will re-fill your pockets and that’s a promise.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right_cont">
+                <div>
+                <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png" alt="logo">
+                <p>Continue with</p>
+                <div class="facebook">Facebook</div>
+                <div class="google">Google</div>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="Enter your Email or Mobile number">
+                </form>
+                <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next">    
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+    var slides1 = document.querySelector('.promo1')
+    var slides2 = document.querySelector('.promo2')
+    var slides3 = document.querySelector('.promo3')
+   
+    var slides_arr = [slides1, slides2, slides3]
+  
+     
+
+    var time = 2000;
+    var i = 0;
+    function changeImg(){
+        slides3.style.display = "none"
+     slides1.style.display = "none"
+     slides2.style.display = "none"
+     
+      
+                            slides_arr[i].style.display = "block"
+                            if(i < slides_arr.length - 1){
+                            i++; 
+                            } else { 
+                                i = 0;
+                            }
+                            setTimeout("changeImg()", time);
+                    }
+    window.onload=changeImg;
+
+    document.getElementById('signup').addEventListener('click', function(){
+        document.querySelector('.cont').style.display = "flex"
+    })
+
+    document.querySelector(".close").addEventListener("click", function(){
+        document.querySelector('.cont').style.display = "none"
+    })
+
+
+    
+</script>

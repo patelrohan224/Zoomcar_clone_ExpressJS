@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car</title>
+    <style>
+        body{
+            background-color: rgb(239,239,239);
+            margin: 0px;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: 24% 76%;
+        }
+        #main div{
+            margin: none;
+        }
+        /* .left_coloum{
+           
+        } */
+        .right_coloum{
+          
+            background-color: rgb(247,247,247);
+        }
+        .title{
+            background-color:rgb(228,241,220);
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e4f1dc;
+            color: rgb(238,90,87);
+        }
+        h2{
+           margin: 0px;
+        }
+        .sort_bar{
+          background-color: #e6e6e6;
+          padding: 10px 20px;
+        }
+        .sort_bar .item {
+          display: inline-block;
+          border-radius: 2px;
+          background-color: #fff;
+          border: 1px solid #d8d8d8;
+          padding: 3px 10px;
+          font-size: 11px;
+          color: #9b9b9b;
+          margin-left: 10px;
+          cursor: pointer;
+          position: relative;
+        }
+        .no_fuel_cont {
+          margin: 10px auto;
+          margin-bottom: 0;
+        }
+        .no_fuel-block {
+         display: flex;
+         border-radius: 4px;
+         border: 1px solid #d8d8d8;
+         cursor: pointer;
+         margin-left: 40%;
+         margin-right: 30%;
+      }
+       .no_fuel {
+         border-right: 1px solid #d8d8d8;
+         border-radius: 4px;
+         border-top-right-radius: 0;
+         border-bottom-right-radius: 0;
+      }
+     .no_fuel,  .with_fuel {
+          width: 172px;
+          padding: 7px 24px;
+          font-size: 10px;
+        }
+    .no_fuel div {
+         color: rgba(0,0,0,.38);
+     }
+     .no_fuel div:first-child, .with_fuel div:first-child {
+         font-weight: 600;
+         font-size: 12px;
+     }
+   .no_fuel, .with_fuel {
+         width: 172px;
+         padding: 7px 24px;
+         font-size: 10px;
+       } 
+       
+       .component-car-item .car-item .feature-image {
+        display: inline-block;
+        background-image: url(/assets/component-images/car-list-sprite.c7d2159….png);
+        background-repeat: no-repeat;
+        background-size: 65px;
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="left_coloum">2</div>
+        <div class="right_coloum">
+            <div class="title">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="12" height="19" viewBox="0 0 12 19"><path fill=" rgb(238,90,87)" fill-rule="nonzero" d="M11.908 7.688a.753.753 0 0 0-.658-.38H7.579L8.246.804a.73.73 0 0 0-.5-.763.762.762 0 0 0-.877.294L.119 10.566a.714.714 0 0 0-.027.745.753.753 0 0 0 .658.381h3.671l-.667 6.505a.73.73 0 0 0 .5.762.755.755 0 0 0 .878-.295l6.75-10.23a.715.715 0 0 0 .026-.746z" </path></svg>
+                    Book Early, Book Cheaper!
+                </h2>
+            </div>
+           <div class="sort_bar">
+            <label>Sort by:</label>
+            <div class="item"> Price: High to Low </div>
+            <div class="item"> Price: Low to High </div>
+            <div class="item active-input"> Distance </div>
+           </div>
+           <div class="no_fuel_cont">
+            <div class="no_fuel-block">
+                <div class="no_fuel" style="background-color: rgb(112, 173, 77);">
+                    <div style="color: rgb(255, 255, 255);">WITHOUT FUEL</div>
+                    <div style="color: rgb(255, 255, 255);">(prices exclude fuel cost)</div>
+                </div> 
+                <div class="with_fuel" style="background-color: rgb(247, 247, 247);">
+                    <div style="color: rgb(0, 0, 0);">WITH FUEL</div> 
+                    <div style="color: rgb(0, 0, 0);">(prices include fuel cost)</div>
+                </div>
+            </div>
+            <div class="car-listing">
+                <div class="component-car-item">
+                    <div class="car-item-policies">
+                        <div class="car-item">
+                            <img src="seat.png">
+                            <div class="img" style="background-image: url(&quot;https://s3-ap-southeast-1.amazonaws.com/zoomcar/pictures/original/1f3585c2e226fb30f85664a669b8c2ee1fdc1703.png?1503039545&quot;);"></div>
+                        </div> 
+                        <div class="details">
+                            <h3>Maruti Swift</h3>
+                         <div class="features">
+                    <div class="feature">
+
+                    </div>
+                    <span class="seater feature-image"></span> 
+                    <span>5 Seater</span>
+                </div> 
+                <div class="feature"><span class="transmission feature-image">
+
+                </span> <span>Manual</span>
+            </div> 
+            <div class="d-n cargroup-id">19</div> 
+            <div class="feature">
+                <span class="bags feature-image">
+                </span> 
+                <span>2 Bags</span>
+            </div> 
+            <div class="z-points age-limit d-f ai-c">
+                <span>AGE LIMIT:</span>
+                 <span class="age-val"> 18+ </span>
+                </div>
+            </div> 
+            <div class="divider">
+
+            </div>
+             <div class="one-way-location-selector">
+                 <div class="location-selector">
+                     <div class="selectedLocation">
+                         <div title="Sadahalli, Kempegowda International Airport Road">Pickup at Sadahalli, Kempegowda International Airport Road</div> 
+                         <div>6.9 km from starting point</div>
+                        </div> 
+                        <ul class="locations-list">
+                            <li class="selected">
+                                <span>Pickup at Sadahalli, Kempegowda International Airport Road</span> 
+                                <span>6.9 km from starting point</span></li><li class="">
+                                    <span>Pickup at Bhaskaran road , MV Garden, Halasuru, Karnataka 560008</span> 
+                                    <span>26.2 km from starting point</span>
+                                </li>
+                                <li class="">
+                                    <span>Pickup at Bellandur</span> 
+                                    <span>29.6 km from starting point</span>
+                                </li>
+                            </ul>
+                        </div>
+                         <div class="location-selector-divider"></div> 
+                         <div class="location-selector">
+                             <div class="selectedLocation">
+                                 <div>Return to Pallavaram Airport Area</div>
+                                  <div> 2.8 km from destination</div>
+            </div> 
+            <ul class="locations-list">
+                <li class="selected">
+                    <span>Return to Pallavaram Airport Area</span> 
+                    <span>2.8 km from destination</span
+                        ></li>
+                        <li class="">
+                            <span>Return to Egmore metro car parking Zone</span>
+                             <span>13.6 km from destination</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <div class="car-book">
+                 <div class="car-amount">
+                     <div class="price">
+                         <sup class="rupee">₹</sup> 2,922
+          </div>
+           <div class="per-km">Excess <strong>Rs8/km</strong>
+        </div> 
+        <button type="button" name="book-now" class="book-car">BOOK NOW</button>
+    </div>
+</div>
+</div>
+ <div class="know-more-policies slide-up">
+     <div><div class="price-includes">
+         <div class="title">Price Includes:</div>
+          <div class="d-f jc-sb f-1">
+              <div class="price-includes-info">
+                  <div class="all-includes d-f fd-c">
+                      <img src="/assets/component-images/freekms.a97c72d254a29c4761a775724a438534.svg" class="img">
+                       <div class="price-name">First 330kms</div>
+                        <div class="price-info">₹ 8/km after 330kms</div>
+                    </div>
+                </div>
+                 <div class="price-includes-info">
+                        <div class="all-includes d-f fd-c">
+                            <img src="https://s3-ap-southeast-1.amazonaws.com/zoomcar/images/original/0cc32410194ba6f3880814419e0fcf92af64d8a9.png?1530536637" class="img"> <div class="price-name">Limited Liability</div>
+                             <div class="price-info">Enjoy complete peace of mind with your liability limited to Rs. 10000.</div>
+                            </div>
+                        </div>
+                        <div class="price-includes-info">
+                            <div class="all-includes d-f fd-c">
+                                <img src="https://s3-ap-southeast-1.amazonaws.com/zoomcar/images/original/936f648b5861d85315a66635d29eca3b674302d3.png?1530536640" class="img"> 
+                                <div class="price-name">SGST and CGST</div> 
+                                <div class="price-info">Prices are inclusive of all the taxes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div>
+                     <div class="no_tolls">
+            The price does not include state tolls and state permits
+          </div>
+        </div>
+         <div class="policies">
+             <div class="policy">Policies</div> 
+             <div class="cancellation">
+                 <div class="title">Cancellation:</div> 
+                 <div class="cancellation-info">
+                     <ul>
+                         <li>Cancellation made after booking start: No refund</li>
+                         <li>Cancellation made more than 24 hours before the booking start: Rs 200</li>
+                         <li>Cancellation made with 24 hours of  booking start: Rs 200 or 50% of Booking fee (whichever is greater)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cancellation">
+                    <div class="title">Late Return:</div>
+                     <div class="cancellation-info"><ul>
+                         <li>Standard hourly fee will be applicable per hour of delay. Weekend or weekday delays will be charged accordingly.</li>
+                         <li>In addition to the standard hourly fee, every hour of delay would be charged at Rs. 300/hour</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cancellation">
+                    <div class="title">Vehicle Damage:</div>
+                     <div class="cancellation-info"><ul>
+                         <li>Any unintentional damage or accident will be liable for damage charge upto Rs 10000/-(full-wrap insurance covers the rest)</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="more-policies">For more policies
+            <a href="/policy" target="_blank"> click here</a>.
+          </div>
+        </div>
+    </div>
+</div>
+ <div class="know-more">
+     <div class="know-more-details">
+        Know More
+        <svg viewBox="0 0 24 15" style="width: 20px; height: 12px;">
+            <path fill="#4990e2" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z">
+
+            </path>
+        </svg>
+    </div>
+</div>
+</div> 
+</div>
+</div>
+        </div>  
+
+
+        </div>
+    </div>
+
+    <script>
+        var cars=[
+            {
+
+            }
+        ]
+
+    </script>
+   
+    
+</body>
+</html>

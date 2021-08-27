@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Drive Car Rentals |Book ZoomCar & Feel Safe!zoomcar.com</title>
+    <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <style>
+        body * {
+            font-family: "Open Sans",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif!important;
+            color: #323a44;
+        }
+        #nav {
+            background-color: rgb(41, 43, 61);
+            margin: 0% 0%;
+            padding: 2%;
+            height: 15%;
+            color: white;
+            width: 97%;
+        }
+        
+        #nav>div {
+            margin: 0% 1%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+        .zms  {
+            color: white;
+        }
+        .amigo{
+            color: white;
+        }
+        a:link {
+            text-decoration: none;
+        }
+        
+        a:active {
+            color: green;
+        }
+        
+        a {
+            color: white;
+        }
+        
+        .float-r {
+            float: right;
+        }
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            margin: -12px 0px 0px 0px;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            /* Important for vertical align on mobile phones */
+            margin: 0;
+            /* Important for vertical align on mobile phones */
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        /* Links inside the dropdown */
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        /* Add a grey background color to dropdown links on hover */
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        /* Show the dropdown menu on hover */
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        #checkout_cont {
+            max-width: 60%;
+            padding: 20px;
+            min-height: 400px;
+            background-color:rgb(243,243,243);
+            border-radius: 8px;
+            margin: 50px auto ;   
+        }
+        .payment_cont {
+            width: 60%;
+            background-color: white;
+            border: 1px solid #ccc;
+            float: left;
+        }
+
+        .checkout_div {
+            padding: 15px 10px;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+        }
+        .book_div {
+            padding: 15px 10px;
+          
+            border-bottom: 1px solid #eee;
+        }
+        .booking {
+            
+            font-size: 16px;
+        }
+        .rupees_paid {
+            font-size: 16px;
+            color: #00AEFF;
+        }
+        .promotion {
+            border-bottom: 1px solid #eee;
+            padding: 15px 10px;
+            margin-bottom: 10px;
+
+        }
+        .refund_cont {
+            padding: 15px 10px;
+            /* margin-bottom: 10px; */
+            border-bottom: 1px solid #eee;
+        }
+        .coupon_btn{
+            background-color: #70AD4D;
+            border-radius: 3px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .total{
+            padding: 15px 10px;
+            background-color: #F2F8ED;
+        } 
+        .car_cont {
+            width: 35%;
+            background-color: white;
+            border: 1px solid #ccc;
+            float: right;  
+        }
+        .summary {
+            padding: 10px 0px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .f_l {
+            float: left;
+        }
+        .f_r {
+            float:right;
+        }
+        .clear {
+            clear: both;
+        }
+        .Car_details{
+            text-align: center;
+        }
+        .btn_cont {
+           
+            width: 60%;
+            text-align: center;
+            margin: 20px 20px 0px 0px;
+        }
+        #checkout_btn{
+            cursor: pointer;
+            background-color: #70AD4D ;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            border: none;
+            padding: 10px 25px;
+
+        }
+        .border {
+            border-bottom: 1px solid #eee;
+        }
+
+        .start_end_cont {
+            margin: 0px 8px;
+            padding: 10px 0px;
+            text-align: center;
+        }
+       
+        .start {
+            font-size: 18px;
+            color: #666666;
+            display: inline-block;
+        }
+        .start_time {
+            font-size: 11px;
+            font-weight: 100;
+        }
+        .to {
+            background: url(https://assets.zoomcar.com/assets/home/to-027eb439c7db0a0ce1cb1fe2c2535cc1.svg) no-repeat 45.8% 52.6%;
+            height: 33px;
+            width: 50px;
+            display: inline-block;
+        }
+        .end {
+            font-size: 18px;
+            color: #666666;
+            display: inline-block;
+
+        }
+        .end_time {
+            font-size: 11px;
+            font-weight: 100;
+        }
+        #footers {
+            background-color: rgb(41, 43, 61);
+            align-items: center;
+            text-align: center;
+            padding: 2%;
+            height: 100px;
+            width: 97%;
+            color: white;
+        }
+         p {
+            color: white;
+        }
+        .flex {
+            display: flex;
+        }
+        
+        #info>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 35%;
+            margin: 1%;
+            margin-left: 12%;
+        }
+        
+        .size {
+            height: 100px;
+            width: 100px;
+        }
+.car_img_prop{
+    height: 100%;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <img src="https://www.zoomcar.com/build/img/logo.f0c7a9744cfeb3fb5c90eafda61dd2ce.svg" style="height: 80%;width: 10%;">
+        <div class="float-r">
+            <a href="login.html">LOGIN</a>
+        </div>
+        <div class=" float-r ">
+            <a href="login.html">SIGNUP</a>
+        </div>
+        <div class=" float-r" style="height: -1px;margin-top: 0px;">
+            <div class="dropbtn float-r dropdown" style="font-size: 20px; background-color: transparent;">MOBILE APP
+
+                <!-- <i class="fa fa-caret-down"></i>-->
+
+                <div class="dropdown-content">
+                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7QYicbC68K1SLmUUtoVci5YswGfPnCisjtA&usqp=CAU" style="height: 35px;width: 100%;"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJj8LuevwdQYk2S3w1B3EeDskXk7LvtcHOkzlQQnWO3NMDX6qwH7bCnGHqCR_t_aFmtw&usqp=CAU" style="height: 35px;width: 92%;"></a>
+                    <a href="https://itunes.apple.com/us/app/zoomcar-self-drive-cars/id889910218?mt=8&utm_source=home%20page&utm_medium=header%20links&utm_content=iOS&utm_campaign=installs">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAFKoUEGpPjP79LPi6r9bFfem3GIOQawWVV75SkXyBwevJd183Bvw_wI9duOdX5rTccU&usqp=CAU" style="height: 35px;width: 100%;">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="float-r zms " style="cursor: pointer;">
+            ZMS
+        </div>
+        <div class="float-r amigo" style="cursor: pointer;">
+            AMIGO
+        </div>
+        <div class="float-r ">
+            <a href="login.html">SUBSCRIPTION</a>
+        </div>
+        <div class="float-r ">
+            <a href="offer.html">OFFERS</a>
+        </div>
+
+    </div>
+    <div id="checkout_cont" >
+        <div class="payment_cont f_l">
+            <div class="checkout_div">Checkout</div>
+            <div class="book_div">
+                <span class="booking f_l">Booking Fee 
+                    <br>
+                <span style="font-size: 12px; color: #999999;">
+                    Booking fee excludes fuel cost
+                </span>
+                </span>
+                <div class="f_r rupees_paid" id="price_car"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="promotion">
+                <div class="f_l">Promotion Code</div>
+                <button class="coupon_btn f_r" onclick="zoomnew()">ZOOMNEW</button>
+                <div class="clear"></div>
+            </div>
+            <div class="refund_cont">
+                <div class="f_l refund">Refundable Deposite</div>
+                <div class="f_r" style="font-size: 16px;">₹ 2,499</div>
+                <div class="clear"></div>
+            </div>
+            <div class="total">
+                <div class="f_l" style="font-weight: 600;">Total Payable Amount</div>
+                <div class="f_r" style="color: #70AD4D; font-weight: 800;" id="total"></div>
+                <div class="clear"></div>
+            </div>   
+        </div>
+     
+        <div class="car_cont ">
+            <div class="summary">SUMMARY</div>
+            <div id="car_img">
+                
+            </div>
+            <div class="Car_details"></div>
+            <div class="Car_details">(5 Seater)</div>
+            <div class="border"></div>
+            <div class="start_end_cont">
+                <div class="start">
+                    <div> 11:30 AM </div>
+                    <div class="start_time"> 02 SEP 21, THU</div>
+                </div>
+                <div class="to"></div>
+                <div class="end">
+                    <div> 05:30 PM </div>
+                    <div class="end_time"> 04 SEP 21, SAT</div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="btn_cont">
+            <button id="checkout_btn" style="cursor: pointer;"> <a href="payment.html">Checkout</a> </button>
+        </div>
+    </div>
+    <div id="footers">
+        <!--ZOOMCAR footers Start-->
+
+        <div class="flex">
+            <div style="height: 50%;width: 50%;" class="size">
+                <img src="https://www.zoomcar.com/build/img/zc-works.2adcbe18edb84c7c1fdf0c8d6c894f8b.svg" style="height: 50px;width: 50px;margin-top: 3%;">
+
+                <p style="margin: 1%;text-align: center;font-size: 20px;">How Zoomcars works?</p>
+            </div>
+            <div style="height: 50%;width:50%;" class="size">
+                <img src="https://www.zoomcar.com/build/img/policies.ceddb15a4eef16af85ba8666b1522741.svg" style="height: 50px;width: 50px; margin-top: 3%;">
+
+                <p style="margin: 1%;text-align: center;font-size: 20px;">Policies</p>
+            </div>
+            <div style="height: 50%;width: 50%;" class="size">
+                <img src="https://www.zoomcar.com/build/img/help-support.acf244c0683e201bd2d978f1ddc5d33d.svg" style="height: 50px;width: 50px; margin-top: 3%;">
+
+                <p style="margin: 1%;text-align: center;font-size: 20px;">Help-Support</p>
+            </div>
+            <div style="height: 50%;width: 50%;" class="size">
+                <img src="https://www.zoomcar.com/build/img/safety.127607759cd86e3d75f5698a641d5b83.svg" style="height: 50px;width: 50px; margin-top: 3%;">
+
+                <p style="margin: 1%;text-align: center;font-size: 20px;">Zoom in Safety</p>
+            </div>
+
+        </div>
+
+
+    </div>
+   
+</body>
+</html>
+<script>
+    let db_arr=localStorage.getItem("car_cart")
+    let db_cart=JSON.parse(db_arr)
+    console.log(db_cart);
+    // var total_rs = document.getElementById("total").innerHTML.split(" ");
+    // var total_join = total_rs[1].split(",").join("")
+    var total = Number(db_cart[1])
+    total=total+2499
+    document.getElementById("total").in = `₹ ${total}`
+    function zoomnew() {
+        var final = total - total*0.3 
+        total = final
+        total_pay=total
+        document.getElementById("total").in = `₹ ${total}`
+
+        localStorage.setItem("total_payable", total_pay)
+    
+        
+    }
+    
+   let div_car=document.getElementById("car_img")
+   let car_img=document.createElement("img")
+   car_img.src=db_cart[2]
+   car_img.setAttribute("class","car_img_prop")
+   div_car.append(car_img)
+   let price_car=document.getElementById("price_car")
+   price_car.innerText=db_cart[1] 
+    let car_name=document.querySelector(".Car_details")
+    car_name.innerText=db_cart[0]
+   
+
+   
+</script>

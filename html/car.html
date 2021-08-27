@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(239,239,239);
+            margin: 0px;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: 23.1% 76.9%;
+        }
+        #main div{
+            margin: none;
+        }
+        .right_coloum{
+          
+            background-color: rgb(247,247,247);
+        }
+        .title{
+            background-color:rgb(228,241,220);
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e4f1dc;
+            color: rgb(238,90,87);
+        }
+        h2{
+           margin: 0px;
+        }
+        .sort_bar{
+          background-color: #e6e6e6;
+          padding: 10px 20px;
+        }
+        .sort_bar .item {
+          display: inline-block;
+          border-radius: 2px;
+          background-color: #fff;
+          border: 1px solid #d8d8d8;
+          padding: 3px 10px;
+          font-size: 11px;
+          color: #9b9b9b;
+          margin-left: 10px;
+          cursor: pointer;
+          position: relative;
+        }
+        .no_fuel_cont {
+          margin: 10px auto;
+          margin-bottom: 0;
+        }
+        .no_fuel-block {
+         display: flex;
+         border-radius: 4px;
+         border: 1px solid #d8d8d8;
+         cursor: pointer;
+         margin-left: 40%;
+         margin-right: 30%;
+      }
+       .no_fuel {
+         border-right: 1px solid #d8d8d8;
+         border-radius: 4px;
+         border-top-right-radius: 0;
+         border-bottom-right-radius: 0;
+      }
+     .no_fuel,  .with_fuel {
+          width: 172px;
+          padding: 7px 24px;
+          font-size: 10px;
+        }
+    .no_fuel div {
+         color: rgba(0,0,0,.38);
+     }
+     .no_fuel div:first-child, .with_fuel div:first-child {
+         font-weight: 600;
+         font-size: 12px;
+     }
+   .no_fuel, .with_fuel {
+         width: 172px;
+         padding: 7px 24px;
+         font-size: 10px;
+       }
+
+
+
+       #final{
+          background-color:rgb(247,247,247);
+          padding: 12px;
+
+       }
+         #main_cont{
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            background-color: white;
+            margin-top: 10px;  
+           
+        }
+         #main_cont .left , #main_cont .middle , #main_cont .right{
+            border: 1px dotted #e0dfdf;
+            padding: 5px;
+            box-shadow: -2px 2px 4px 2px #e0dfdf; 
+            margin-bottom: 10px;
+        }
+        #main_cont1{
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            background-color: white;
+            margin-top: 10px;  
+           
+        }
+         #main_cont1 .left , #main_cont1 .middle , #main_cont1 .right{
+            border: 1px dotted #e0dfdf;
+            padding: 5px;
+            box-shadow: -2px 2px 4px 2px #e0dfdf; 
+            margin-bottom: 10px;
+        }
+        #main_cont2{
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            background-color: white;
+            margin-top: 10px;  
+           
+        }
+         #main_cont2 .left , #main_cont2 .middle , #main_cont2 .right{
+            border: 1px dotted #e0dfdf;
+            padding: 5px;
+            box-shadow: -2px 2px 4px 2px #e0dfdf; 
+            margin-bottom: 10px;
+        }
+        .middle .seats{
+            padding: 0px;
+            border-left:none ;
+            border-right: none;
+        }
+         
+        .seats{
+            display: flex;
+            border: 1px dotted #e0dfdf;
+            margin-top: 5px;
+            font-family: Open Sans;
+            
+        }
+        .seats img{
+            width: 20%;
+            margin-right: 5px;
+            
+        }
+      
+        .left img{
+            width: 90%;
+            height: 90%;
+        }
+        h3{
+           margin-top: 2px;
+           margin-bottom: 0px;
+        }
+        .pick-up{
+            display: grid;
+            grid-template-columns: 50% 50%;
+    
+        }
+       
+        p {
+         margin-top: 3px;
+         margin-bottom: 5px;
+        }
+       
+        .pick-up{
+            font-size: 14px;
+            color: #000;
+           opacity: .87;
+           align-items: center;
+        }
+        .right h1  {
+            margin-bottom: 1px;
+            margin-top: 3px;
+            font-size: 30px;
+            color: #70ad4d;
+            font-weight: 600;
+            text-align: center;
+        }
+        .right{
+            text-align: center;
+        }
+        .right button{
+            width: 80%;
+            height: 30%;
+            margin-top: 20px;
+            padding: 6px 10px;
+           background-color: #70ad4d;
+           color: #fff;
+           outline: none;
+           border: 0;
+           font-size: 14px;
+           font-weight: 600;
+           letter-spacing: .6px;
+           border-radius: 2px;
+           cursor: pointer;
+           margin-top: 5px;
+           font-size: 90%;
+        }
+        .right p{
+            font-size: 80%;
+            color: #000;
+            opacity: .54;
+        }
+        .middle span{
+            font-size: 12px;
+        }
+        .left_coloum{
+            padding: 5px;
+        }
+        .heading{
+            margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: Open Sans;
+    opacity: .54;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+
+        }
+
+        .heading img,.dates_s_e img{
+            width: 5%;
+            height: 5%;
+            border-radius: 50%;
+        }
+        
+        #start_drop_location{
+            height: 111px;
+    width: 86%;
+    padding: .2% 7%;
+    background-color: rgb(239,239,239);
+
+         
+        }
+        #start_drop_location>div{
+            /* flex-direction: column; */
+        }
+        #d_p_point{
+            display: flex;
+            flex-direction: row;
+        }
+        .dates_s_e{
+            display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-family: Open Sans;
+    opacity: .54;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+        }
+        #star_point{
+            width: 50%;
+    height: 80px;
+    border: 1px solid #d8d8d8;
+    background-color: white;
+        }
+        #drop_point{
+            width: 50%;
+    height: 80px;
+    background-color: white;
+    border: 1px solid #d8d8d8;
+        }
+        h5{
+            font-family: Open Sans;
+            height: 15px;
+            width: 112px;
+    align-items: center;
+    opacity: .54;
+    font-size: 11px;
+    color: #000;
+    margin: 9px 0px 0px 10px;
+        }
+        .pick_city{
+            font-size: 18px;
+    font-weight: 700;
+    opacity: .87;
+    text-transform: capitalize;
+    margin: 7px 0px 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323a44;
+        }
+        .drop_city{
+            font-size: 18px;
+    font-weight: 700;
+    opacity: .87;
+    text-transform: capitalize;
+    margin: 7px 0px 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323a44;
+        }
+        .p_point_car,.d_point_car{
+            margin: 0px 0px 0px 10px;
+    font-size: 11px;
+    color: #000;
+    opacity: .54;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: 16px;
+    max-height: 16px;
+}
+        }
+        #date_select{
+            margin-top: ;
+            height: 122px;
+              width: 86%;
+            padding: .2% 7%;
+            background-color: teal;
+            display: flex;
+           
+        }
+        #date_select {
+    flex-direction: column;
+    width: 86%;
+    margin: .2% 7%;
+}
+        #date_start{
+            width: 50%;
+            height: 80px;
+            background-color: white;
+            border: 1px solid #d8d8d8;
+        }
+        #date_end{
+            width: 50%;
+            height: 80px;
+            background-color: white;
+            border: 1px solid #d8d8d8;
+        } 
+        #data_flex{
+            display: flex;
+
+        } 
+        #data_flex>div{
+            flex-direction: row;
+        }
+        .p_info{
+            display: flex;
+        }
+        .p_info>div{
+            flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+        }
+        #transimtion{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+       #img_tra{
+        height: 22px;
+    margin-top: 6px;
+    border-radius: 23px;
+    width: 22px;
+       
+       }
+       .auto_trs{
+        text-align: center;
+        background-color: white;
+        border: 1px solid #d8d8d8;
+       }
+       .manu_trs{
+        text-align: center;
+        background-color: white;
+        border: 1px solid #d8d8d8;
+       }
+       #trans_part{
+        width: 86%;
+    height: 90px;
+    margin-top: 7px;
+    padding: .2% 7%;
+       }
+       .tran_p{
+        font-size: 10px;
+    opacity: .54;
+    text-transform: uppercase;
+       }
+       .left_date ,.right_date{
+        margin: 0px 0px 0px 22px;
+    font-size: 34px;
+    text-align: center;
+}
+h6.p_day,.d_day {
+    margin: 6px 0px 0px 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+p.s_time_date,.e_time_date {
+    margin: 0px 0px 0px 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+.dat_head_h5{
+    margin: 8px 0px 0px 22px !important;
+}
+#trans_part>span {
+    font-size: 12px;
+    margin: 0px 0px 0px 5px;
+    font-family: Open Sans;
+    color: #9b9b9b;
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+    <div class="left_coloum">
+           
+
+         <div id="start_drop_location">
+            <div class="heading">
+               
+            <img src="https://thumbs.dreamstime.com/b/tick-mark-icon-flat-illustration-check-mark-vector-tick-mark-icon-flat-illustration-check-mark-vector-164317151.jpg" alt="">
+               
+               <span>START AND DESTINATION</span> 
+              
+            </div>
+      
+        <div id="d_p_point">
+             <div id="star_point">
+                 <h5>STARTING POINT <span>></span></h5>
+                 <h4 class="pick_city"></h4>
+                 <p class="p_point_car"></p>
+             </div>
+             <div id="drop_point">
+                 <h5>DESTINATION<span>></span></h5>
+                 <h4 class="drop_city"></h4>
+                 <p class="d_point_car"></p>
+             </div>
+        </div>
+    </div>
+        <div id="date_select">
+              <div class="dates_s_e">
+               
+            <img src="https://thumbs.dreamstime.com/b/tick-mark-icon-flat-illustration-check-mark-vector-tick-mark-icon-flat-illustration-check-mark-vector-164317151.jpg" alt="">
+               
+               <span>SELECT DATE AND TIME FOR YOUR TRIP</span> 
+              
+            </div>
+            <div id="data_flex">
+            <div id="date_start">
+                <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
+                <div class="p_info">
+                    <div class="left_date"></div>
+                    <div class="rigth_m_t">
+                        <h6 class="p_day"></h6>
+                        <p class="s_time_date"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="date_end">
+                <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
+                <div class="p_info">
+                    <div class="right_date"></div>
+                    <div class="rigth_m_t">
+                        <h6 class="d_day"></h6>
+                        <p class="e_time_date"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         </div>
+        <div id="trans_part">
+              <span>TRANSMISSION</span>
+              <div id="transimtion">
+              <div class="auto_trs">
+                  <img id="img_tra" src="auto.PNG" alt="">
+                  <p class="tran_p">AUTOMATIC</p>
+              </div>
+              <div class="manu_trs">
+                <img id="img_tra" src="manual.PNG" alt="">
+                <p class="tran_p">MANUAL</p>
+              </div>
+          </div>
+        </div>
+   
+        </div>
+        <div class="right_coloum">
+            <div class="title">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="12" height="19" viewBox="0 0 12 19"><path fill=" rgb(238,90,87)" fill-rule="nonzero" d="M11.908 7.688a.753.753 0 0 0-.658-.38H7.579L8.246.804a.73.73 0 0 0-.5-.763.762.762 0 0 0-.877.294L.119 10.566a.714.714 0 0 0-.027.745.753.753 0 0 0 .658.381h3.671l-.667 6.505a.73.73 0 0 0 .5.762.755.755 0 0 0 .878-.295l6.75-10.23a.715.715 0 0 0 .026-.746z" </path></svg>
+                    Book Early, Book Cheaper!
+                </h2>
+            </div>
+
+
+            <div id="final">
+                <div class="sort_bar">
+                    <label>Sort by:</label>
+                    <div class="item"> Price: Low to High </div>
+                    <div class="item" id="sort"> Price: High to Low </div>
+                   </div>
+                   <div class="no_fuel_cont">
+                    <div class="no_fuel-block">
+                        <div class="no_fuel" style="background-color: rgb(112, 173, 77);">
+                            <div>WITHOUT FUEL</div>
+                            <div>(prices exclude fuel cost)</div>
+                        </div> 
+                        <div class="with_fuel" style="background-color: rgb(247, 247, 247);">
+                            <div>WITH FUEL</div> 
+                            <div>(prices include fuel cost)</div>
+                        </div>
+                    </div>
+
+                    <div id="main_cont">
+                    
+                    </div>
+                    <div id="main_cont1">
+                    
+                    </div>
+                    <div id="main_cont2">
+                    
+                    </div>
+            </div>
+        </div> 
+
+
+
+
+
+    <script>
+        let db_arr=localStorage.getItem("pick_drop_points")
+        var new_db_location=JSON.parse(db_arr)
+        console.log(new_db_location);
+        console.log(new_db_location[0].d_city);
+        document.querySelector(".pick_city").innerText=new_db_location[0].p_city
+        document.querySelector(".drop_city").innerText=new_db_location[0].d_city
+        document.querySelector(".d_point_car").innerText=new_db_location[0].d_location
+        document.querySelector(".p_point_car").innerText=new_db_location[0].p_location
+      
+        document.querySelector(".left_date").innerText=new_db_location[0].p_date
+        document.querySelector(".right_date").innerText=new_db_location[0].d_date
+        document.querySelector(".p_day").innerText=new_db_location[0].p_month
+        document.querySelector(".d_day").innerText=new_db_location[0].d_month
+        document.querySelector(".s_time_date").innerText=new_db_location[0].p_time
+        document.querySelector(".e_time_date").innerText=new_db_location[0].d_time
+        const cars=[
+            {
+                name:"Maruti Swift",
+                average:"Excess Rs8/Km",
+                img:"https://s3-ap-southeast-1.amazonaws.com/zoomcar/pictures/original/1f3585c2e226fb30f85664a669b8c2ee1fdc1703.png?1503039545",
+                drive:"manual",
+                bags:"2 bags",
+                price:"8,889",
+                price1:"15,631"
+
+            },
+            {
+                name:"Tata Tiago",
+                average:"Excess Rs8/Km",
+                img:"https://s3-ap-southeast-1.amazonaws.com/zoomcar/pictures/original/8e78d99a6ddd6b6e6c858dad6f223fe74875e370.jpg?1506410553",
+                drive:"manual",
+                bags:"3 bags",
+                price:"8,409",
+                price1:"14,621"
+
+            },
+            {
+                name:"Hundai i20",
+                average:"Excess Rs10/Km",
+                img:"https://s3-ap-southeast-1.amazonaws.com/zoomcar/pictures/original/669ef153e37fe722e57d75af972c5740662b79e5.png?1503045133",
+                drive:"manual",
+                bags:"3 bags",
+                price:"7,287",
+                price1:"12,631"
+
+            },
+            {
+                name:"Maruti Swift At",
+                average:"Excess Rs11/Km",
+                img:"https://s3-ap-southeast-1.amazonaws.com/zoomcar/pictures/original/964a9433a21c9b95c25217ecdbe653abb658c9f1.png?1521810661",
+                drive:"Automatic",
+                bags:"3 bags",
+                price:"6,989",
+                price1:"11,631"
+
+            },
+            {
+                name:"Ford ecosport",
+                average:"Excess Rs18/Km",
+                img:"https://s3-ap-southeast-1.amazonaws.com/zoomcar/pictures/original/16f10a6059e90dc8193fa5a8ace6263fc39e7689.png?1503048248",
+                drive:"manual",
+                bags:"4 bags",
+                price:"6,289",
+                price1:"11,431"
+
+            },
+           
+            {
+                name:"Maruti Brezza",
+                average:"Excess Rs12/Km",
+                img:"https://s3-ap-southeast-1.amazonaws.com/zoomcar/pictures/original/442cc622b1d00816cedc3f8ef316ee49aab2ebcd.png?1512544852",
+                drive:"Automatic",
+                bags:"4 bags",
+                price:"6,209",
+                price1:"10,010"
+
+            },
+        ];
+        const cars_JSON=JSON.stringify(cars);
+      //store above data in local storage
+      localStorage.setItem("Mycars",cars_JSON);
+      
+      //display on web page
+      let Mycars=localStorage.getItem("Mycars");
+
+      //convert JSON into object;
+       Mycars=JSON.parse(Mycars);
+       var final=document.getElementById("final"); 
+       function showProduct(){
+        var main_con=document.getElementById("main_cont"); 
+        Mycars.forEach(function (Product) {
+            var div1=document.createElement("div");
+            div1.setAttribute("class","left");
+            var image=document.createElement("img");
+            image.src=Product.img;
+            div1.append(image);
+            var div2=document.createElement("div");
+            div2.setAttribute("class","middle")
+            var h3=document.createElement("h3");
+            h3.innerHTML=Product.name;
+            div2.append(h3);
+            var div2_2=document.createElement("div");
+            div2_2.setAttribute("class","seats");
+
+            var div2_2_1=document.createElement("div");
+            var span2_2_1=document.createElement("span");
+            var img2_2_1=document.createElement("img");
+            img2_2_1.src="seat.png";
+            span2_2_1.append(img2_2_1);
+            var span2_2_2=document.createElement("span");
+            span2_2_2.innerText="5 Seater";
+            div2_2_1.append(span2_2_1);
+            div2_2_1.append(span2_2_2);
+            div2_2.append(div2_2_1);
+
+            var div2_2_3=document.createElement("div");
+            var span2_2_3=document.createElement("span");
+            var img2_2_3=document.createElement("img");
+            img2_2_3.src="car-.png";
+            span2_2_3.append(img2_2_3);
+            var span2_2_4=document.createElement("span");
+            span2_2_4.innerText=Product.drive;
+            div2_2_3.append(span2_2_3);
+            div2_2_3.append(span2_2_4);
+            div2_2.append(div2_2_3);
+
+            var div2_2_5=document.createElement("div");
+            var span2_2_5=document.createElement("span");
+            var img2_2_5=document.createElement("img");
+            img2_2_5.src="height.png";
+            span2_2_5.append(img2_2_5);
+            var span2_2_6=document.createElement("span");
+            span2_2_6.innerText=Product.bags;
+            div2_2_5.append(span2_2_5);
+            div2_2_5.append(span2_2_6);
+            div2_2.append(div2_2_5);
+
+            var  div2_2_7=document.createElement("div");
+            var span2_2_7=document.createElement("span");
+            span2_2_7.innerText="AGE-LIMIT:18+";
+            div2_2_7.append(span2_2_7);
+            div2_2.append(div2_2_7);
+
+            div2.append(div2_2)
+
+            var div2_2_0=document.createElement("div");
+            div2_2_0.setAttribute("class","pick-up");
+            var div2_2_0_1=document.createElement("div");
+            var p_pickup=document.createElement("p");
+            p_pickup.innerText="Pickup at "+new_db_location[0].p_location;
+            var h3_pickup=document.createElement("h3");
+            h3_pickup.innerText="1.5 km from starting point";
+            div2_2_0_1.append(p_pickup,h3_pickup)
+
+            var div2_2_0_2=document.createElement("div");
+            var p_endup=document.createElement("p");
+            p_endup.innerText="Drop at "+new_db_location[0].d_location;
+            var h3_endup=document.createElement("h3");
+            h3_endup.innerText="1.5 km from starting point";
+
+            div2_2_0_2.append(p_endup,h3_endup)
+            div2_2_0.append(div2_2_0_1,div2_2_0_2);
+            div2.append(div2_2_0)
+
+
+
+
+
+            var div3=document.createElement("div");
+            div3.setAttribute("class","right")
+            var h1=document.createElement("h1");
+            h1.innerText=`₹${Product.price}`;
+           
+            var p=document.createElement("p");
+            p.innerText=Product.average;
+            var btn=document.createElement("button");
+            btn.innerText="Book Now"
+            div3.append(h1,p,btn)
+           btn.onclick=function(){
+                add_to_cart(Product.name,Product.price,Product.img)
+            }
+
+            div3.setAttribute("class","right");
+            main_con.append(div1,div2,div3);
+            final.append(main_con)
+        }); 
+    }
+   
+    function add_to_cart(a,b,c) {
+        var ar_Cart=[]
+        ar_Cart.push(a)
+        ar_Cart.push(b)
+        ar_Cart.push(c)
+        let db=JSON.stringify(ar_Cart)
+        localStorage.setItem("car_cart",db)
+        
+
+    }
+    function showProduct1(){
+        var main_con1=document.getElementById("main_cont1"); 
+        Mycars.forEach(function (Product) {
+            var div1=document.createElement("div");
+            div1.setAttribute("class","left");
+            var image=document.createElement("img");
+            image.src=Product.img;
+            div1.append(image);
+            var div2=document.createElement("div");
+            div2.setAttribute("class","middle")
+            var h3=document.createElement("h3");
+            h3.innerHTML=Product.name;
+            div2.append(h3);
+            var div2_2=document.createElement("div");
+            div2_2.setAttribute("class","seats");
+
+            var div2_2_1=document.createElement("div");
+            var span2_2_1=document.createElement("span");
+            var img2_2_1=document.createElement("img");
+            img2_2_1.src="seat.png";
+            span2_2_1.append(img2_2_1);
+            var span2_2_2=document.createElement("span");
+            span2_2_2.innerText="5 Seater";
+            div2_2_1.append(span2_2_1);
+            div2_2_1.append(span2_2_2);
+            div2_2.append(div2_2_1);
+
+            var div2_2_3=document.createElement("div");
+            var span2_2_3=document.createElement("span");
+            var img2_2_3=document.createElement("img");
+            img2_2_3.src="car-.png";
+            span2_2_3.append(img2_2_3);
+            var span2_2_4=document.createElement("span");
+            span2_2_4.innerText=Product.drive;
+            div2_2_3.append(span2_2_3);
+            div2_2_3.append(span2_2_4);
+            div2_2.append(div2_2_3);
+
+            var div2_2_5=document.createElement("div");
+            var span2_2_5=document.createElement("span");
+            var img2_2_5=document.createElement("img");
+            img2_2_5.src="height.png";
+            span2_2_5.append(img2_2_5);
+            var span2_2_6=document.createElement("span");
+            span2_2_6.innerText=Product.bags;
+            div2_2_5.append(span2_2_5);
+            div2_2_5.append(span2_2_6);
+            div2_2.append(div2_2_5);
+
+            var  div2_2_7=document.createElement("div");
+            var span2_2_7=document.createElement("span");
+            span2_2_7.innerText="AGE-LIMIT:18+";
+            div2_2_7.append(span2_2_7);
+            div2_2.append(div2_2_7);
+
+            div2.append(div2_2)
+
+            var div2_2_0=document.createElement("div");
+            div2_2_0.setAttribute("class","pick-up");
+            var div2_2_0_1=document.createElement("div");
+            var p_pickup=document.createElement("p");
+            p_pickup.innerText="Pickup at "+new_db_location[0].p_location;
+            var h3_pickup=document.createElement("h3");
+            h3_pickup.innerText="1.5 km from starting point";
+            div2_2_0_1.append(p_pickup,h3_pickup)
+
+            var div2_2_0_2=document.createElement("div");
+            var p_endup=document.createElement("p");
+            p_endup.innerText="Drop at "+new_db_location[0].d_location;
+            var h3_endup=document.createElement("h3");
+            h3_endup.innerText="1.5 km from starting point";
+
+            div2_2_0_2.append(p_endup,h3_endup)
+            div2_2_0.append(div2_2_0_1,div2_2_0_2);
+            div2.append(div2_2_0)
+
+            var div3=document.createElement("div");
+            div3.setAttribute("class","right")
+            var h1=document.createElement("h1");
+            h1.innerText=`₹${Product.price1}`;
+           
+            var p=document.createElement("p");
+            p.innerText=Product.average;
+            var btn=document.createElement("button");
+            btn.innerText="Book Now"
+            div3.append(h1,p,btn)
+
+            div3.setAttribute("class","right");
+            main_con1.append(div1,div2,div3);
+            final.append(main_con1)
+        }); 
+    }
+    showProduct() 
+    showProduct1()
+   var main_con2=document.getElementById("main_cont2"); 
+    document.querySelector(".item").addEventListener("click", function(){
+        var re=Mycars.reverse();
+        var count=0;
+        re.forEach(function (Product) {
+           
+            var div1=document.createElement("div");
+            div1.setAttribute("class","left");
+            var image=document.createElement("img");
+            image.src=Product.img;
+            div1.append(image);
+            var div2=document.createElement("div");
+            div2.setAttribute("class","middle")
+            var h3=document.createElement("h3");
+            h3.innerHTML=Product.name;
+            div2.append(h3);
+            var div2_2=document.createElement("div");
+            div2_2.setAttribute("class","seats");
+
+            var div2_2_1=document.createElement("div");
+            var span2_2_1=document.createElement("span");
+            var img2_2_1=document.createElement("img");
+            img2_2_1.src="seat.png";
+            span2_2_1.append(img2_2_1);
+            var span2_2_2=document.createElement("span");
+            span2_2_2.innerText="5 Seater";
+            div2_2_1.append(span2_2_1);
+            div2_2_1.append(span2_2_2);
+            div2_2.append(div2_2_1);
+
+            var div2_2_3=document.createElement("div");
+            var span2_2_3=document.createElement("span");
+            var img2_2_3=document.createElement("img");
+            img2_2_3.src="car-.png";
+            span2_2_3.append(img2_2_3);
+            var span2_2_4=document.createElement("span");
+            span2_2_4.innerText=Product.drive;
+            div2_2_3.append(span2_2_3);
+            div2_2_3.append(span2_2_4);
+            div2_2.append(div2_2_3);
+
+            var div2_2_5=document.createElement("div");
+            var span2_2_5=document.createElement("span");
+            var img2_2_5=document.createElement("img");
+            img2_2_5.src="height.png";
+            span2_2_5.append(img2_2_5);
+            var span2_2_6=document.createElement("span");
+            span2_2_6.innerText=Product.bags;
+            div2_2_5.append(span2_2_5);
+            div2_2_5.append(span2_2_6);
+            div2_2.append(div2_2_5);
+
+            var  div2_2_7=document.createElement("div");
+            var span2_2_7=document.createElement("span");
+            span2_2_7.innerText="AGE-LIMIT:18+";
+            div2_2_7.append(span2_2_7);
+            div2_2.append(div2_2_7);
+
+            div2.append(div2_2)
+
+            var div2_2_0=document.createElement("div");
+            div2_2_0.setAttribute("class","pick-up");
+            var div2_2_0_1=document.createElement("div");
+            var p_pickup=document.createElement("p");
+            p_pickup.innerText="Pickup at "+new_db_location[0].p_location;
+            var h3_pickup=document.createElement("h3");
+            h3_pickup.innerText="1.5 km from starting point";
+            div2_2_0_1.append(p_pickup,h3_pickup)
+
+            var div2_2_0_2=document.createElement("div");
+            var p_endup=document.createElement("p");
+            p_endup.innerText="Drop at "+new_db_location[0].d_location;
+            var h3_endup=document.createElement("h3");
+            h3_endup.innerText="1.5 km from starting point";
+
+            div2_2_0_2.append(p_endup,h3_endup)
+            div2_2_0.append(div2_2_0_1,div2_2_0_2);
+            div2.append(div2_2_0)
+
+            var div3=document.createElement("div");
+            div3.setAttribute("class","right")
+            var h1=document.createElement("h1");
+            h1.innerText=`₹${Product.price}`;
+           
+            var p=document.createElement("p");
+            p.innerText=Product.average;
+            var btn=document.createElement("button");
+            btn.innerText="Book Now"
+            div3.append(h1,p,btn)
+
+            div3.setAttribute("class","right");
+           
+
+         
+            main_con2.append(div1,div2,div3);
+            final.append(main_con2) 
+           
+        }); 
+        document.getElementById('main_cont2').style.display = "grid"
+        document.getElementById('main_cont').style.display = "none"
+        document.getElementById('main_cont1').style.display = "none"
+       
+   
+    })
+    
+    document.getElementById("sort").addEventListener("click", function(){
+        document.getElementById('main_cont2').style.display = "none"
+        document.getElementById('main_cont1').style.display = "none"
+        document.getElementById('main_cont').style.display = "grid"
+    })
+
+
+    document.getElementById('main_cont1').style.display = "none"
+    document.querySelector('.no_fuel').style.color = "white"
+
+    document.querySelector(".no_fuel").addEventListener("click", function(){
+        document.querySelector('.no_fuel').style.color = "white"
+        document.querySelector('.no_fuel').style.backgroundColor = "rgb(112, 173, 77)"
+        document.querySelector('.with_fuel').style.color = "black"
+        document.querySelector('.with_fuel').style.backgroundColor = "rgb(255, 255, 255)"
+        document.getElementById('main_cont1').style.display = "none"
+        document.getElementById('main_cont').style.display = "grid"
+        document.getElementById('main_cont2').style.display = "none"
+        
+    })
+   
+    document.querySelector(".with_fuel").addEventListener("click", function(){
+        document.querySelector('.with_fuel').style.color = "white"
+        document.querySelector('.with_fuel').style.backgroundColor = "rgb(112, 173, 77)"
+        document.querySelector('.no_fuel').style.color = "black"
+        document.querySelector('.no_fuel').style.backgroundColor = "rgb(247, 247, 247)"
+        document.getElementById('main_cont').style.display = "none"
+        document.getElementById('main_cont1').style.display = "grid"
+        document.getElementById('main_cont2').style.display = "none"
+    })
+    
+
+
+
+    </script>
+   
+    
+</body>
+</html>
