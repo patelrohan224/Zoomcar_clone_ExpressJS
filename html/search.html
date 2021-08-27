@@ -285,7 +285,7 @@ input:checked + .slider:before {
     border-top: 42px solid transparent;
     border-left: 17px solid #33414f;
     visibility: visible;
-    border-bottom: 41px solid transparent;}
+    border-bottom: 40px solid transparent;}
 #page{
     width: 1147px;
     height: 100%;
@@ -591,7 +591,7 @@ width: 1147px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    
+  
 }
 #oct_date_2{
     width: 1200px;
@@ -619,6 +619,7 @@ h6 {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     font-size: 22px;
+    font-weight: 100;
 }
 #time_pickup{
     display: flex;
@@ -768,7 +769,7 @@ height: 82px;
             </style>
 </head>
 <body>
-    
+    <!-- top animation start-->
 <div id="status_head">
     <div id="circle_box">
         <div class="first_circle"><div class="first_fillup"></div></div>
@@ -787,7 +788,11 @@ height: 82px;
     </div>
     <img src="https://www.zoomcar.com/assets/component-images/home-icon.148123dbffda052b1327ffd47f245138.png" class="home" onclick="Home()">
 </div>
+   <!-- top animation end-->
+
+      
 <div id="page">
+    <!-- serch city start -->
         <div id="search">
         <h1 class="title">Tell us your Starting Point</h1>
         <div id="input_part">
@@ -838,6 +843,9 @@ height: 82px;
             <div id="div_space"></div>
         </div>
 </div>
+ <!-- serch city end -->
+
+ <!-- pickup page start -->
 <div id="pickup_page">
     <div><p class="date_pick">From When do you neww a Zoomcar?</p></div>
     <div id="month_div">
@@ -941,6 +949,10 @@ height: 82px;
     </div>
     </div>
 </div>
+<!-- pickup page end -->
+
+
+<!-- dropoff page start -->
 <div id="dropoff_page">
     <div><p class="date_pick_2">Till when do you need it?</p></div>
     <div id="month_div_2">
@@ -1044,6 +1056,9 @@ height: 82px;
     </div>
     </div>
 </div>
+<!-- dropoff page end -->
+
+<!-- bottom status start -->
 <div id="status_bottom">
         <div class="first_box">
             <p class="start">STARTING POINT</p>
@@ -1064,12 +1079,19 @@ height: 82px;
         <div class="tr-box_3"></div>
         <div class="trwhite-box_3"></div>
         <div id="click_month_btn"><button onclick="time_page()">NEXT</button> </div>
-       
 </div>
+<!-- bottom status end -->
 
 </body >
             <script>
-                function Home() {
+     // first city search
+                              var date_final_picked=""
+                               var day_final_picked=""
+                               var date_final_drop=""
+                               var day_final_drop=""
+                               var p_point=""
+                               var d_ponit=""
+                function Home() {              
                     window.open("search.html","_top")    
                 }
                 
@@ -1096,7 +1118,8 @@ height: 82px;
                        
                     }
                   var city_array_second_input=["Kolkata" ,"Chennai"]
-                  function city_2() {
+       //second city serach
+                  function city_2() {            
                     
                     let count=0
                         for (let i = 0; i < city_array_second_input.length; i++) {
@@ -1117,7 +1140,8 @@ height: 82px;
                        
                     }
                   var city_array_2=["Chennai International Airport","University of Madras","Netaji Subhash Chandra Bose International Airport"]
-                function bang() {
+   //stations on first city
+                function bang() {                
                     
                     let count=0
                         for (let i = 0; i < city_array.length; i++) {
@@ -1141,8 +1165,8 @@ height: 82px;
                        
                     }  document.querySelector(".trwhite-box_3").style.visibility="hidden"
                                    document.querySelector(".tr-box_3").style.visibility="hidden"
-
-                    function bang_2() {
+         //stations on second city
+                    function bang_2() {          
                     
                     let count=0
                         for (let i = 0; i < city_array_2.length; i++) {
@@ -1174,7 +1198,8 @@ height: 82px;
                     var bottom_p_head=document.querySelector('p[class="start"]')
                     var bottom_p_location=document.querySelector('p[class="first_box_location"]')
                     box.addEventListener("click",add)
-                                 function add() {
+                //toggle button for choose second city
+                                 function add() {                
                                     if(box.checked){
                                         var boxpart=document.getElementById("input_part_2")
                                         boxpart.style.visibility="visible"
@@ -1203,7 +1228,8 @@ height: 82px;
                                  }
                                  var page_1=0
                                  let pick_date=document.getElementById("pickup_page")
-                              function time_page() {
+                // if value is empty dnt go further                                 
+                              function time_page() {                    
                                   if(page_1==0){
                                  var c=0
                                     if(document.getElementById("first_2").value!=="")
@@ -1221,10 +1247,10 @@ height: 82px;
                                    if(c>0){
                                        
                                     let pickup_point=document.getElementById("first_2").value
-                                    console.log('pickup_point:', pickup_point)
-
+                                
                                     let dropoff_point=document.getElementById("second_2").value
-                                    console.log('dropoff_point:', dropoff_point)
+                                    d_ponit=dropoff_point
+                                    p_point=pickup_point
 
                                     document.getElementById('page').style.display="none"
 
@@ -1247,21 +1273,31 @@ height: 82px;
                                    document.querySelector(".tr-box_3").style.visibility="hidden"
                                    page_1++
                                    }
-
+                                   console.log(page_1);
 
                                    
                                   
                                 }
-                                  else{
+                                  if(page_1==1){
+                    //second page call when all search was given
+                    if(date_final_picked!=="" && day_final_picked!=="" && pick_month_value!=="" && pick_time_value!==""){
+                                     
                                   
-                                      last_page()
-
+                                      last_page()        
+                        
+                                    }
+                                   
                                   }
+                                  if(page_1==2){
+                                if(pick_time_value_2!=="" && pick_month_value_2!=="" && day_final_drop!=="" && date_final_drop!==""){
+                                    end_fun()
+                                }
+                            }
 
 
                                 }
 
-                               
+                            
                                     
                                     
                                 document.getElementById("aug_date").style.display="grid"
@@ -1276,7 +1312,7 @@ height: 82px;
                                     
                                     
                                     var pick_month_value=""
-                                   
+                 // function for the month on pickup point start.....
                                 function Sep_month() {
 
                                 document.getElementById("aug_date").style.display="none"
@@ -1289,7 +1325,9 @@ height: 82px;
                                    
                                     
                                     pick_month_value=sep.value
-                                    document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+
+                                   
+                                    document.querySelector(".second_box_location").innerHTML=pick_month_value+" "+2021+"<br>"+pick_time_value
                                    
                                 }
                                 function aug_month() {
@@ -1302,7 +1340,8 @@ height: 82px;
                                     oct.setAttribute("id","unslect_month")
                                     aug.value="AUG"
                                     pick_month_value=aug.value
-                                    document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                                 
+                                    document.querySelector(".second_box_location").innerHTML=pick_month_value+" "+2021+"<br>"+pick_time_value
                                 } 
                                 function oct_month() {
                                     document.getElementById("aug_date").style.display="none"
@@ -1312,9 +1351,11 @@ height: 82px;
                                     sep.setAttribute("id","unslect_month")
                                     oct.setAttribute("id","shad_month_btn")
                                     oct.value="OCT"
-                                    pick_month_value=  oct.value
-                                    document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                                    pick_month_value=oct.value
+                                  
+                                    document.querySelector(".second_box_location").innerHTML=pick_month_value+" "+2021+"<br>"+pick_time_value
                                 }
+                  // function for the month on pickup point end.
                                let time_a=document.getElementById("a")
                                let time_b=document.getElementById("b")
                                let time_c=document.getElementById("c")
@@ -1332,6 +1373,9 @@ height: 82px;
                                time_f.setAttribute("id","unselect_time")
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
+
+                // function for all time for pcikup time start.....
+
                               function on_pickup_time_a() {
                                 time_a.setAttribute("id","time_select_id")
                                time_b.setAttribute("id","unselect_time")
@@ -1342,7 +1386,13 @@ height: 82px;
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="09:00 pm"
-                               document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                              let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                               }
                               function on_pickup_time_b() {
                                 time_a.setAttribute("id","unselect_time")
@@ -1354,7 +1404,14 @@ height: 82px;
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="12:00 pm"
-                               document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                              let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                    date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                                 }
                                 function on_pickup_time_c() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1366,7 +1423,13 @@ height: 82px;
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="03:00 pm"
-                               document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                              let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                                 }
                                 function on_pickup_time_d() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1378,7 +1441,13 @@ height: 82px;
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="06:00 pm"
-                               document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                              let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                                 }
                                 function on_pickup_time_e() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1390,7 +1459,13 @@ height: 82px;
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="09:00 am"
-                               document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                              let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                                 }
                                 function on_pickup_time_f() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1402,7 +1477,13 @@ height: 82px;
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="12:00am"
-                               document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                              let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                                 }
                                 function on_pickup_time_g() {
                                     time_a.setAttribute("id","unselect_time")
@@ -1414,8 +1495,15 @@ height: 82px;
                                time_g.setAttribute("id","time_select_id")
                                time_h.setAttribute("id","unselect_time")
                                pick_time_value="03:00 am"
-                               document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
-                                } function on_pickup_time_h() {
+                              let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                                } 
+                                function on_pickup_time_h() {
                                     time_a.setAttribute("id","unselect_time")
                                time_b.setAttribute("id","unselect_time")
                                time_c.setAttribute("id","unselect_time")
@@ -1425,13 +1513,20 @@ height: 82px;
                                time_g.setAttribute("id","unselect_time")
                                time_h.setAttribute("id","time_select_id")
                                pick_time_value="06:00 am"
-                               document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                              let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                                 }
-                         
+                // function for all time for pcikup time end.
                             function last_page() {
+                                if(page_1==1){
                                 if(pick_time_value!=="" && pick_month_value!==""){
-                                
-                                
+
+                                    
                                 pick_date.style.display="none"
 
                                 document.getElementById("dropoff_page").setAttribute("id","pick_date_div_2")
@@ -1441,7 +1536,7 @@ height: 82px;
                                 document.querySelector(".third_box").setAttribute("class","first_box")
                                 document.querySelector(".first_box").setAttribute("class","first_box_fillup_2")
                                 document.querySelector(".tr-box").setAttribute("class","fill_tr_box")
-                                // document.querySelector("first_box_fillup").setAttribute("class","first_box_fillup_2")
+                                 // document.querySelector("first_box_fillup").setAttribute("class","first_box_fillup_2")
                                   
                                    document.querySelector(".trwhite-box_3").setAttribute("id","trwhite-box_3")
                                    
@@ -1450,8 +1545,10 @@ height: 82px;
                                    document.querySelector(".second_circle_fillup").setAttribute("class","last_circle")
                                    document.querySelector(".second_fillup").setAttribute("class","last_circle_ffup")
                                    document.querySelector(".line_2").setAttribute("class","line_2")
-                                   
-                                }
+                                   page_1++
+                                }}
+                                console.log(page_1);
+                               
                             }
                             document.getElementById("aug_date_2").style.display="grid"
                                     document.getElementById("oct_date_2").style.display="none"
@@ -1463,6 +1560,7 @@ height: 82px;
                                     sep_second.setAttribute("id","unslect_month")
                                     oct_second.setAttribute("id","unslect_month")
                             var pick_month_value_2=""
+            // function for drop off month start.....
                             function Sep_month_2() {
 
                                 document.getElementById("aug_date_2").style.display="none"
@@ -1475,7 +1573,8 @@ height: 82px;
                                    
                                     
                                     pick_month_value_2=sep_second.value
-                                    document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+
+                                    document.querySelector(".third_box_location_3").innerHTML=pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                    
                                 }
                                 function aug_month_2() {
@@ -1489,7 +1588,7 @@ height: 82px;
                                     aug_second.setAttribute("id","shad_month_btn")
                                     aug_second.value="AUG"
                                     pick_month_value_2=aug_second.value
-                                    document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                                    document.querySelector(".third_box_location_3").innerHTML=pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                 } 
                                 function oct_month_2() {
                                     document.getElementById("aug_date_2").style.display="none"
@@ -1500,8 +1599,9 @@ height: 82px;
                                     oct_second.setAttribute("id","shad_month_btn")
                                     oct_second.value="OCT"
                                     pick_month_value_2=  oct_second.value
-                                    document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                                    document.querySelector(".third_box_location_3").innerHTML=pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                 }
+             // function for drop off month end.
                                 let time_a_2=document.getElementById("a_2")
                                let time_b_2=document.getElementById("b_2")
                                let time_c_2=document.getElementById("c_2")
@@ -1519,6 +1619,7 @@ height: 82px;
                                time_f_2.setAttribute("id","unselect_time")
                                time_g_2.setAttribute("id","unselect_time")
                                time_h_2.setAttribute("id","unselect_time")
+                // function for drop off time start....
                               function on_pickup_time_a_2() {
                                 time_a_2.setAttribute("id","time_select_id")
                                time_b_2.setAttribute("id","unselect_time")
@@ -1529,7 +1630,13 @@ height: 82px;
                                time_g_2.setAttribute("id","unselect_time")
                                time_h_2.setAttribute("id","unselect_time")
                                pick_time_value_2="09:00 pm"
-                               document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                               let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                              
                               }
                               function on_pickup_time_b_2() {
                                 time_a_2.setAttribute("id","unselect_time")
@@ -1541,7 +1648,12 @@ height: 82px;
                                time_g_2.setAttribute("id","unselect_time")
                                time_h_2.setAttribute("id","unselect_time")
                                pick_time_value_2="12:00 pm"
-                               document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                               let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                 }
                                 function on_pickup_time_c_2() {
                                     time_a_2.setAttribute("id","unselect_time")
@@ -1553,7 +1665,12 @@ height: 82px;
                                time_g_2.setAttribute("id","unselect_time")
                                time_h_2.setAttribute("id","unselect_time")
                                pick_time_value_2="03:00 pm"
-                               document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                               let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                 }
                                 function on_pickup_time_d_2() {
                                     time_a_2.setAttribute("id","unselect_time")
@@ -1565,7 +1682,12 @@ height: 82px;
                                time_g_2.setAttribute("id","unselect_time")
                                time_h_2.setAttribute("id","unselect_time")
                                pick_time_value_2="06:00 pm"
-                               document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                               let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                 }
                                 function on_pickup_time_e_2() {
                                     time_a_2.setAttribute("id","unselect_time")
@@ -1577,7 +1699,12 @@ height: 82px;
                                time_g_2.setAttribute("id","unselect_time")
                                time_h_2.setAttribute("id","unselect_time")
                                pick_time_value_2="09:00 am"
-                               document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                               let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                 }
                                 function on_pickup_time_f_2() {
                                     time_a_2.setAttribute("id","unselect_time")
@@ -1589,7 +1716,12 @@ height: 82px;
                                time_g_2.setAttribute("id","unselect_time")
                                time_h_2.setAttribute("id","unselect_time")
                                pick_time_value_2="12:00am"
-                               document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                               let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                 }
                                 function on_pickup_time_g_2() {
                                     time_a_2.setAttribute("id","unselect_time")
@@ -1601,8 +1733,14 @@ height: 82px;
                                time_g_2.setAttribute("id","time_select_id")
                                time_h_2.setAttribute("id","unselect_time")
                                pick_time_value_2="03:00 am"
-                               document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
-                                } function on_pickup_time_h_2() {
+                               let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                                } 
+                                function on_pickup_time_h_2() {
                                     time_a_2.setAttribute("id","unselect_time")
                                time_b_2.setAttribute("id","unselect_time")
                                time_c_2.setAttribute("id","unselect_time")
@@ -1612,8 +1750,14 @@ height: 82px;
                                time_g_2.setAttribute("id","unselect_time")
                                time_h_2.setAttribute("id","time_select_id")
                                pick_time_value_2="06:00 am"
-                               document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                               let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                 }
+                // function for drop off time end.
                                 console.log(page_1);
 
 
@@ -1621,6 +1765,7 @@ height: 82px;
                             var date_pciker_array_aug_2=["aug_2_28","aug_2_29","aug_2_30","aug_2_31"]
                                 var pic_date=""
                                 var pic_date_2=""
+                // function for date picker for drop off and pick up point start...
                                 function date_picker_aug(n) {
                                     for (let i = 0; i < date_pciker_array_aug.length; i++) {
                                         if(date_pciker_array_aug[i]!==n){
@@ -1633,7 +1778,14 @@ height: 82px;
                                     document.getElementById(n).style.border="2px solid #70ad4d"
                                     document.getElementById(n).style.boxShadow=" 0 4px 12px rgb(0 0 0 / 18%)"
                                     pic_date=n
-                                    document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+
+                                   let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                                    
                                 }
                                 function date_picker_aug_2(n) {
@@ -1647,8 +1799,13 @@ height: 82px;
                                     }
                                     document.getElementById(n).style.border="2px solid #70ad4d"
                                     document.getElementById(n).style.boxShadow=" 0 4px 12px rgb(0 0 0 / 18%)"
-                                    pic_date=n
-                                    document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                                    pic_date_2=n
+                                    let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                    
                                 }
                                 var date_pciker_array_sep=["sep_1","sep_2","sep_3","sep_4","sep_5","sep_6","sep_7","sep_8","sep_9","sep_10",
@@ -1671,7 +1828,13 @@ height: 82px;
                                     document.getElementById(n).style.boxShadow=" 0 4px 12px rgb(0 0 0 / 18%)"
                                     document.getElementById(n).style.color="goldenrod"
                                     pic_date=n
-                                    document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                                   let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                                 }
                                 function date_picker_sep_2(n) {
                                     for (let i = 0; i < date_pciker_array_sep_2.length; i++) {
@@ -1687,7 +1850,12 @@ height: 82px;
                                     document.getElementById(n).style.boxShadow=" 0 4px 12px rgb(0 0 0 / 18%)"
                                     document.getElementById(n).style.color="goldenrod"
                                     pic_date_2=n
-                                    document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                                    let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                 }
                                 var date_pciker_array_oct=["oct_1","oct_2","oct_3","oct_4","oct_5","oct_6","oct_7","oct_8","oct_9","oct_10",
                                 "oct_11","oct_12","oct_13","oct_14","oct_15","oct_16","oct_17","oct_18","oct_19","oct_20",
@@ -1710,7 +1878,13 @@ height: 82px;
                                     document.getElementById(n).style.boxShadow=" 0 4px 12px rgb(0 0 0 / 18%)"
                                     document.getElementById(n).style.color="goldenrod"
                                     pic_date=n
-                                    document.querySelector(".second_box_location").innerHTML=document.getElementById(pic_date).textContent+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
+                                   let qqq=document.getElementById(pic_date).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_picked=lll
+                                    day_final_picked=qqq
+                                    
+                                    document.querySelector(".second_box_location").innerHTML=qqq+"  "+lll+" , "+pick_month_value+" "+2021+"<br>"+pick_time_value
                                     
                                 }
                                 
@@ -1728,7 +1902,12 @@ height: 82px;
                                     document.getElementById(n).style.boxShadow=" 0 4px 12px rgb(0 0 0 / 18%)"
                                     document.getElementById(n).style.color="goldenrod"
                                     pic_date_2=n
-                                    document.querySelector(".third_box_location_3").innerHTML=document.getElementById(pic_date_2).textContent+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
+                                    let qqq=document.getElementById(pic_date_2).textContent
+                                    let lll=qqq.slice(3, 5)
+                                    qqq=qqq.substring(0, 3)
+                                     date_final_drop=lll
+                                    day_final_drop=qqq
+                               document.querySelector(".third_box_location_3").innerHTML=qqq+"  "+lll+" , "+pick_month_value_2+" "+2021+"<br>"+pick_time_value_2
                                     
                                 }
                                 document.querySelector(".second_box_location").style.color="#f8f8f8"
@@ -1736,7 +1915,15 @@ height: 82px;
                                 document.querySelector(".third_box_location_3").style.color="#f8f8f8"
                                 document.querySelector(".third_box_location_3").style.margin="0px 0px 2px 60px"
                                 
-
-                                
+           // function for date picker for drop off and pick up point end.
+                                      function end_fun() {
+                                        console.log(date_final_picked,day_final_picked);
+                                     console.log(day_final_drop,date_final_drop);
+                                     console.log(pick_time_value);
+                                     console.log(pick_time_value_2);
+                                     console.log(p_point);
+                                     console.log(d_ponit);
+                                     console.log(page_1);
+                                      }
             </script>
 </html> 
