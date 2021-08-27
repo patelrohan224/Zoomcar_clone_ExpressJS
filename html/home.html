@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
+    <title>Self Drive Car Rentals |Book ZoomCar & Feel Safe!zoomcar.com</title>
+    <style>
+        #nav {
+            background-color: rgb(41, 43, 61);
+            margin: 0% 0%;
+            padding: 2%;
+            height: 15%;
+            color: white;
+            width: 97%;
+        }
+        
+        #nav>div {
+            margin: 0% 1%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+        
+        a:link {
+            text-decoration: none;
+        }
+        
+        a:active {
+            color: green;
+        }
+        
+        a {
+            color: white;
+        }
+        
+        .float-r {
+            float: right;
+        }
+        
+        #main-cont {
+            background-image: url(maincont.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 97%;
+            height: 500px;
+            margin: 0% 0%;
+            padding: 2%;
+            border: 5px;
+            color: white;
+        }
+        
+        .intro {
+            text-align: center;
+            margin: 8%;
+            font-family: "arial";
+        }
+        
+        .intro>p {
+            margin-top: 1%;
+        }
+        
+        #city {
+            border: 0px;
+            background-color: transparent;
+            font-size: 20px;
+            color: rgb(41, 38, 38);
+        }
+        
+        #slide {
+            background-image: url(https://www.zoomcar.com/build/img/testimonial_bg.499d1dd2876b931e9cf0509e3d1884f5.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 500px;
+            margin: 0% 0%;
+            margin-left: -2%;
+            padding: 2%;
+            color: white;
+        }
+        
+        #info {
+            background-color: rgb(201, 198, 198);
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            padding: 2%;
+            height: 500px;
+            width: 97%;
+        }
+        
+        #work {
+            background-color: rgb(201, 198, 198);
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            padding: 2%;
+            height: 340px;
+            width: 97%;
+        }
+        
+        #work>.size {
+            height: 150px;
+            width: 200px;
+        }
+        
+        #work>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 150px;
+            margin: 1%;
+            margin-left: 3%;
+        }
+        
+        #users {
+            background-color: white;
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            margin-top: 4%;
+            margin-left: -2%;
+            padding: 2%;
+            height: 250px;
+            width: 100%;
+        }
+        
+        #footers {
+            background-color: rgb(41, 43, 61);
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            padding: 2%;
+            height: 100px;
+            margin-left: -2%;
+            margin-top: 1px;
+            width: 100%;
+            color: white;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        #info>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 35%;
+            margin: 1%;
+            margin-left: 12%;
+        }
+        
+        .size {
+            height: 100px;
+            width: 100px;
+        }
+        
+        button {
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        /* Dropdown button */
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            margin: -12px 0px 0px 0px;
+        }
+        
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            /* Important for vertical align on mobile phones */
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        /* Links inside the dropdown */
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        /* Add a grey background color to dropdown links on hover */
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        /* Show the dropdown menu on hover */
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        #flow {
+            overflow: hidden;
+            background-color: transparent;
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 105%;
+            display: flex;
+            height: 80px;
+            flex-direction: row;
+            background: white;
+            margin-left: -193px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+        }
+        
+        .serachbar_pro_img {
+            margin-left: -371px;
+            margin-top: 20px;
+            width: 107px;
+            height: 27px;
+        }
+        
+        #serac_bar_default {
+            background-color: white;
+            border: 1px solid rgb(44, 43, 43);
+            border-radius: 6px;
+            height: 50px;
+            width: 400px;
+            color: rgb(49, 45, 45);
+            margin-left: 30%;
+            font-size: 20px;
+            align-items: center;
+        }
+        
+        body {
+            font-family: "arial";
+        }
+    </style>
+</head>
+
+<body>
+    <!--NAV BAR Start-->
+    <div id="nav">
+
+        <img src="https://www.zoomcar.com/build/img/logo.f0c7a9744cfeb3fb5c90eafda61dd2ce.svg" style="height: 80%;width: 10%;">
+
+
+        <div class="float-r">
+
+            <a href="#">LOGIN</a>
+
+        </div>
+        <div class=" float-r ">
+            <a href="#">SIGNUP</a>
+        </div>
+        <div class=" float-r" style="height: -10px;margin-top: 0px;">
+            <div class="dropbtn float-r dropdown" style="font-size: 20px; background-color: transparent;margin-top: 0px;">MOBILE APP
+
+                <!-- <i class="fa fa-caret-down"></i>-->
+
+                <div class="dropdown-content">
+                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7QYicbC68K1SLmUUtoVci5YswGfPnCisjtA&usqp=CAU" style="height: 35px;width: 100%;"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJj8LuevwdQYk2S3w1B3EeDskXk7LvtcHOkzlQQnWO3NMDX6qwH7bCnGHqCR_t_aFmtw&usqp=CAU" style="height: 35px;width: 88%;"></a>
+                    <a href="https://itunes.apple.com/us/app/zoomcar-self-drive-cars/id889910218?mt=8&utm_source=home%20page&utm_medium=header%20links&utm_content=iOS&utm_campaign=installs">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAFKoUEGpPjP79LPi6r9bFfem3GIOQawWVV75SkXyBwevJd183Bvw_wI9duOdX5rTccU&usqp=CAU" style="height: 35px;width: 100%;">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="float-r " style="cursor: pointer;">
+            ZMS
+        </div>
+        <div class="float-r " style="cursor: pointer;">
+            AMIGO
+        </div>
+        <div class="float-r ">
+            <a href="#">SUBSCRIPTION</a>
+        </div>
+        <div class="float-r ">
+            <a href="offer.html">OFFERS</a>
+        </div>
+
+    </div>
+    <!--NAV BAR END-->
+    <div id="main-cont">
+        <!--Main Cont Start-->
+        <div class="intro">
+            <p style="font-size: 45px;">DRIVE IN SANITIZED ZOOMCAR</p>
+            <p style="font-size: 20px;">Self Drive Car Rental in <label for="city">    </label>
+
+                <select name="city" id="city">
+                  <option value="Chennai">Chennai</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Banglore">Banglore</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Delhi NCR">Delhi NCR</option>
+                  <option value="Vadodra">Vadodra</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Nashik">Nashik</option>
+                  <option value="Raipur">Raipur</option>
+                  <option value="Trivandrum">Trivandrum</option>
+                  <option value="Kochi">Kochi</option>
+                  <option value="Patna">Patna</option>
+                  <option value="Indore">Indore</option>
+                  <option value="Guwahati">Guwahati</option>
+                  <option value="calicut">calicut</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Nagpur">Nagpur</option>
+                  <option value="Luchnow">Luchnow</option>
+                  <option value="Bhopal">Bhopal</option>
+                  <option value="Mysore">Mysore</option>
+                  <option value="Siligurhi">Siligurhi</option>
+                  <option value="Vijayawada">Vijayawada</option>
+                  <option value="Trichy">Trichy</option>
+                  <option value="Vizag">Vizag</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Nashik">Nashik</option>
+                  <option value="Raipur">Raipur</option>
+                  <option value="Trivandrum">Trivandrum</option>
+                  <option value="Kochi">Kochi</option>
+                  <option value="Patna">Patna</option>
+                  <option value="Indore">Indore</option>
+                  <option value="Guwahati">Guwahati</option>
+                  <option value="calicut">calicut</option>
+                  <option value="Jaipur">Jaipur</option>
+                </select>
+            </p>
+
+            <div id="flow">
+                <a href="search.html">
+                    <div id="serac_bar_default">
+
+                        <p style="margin-left: 8%;" id="start">Start your wonderful journey</p>
+                        <p style="margin-left: 88%; margin-top: -37px; font-size: 25px;color: rgb(32, 30, 30);" id="arrow">></p>
+
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <!--Main Cont End-->
+    </div>
+    <div id="info">
+        <!--ZOOMCAR ADVANTAGE Start-->
+        <p style="font-size: 25px;color: rgb(61, 56, 56);">THE ZOOMCAR ADVANTAGE</p>
+        <p style="color: rgb(61, 56, 56);">We simplified car rentals, so you can focus on what's important to you. </p>
+        <div class="flex">
+            <div style="height: 50%;width: 20%;background-color: white;" class="size">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDSBCoIZTMxbwOcQkAfp_OWvPI9lgZXLOuEA&usqp=CAU" style="height: 50px;width: 50px;margin-top: 3%;">
+                <h3 style="color: rgb(116, 214, 116);">Fuel Cost Included</h3>
+                <p style="margin: 1%;text-align: center;">Don't worry about mileage! All fuel costs are included. If you refill fuel, we'll pay you back!</p>
+            </div>
+            <div style="height: 50%;width: 20%;            background-color: white;" class="size">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqLf3927ZCNKTNp1g-SiUlzRq4d8cMXdxOw&usqp=CAU" style="height: 50px;width: 50px; margin-top: 3%;">
+                <h3 style="color: rgb(116, 214, 116); ">No Hidden Charges</h3>
+                <p style="margin: 1%;text-align: center;">Our prices include taxes and insurance. What you see is what you really pay!</p>
+            </div>
+            <div style="height: 50%;width: 20%;background-color: white;" class="size">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4eaA6vNcTIdPiWfJ84AmoFfZfOUBusFGHYA&usqp=CAU" style="height: 50px;width: 50px; margin-top: 3%;">
+                <h3 style="color: rgb(116, 214, 116); ">Flexi Pricing Packages</h3>
+                <p style="margin: 1%;text-align: center;">One size never fits all! Choose a balance of time and kilometers that works best for you.</p>
+            </div>
+
+        </div>
+        <div class="flex ">
+            <div style="height: 50%;width: 20%;background-color: white; " class="size">
+                <img src="https://www.searchpng.com/wp-content/uploads/2020/06/Location-Green-Icon-PNG-715x715.jpg " style="height: 50px;width: 50px;margin-top: 3%; ">
+                <h3 style="color: rgb(116, 214, 116); ">Go Anywhere</h3>
+                <p style="margin: 1%;text-align: center;">Our cars have all-India permits. Just remember to pay state tolls and entry taxes.</p>
+            </div>
+            <div style="height: 50%;width: 20%;background-color: white; " class="size">
+                <img src="data:image/png;base64,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"
+                    style="height: 50px;width: 50px;margin-top: 3%; ">
+                <h3 style="color: rgb(116, 214, 116); ">24x7 Roadside Assistance
+                </h3>
+                <p style="margin: 1%;text-align: center;">We have round-the-clock, pan India partners. Help is never far away from you.</p>
+            </div>
+            <div style="height: 50%;width: 20%;background-color: white; " class="size">
+                <img src="https://c8.alamy.com/comp/MHPCXR/insurance-car-icon-green-vector-MHPCXR.jpg" style="height: 50px;width: 50px;margin-top: 3%; ">
+                <h3 style="color: rgb(116, 214, 116); ">Damage Insurance</h3>
+                <p style="margin: 1%;text-align: center;">All your bookings include damage insurance! Drive safe, but don’t worry!
+
+                </p>
+            </div>
+
+        </div>
+        <!--ZOOMCAR ADVANTAGE END-->
+    </div>
+
+    <div id="work">
+        <!--ZOOMCAR WORK DESCRIPTION Start-->
+        <p style="font-size: 25px;color: rgb(61, 56, 56);">HOW ZOOMCAR WORKS</p>
+        <p style="color: rgb(61, 56, 56);">Drive yourself to an adventure and back in 5 simple steps </p>
+        <div class="flex">
+            <div style="height: 50%;width: 50%;background-color: white;" class="size">
+                <img src="https://www.zoomcar.com/build/img/book.f804056bb2429eeabf95836bdf8865e1.svg" style="height: 50px;width: 50px;margin-top: 3%;">
+                <p style="font-size: 14px; ">BOOK</p>
+                <p style="margin: 1%;text-align: center;">Search for and book a car on our site!</p>
+            </div>
+            <div style="height: 50%;width:50%;            background-color: white;" class="size">
+                <img src="https://www.zoomcar.com/build/img/dl.99966c7703663379725f13d45663b372.svg" style="height: 50px;width: 50px; margin-top: 3%;">
+                <p style="font-size: 14px; ">UPLOAD LICENSE</p>
+                <p style="margin: 1%;text-align: center;">Upload your driver’s license, and pay a small security deposit.</p>
+            </div>
+            <div style="height: 50%;width: 50%;background-color: white;" class="size">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4eaA6vNcTIdPiWfJ84AmoFfZfOUBusFGHYA&usqp=CAU" style="height: 50px;width: 50px; margin-top: 3%;">
+                <p style="font-size: 14px; ">UNLOCK</p>
+                <p style="margin: 1%;text-align: center;">We SMS your car details 20 minutes before pickup. Unlock it via the Zoomcar app.</p>
+            </div>
+            <div style="height: 50%;width: 50%;            background-color: white;" class="size">
+                <img src="https://www.zoomcar.com/build/img/zoom.db4f328f3f4b83596bb3f2aefd04a864.svg" style="height: 50px;width: 50px; margin-top: 3%;">
+                <p style="font-size: 14px; ">ZOOM</p>
+                <p style="margin: 1%;text-align: center;">Fill the start checklist in the Zoomcar app. Grab the keys from the glove-box and drive.</p>
+            </div>
+            <div style="height: 50%;width: 50%;            background-color: white;" class="size">
+                <img src="https://www.zoomcar.com/build/img/return.c50e35f6ae4b2891e95c121082d968f0.svg" style="height: 50px;width: 50px; margin-top: 3%;">
+                <p style="font-size: 14px; ">RETURN</p>
+                <p style="margin: 1%;text-align: center;">Return the car to the same location and fill the end checklist to end your trip.</p>
+            </div>
+        </div>
+        <!--ZOOMCAR WORK DESCRIPTION END-->
+
+
+
+        <!--ZOOMCAR Details start-->
+        <div id="users">
+            <!--ZOOMCAR WORK DESCRIPTION Start-->
+
+            <div class="flex">
+                <div style="height:70%;width: 50%;background-color: white;" class="size">
+                    <img src="https://www.zoomcar.com/build/img/steering-wheel.121c23ffa50aa2da7a1e1f829048dd90.svg" style="height: 120px;width: 70px;margin-top: 3%;">
+                    <h3 style="font-size: 20px; ">3,000+</h3>
+                    <p style="margin: 1%;text-align: center;">Rides Daily</p>
+                </div>
+                <div style="height: 70%;width:50%;            background-color: white;" class="size">
+                    <img src="https://www.zoomcar.com/build/img/happy.c650409b5435456374eca19943b697f0.svg" style="height: 120px;width: 70px; margin-top: 3%;">
+                    <h3 style="font-size: 20px; ">48,00,000+</h3>
+                    <p style="margin: 1%;text-align: center;">Happy Users</p>
+                </div>
+                <div style="height: 70%;width: 50%;background-color: white;" class="size">
+                    <img src="https://www.zoomcar.com/build/img/kms.4dc69060e383492afc70514e93ca766c.svg" style="height: 120px;width: 70px; margin-top: 3%;">
+                    <h3 style="font-size: 20px; ">36,00,00,000+</h3>
+                    <p style="margin: 1%;text-align: center;">Km Travelled (enough for 470 round trips to the moon!)</p>
+                </div>
+                <div style="height: 70%;width: 50%;            background-color: white;" class="size">
+                    <img src="https://www.zoomcar.com/build/img/cars.fcc55acb001edaad3d14055517a1e1b4.svg" style="height: 120px;width:70px; margin-top: 3%;">
+                    <h3 style="font-size: 20px; ">6,500+</h3>
+                    <p style="margin: 1%;text-align: center;">Number of Zoomcars</p>
+                </div>
+                <div style="height: 70%;width: 50%;            background-color: white;" class="size">
+                    <img src="https://www.zoomcar.com/build/img/star_rating.5999c91406d9adad8f35df39ef055ec5.svg" style="height: 120px;width: 70px; margin-top: 3%;">
+                    <h3 style="font-size: 20px; ">Rating 4.7/5.0</h3>
+                    <p style="margin: 1%;text-align: center;">Rated by 3,00,000+ customers over 10,00,000+ bookings</p>
+                </div>
+            </div>
+
+
+        </div>
+        <!--ZOOMCAR WORK DESCRIPTION End-->
+        <!--Zoomcar sliding review start-->
+        <div id="slide">
+            <div style="align-items: center;margin-left: 600px;height:40px;width: 50px;margin-top: 25px;margin-bottom: 1px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMkO4p2w-6Y1wXgtIgdJGP6vIMhjlGLg9heQ&usqp=CAU" style="width: 100px;height: 100px;" id="qoutation"> </div>
+            <div style="display: flex;margin-top: 0px;">
+                <button style="font-size: 100px;width: 15%;margin: 10%;background-color: transparent;color: white;margin-top:1%;" onclick="prev()">
+            < </button>
+                <div style="font-size: 25px;width: 100%;margin: 10%;text-align: center;">
+                    <p id="p">Select your car. Pay. Drive. Return. The zoomcar booking process is as simple as this. Butter cannot be smoother than this.
+                    </p>
+                    <p style="color: green;" id="p_name">- Diptarko C
+                    </p>
+                </div>
+                <button style="font-size: 100px;width: 25%;margin: 10%;background-color: transparent;color: white;margin-top:1%;" onclick="next()">>
+                </button>
+            </div>
+        </div>
+        <!--Zoomcar sliding review End-->
+        <div id="footers">
+            <!--ZOOMCAR footers Start-->
+
+            <div class="flex">
+                <div style="height: 50%;width: 50%;" class="size">
+                    <img src="https://www.zoomcar.com/build/img/zc-works.2adcbe18edb84c7c1fdf0c8d6c894f8b.svg" style="height: 50px;width: 50px;margin-top: 3%;">
+
+                    <p style="margin: 1%;text-align: center;font-size: 20px;">How Zoomcars works?</p>
+                </div>
+                <div style="height: 50%;width:50%;           " class="size">
+                    <img src="https://www.zoomcar.com/build/img/policies.ceddb15a4eef16af85ba8666b1522741.svg" style="height: 50px;width: 50px; margin-top: 3%;">
+
+                    <p style="margin: 1%;text-align: center;font-size: 20px;">Policies</p>
+                </div>
+                <div style="height: 50%;width: 50%;" class="size">
+                    <img src="https://www.zoomcar.com/build/img/help-support.acf244c0683e201bd2d978f1ddc5d33d.svg" style="height: 50px;width: 50px; margin-top: 3%;">
+
+                    <p style="margin: 1%;text-align: center;font-size: 20px;">Help-Support</p>
+                </div>
+                <div style="height: 50%;width: 50%;" class="size">
+                    <img src="https://www.zoomcar.com/build/img/safety.127607759cd86e3d75f5698a641d5b83.svg" style="height: 50px;width: 50px; margin-top: 3%;">
+
+                    <p style="margin: 1%;text-align: center;font-size: 20px;">Zoom in Safety</p>
+                </div>
+
+            </div>
+
+
+        </div>
+        <!--ZOOMCAR footers End-->
+        <script>
+            var msg_arr = ["At the outset, let me thank you for introducing Zoomcar in Bangalore and for giving me an opportunity to use your service. Your customer support was impeccable and vehicle was well-maintained and top-notch.", "I just wanted to let you know that I really appreciate the efforts you are making personally, to ensure that the customer is satisfied... I really hope you carry forward this culture and make a model for other companies.", "You certainly do have a very regular customer here... Must say, Greg went that extra mile... You have a great journey together!", "It was great pleasure use zoom service, As all process being online it was really hassle free experience. good service please keep it going."];
+            var msg_name = ["- D. Samuel", "- Yekula Santosh", "- Sunil Rastogi", "- Rohit R"];
+            var i = 0;
+
+            if (i == (msg_arr.length - 1) || i <= 0) {
+                i = 0;
+            }
+
+            //function for changing review to next review
+            function next() {
+                let p_msg = document.getElementById("p");
+                let p_na = document.getElementById("p_name");
+                console.log(msg_arr[4]);
+                if (i >= 4) {
+                    i = 0;
+                }
+                console.log(p_msg, p_na, i);
+                p_msg.innerText = ""
+                p_msg.innerText = msg_arr[i++];
+                i--;
+
+
+
+                p_na.innerText = ""
+                p_na.innerText = msg_name[i++];
+
+
+
+            }
+            //function for changing review to preview review
+            function prev() {
+                if (i < 0) {
+                    i = 0;
+                }
+                let p_msg = document.getElementById("p");
+                let p_na = document.getElementById("p_name");
+
+
+                console.log(msg_arr, p_na);
+                p_msg.innerText = ""
+                p_msg.innerText = msg_arr[i--];
+
+                i++;
+
+                p_na.innerText = ""
+                p_na.innerText = msg_name[i--];
+
+                console.log(p_msg, p_na, i);
+
+            }
+            //function to call myfunction on scroll
+            window.onscroll = function() {
+                myFunction()
+            };
+
+            var navbar = document.getElementById("flow");
+            var img_scroll = document.createElement("img")
+            var div_seracxh = document.getElementById("serac_bar_default")
+            img_scroll.src = "https://www.zoomcar.com/build/img/color-logo.f8af0af350b2f675a31a558fad8391df.svg"
+            img_scroll.setAttribute("class", "serachbar_pro_img")
+            img_scroll.setAttribute("width", "100%")
+            var sticky = navbar.offsetTop;
+            //function to show search bar on scrolling 
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                    navbar.append(img_scroll)
+                    img_scroll.style.visibility = "visible"
+                    div_seracxh.style.margin = "3% 0% 0% 179%"
+                    navbar.style.backgroundColor = "white"
+
+
+                } else {
+                    navbar.style.backgroundColor = "transparent";
+                    navbar.classList.remove("sticky");
+                    img_scroll.style.visibility = "hidden";
+                    div_seracxh.style.margin = "0% 0% 0% 30%";
+                }
+            }
+        </script>
+</body>
+
+</html>

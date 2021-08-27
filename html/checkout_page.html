@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self Drive Car Rentals |Book ZoomCar & Feel Safe!zoomcar.com</title>
     <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <style>
         body * {
             font-family: "Open Sans",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif!important;
@@ -171,6 +171,7 @@
         }
         .f_l {
             float: left;
+    font-weight: 600;
         }
         .f_r {
             float:right;
@@ -243,7 +244,7 @@
             color: white;
         }
          p {
-            color: white;
+            /* color: white; */
         }
         .flex {
             display: flex;
@@ -265,6 +266,118 @@
     height: 100%;
     width: 100%;
 }
+
+
+#data_flex{
+            display: flex;
+
+        } 
+        #data_flex>div{
+            flex-direction: row;
+        }
+        #date_start{
+            width: 50%;
+            height: 80px;
+            background-color: white;
+            border: 1px solid #d8d8d8;
+        }
+        .dat_head_h5{
+    margin: 8px 0px 0px 22px !important;
+}
+.p_info{
+            display: flex;
+        }
+        .p_info>div{
+            flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+        }
+        .left_date ,.right_date{
+        margin: 0px 0px 0px 22px;
+    font-size: 34px;
+    text-align: center;
+}
+h6.p_day,.d_day {
+    margin: 6px 0px 0px 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+p.s_time_date,.e_time_date {
+    margin: 0px 0px 0px 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+#date_end{
+            width: 50%;
+            height: 80px;
+            background-color: white;
+            border: 1px solid #d8d8d8;
+        } 
+        .dat_head_h5{
+    margin: 8px 0px 0px 22px !important;
+}
+p.s_time_date,.e_time_date {
+    margin: 0px 0px 0px 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+        #d_p_point{
+            display: flex;
+            flex-direction: row;
+        }
+        #star_point{
+            width: 50%;
+    height: 80px;
+    border: 1px solid #d8d8d8;
+    background-color: white;
+        }
+        #drop_point{
+            width: 50%;
+    height: 80px;
+    background-color: white;
+    border: 1px solid #d8d8d8;
+        }
+        .pick_city{
+            font-size: 18px;
+    font-weight: 700;
+    opacity: .87;
+    text-transform: capitalize;
+    margin: 7px 0px 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323a44;
+        }
+        .drop_city{
+            font-size: 18px;
+    font-weight: 700;
+    opacity: .87;
+    text-transform: capitalize;
+    margin: 7px 0px 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323a44;
+        }
+        .p_point_car,.d_point_car{
+            margin: 0px 0px 0px 10px;
+    font-size: 11px;
+    color: #000;
+    opacity: .54;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: 16px;
+    max-height: 16px;
+}
+h5{
+            font-family: Open Sans;
+            height: 15px;
+            width: 112px;
+    align-items: center;
+    opacity: .54;
+    font-size: 11px;
+    color: #000;
+    margin: 9px 0px 0px 10px;
+        }
     </style>
 </head>
 <body>
@@ -342,17 +455,41 @@
             <div class="Car_details"></div>
             <div class="Car_details">(5 Seater)</div>
             <div class="border"></div>
-            <div class="start_end_cont">
-                <div class="start">
-                    <div> 11:30 AM </div>
-                    <div class="start_time"> 02 SEP 21, THU</div>
+            <div id="d_p_point">
+                <div id="star_point">
+                    <h5>STARTING POINT <span>></span></h5>
+                    <h4 class="pick_city"></h4>
+                    <p class="p_point_car"></p>
                 </div>
-                <div class="to"></div>
-                <div class="end">
-                    <div> 05:30 PM </div>
-                    <div class="end_time"> 04 SEP 21, SAT</div>
+                <div id="drop_point">
+                    <h5>DESTINATION<span>></span></h5>
+                    <h4 class="drop_city"></h4>
+                    <p class="d_point_car"></p>
+                </div>
+           </div>
+            <div id="data_flex">
+                <div id="date_start">
+                    <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
+                    <div class="p_info">
+                        <div class="left_date"></div>
+                        <div class="rigth_m_t">
+                            <h6 class="p_day"></h6>
+                            <p class="s_time_date"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="date_end">
+                    <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
+                    <div class="p_info">
+                        <div class="right_date"></div>
+                        <div class="rigth_m_t">
+                            <h6 class="d_day"></h6>
+                            <p class="e_time_date"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
         </div>
         <div class="clear"></div>
 
@@ -393,19 +530,34 @@
 </body>
 </html>
 <script>
+ let db_arr_2=localStorage.getItem("pick_drop_points")
+        var new_db_location=JSON.parse(db_arr_2)
+        document.querySelector(".pick_city").innerText=new_db_location[0].p_city
+        document.querySelector(".drop_city").innerText=new_db_location[0].d_city
+        document.querySelector(".d_point_car").innerText=new_db_location[0].d_location
+        document.querySelector(".p_point_car").innerText=new_db_location[0].p_location
+document.querySelector(".left_date").innerText=new_db_location[0].p_date
+        document.querySelector(".right_date").innerText=new_db_location[0].d_date
+        document.querySelector(".p_day").innerText=new_db_location[0].p_month
+        document.querySelector(".d_day").innerText=new_db_location[0].d_month
+        document.querySelector(".s_time_date").innerText=new_db_location[0].p_time
+        document.querySelector(".e_time_date").innerText=new_db_location[0].d_time
     let db_arr=localStorage.getItem("car_cart")
     let db_cart=JSON.parse(db_arr)
     console.log(db_cart);
-    // var total_rs = document.getElementById("total").innerHTML.split(" ");
-    // var total_join = total_rs[1].split(",").join("")
-    var total = Number(db_cart[1])
+    
+     var total_join = db_cart[1].split(",").join("")
+   
+    let total=Number(total_join)
     total=total+2499
-    document.getElementById("total").in = `₹ ${total}`
+    
+    console.log(total);
+    document.getElementById("total").innerText= `₹ ${total}`
     function zoomnew() {
         var final = total - total*0.3 
         total = final
         total_pay=total
-        document.getElementById("total").in = `₹ ${total}`
+        document.getElementById("total").innerText = `₹ ${total}`
 
         localStorage.setItem("total_payable", total_pay)
     
