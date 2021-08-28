@@ -3,14 +3,241 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
     <title>Self Drive Car Rentals |Book ZoomCar & Feel Safe!zoomcar.com</title>
     <style>
+          body * {
+            font-family: "Open Sans",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif!important;
+        }
+
+      
+        .cont {
+            width: 100%;
+            height: 100%;;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+        } 
+        .cont1 {
+            width: 100%;
+            height: 100%;;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+        } 
+        .cont2 {
+            width: 100%;
+            height: 100%;;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7); 
+            display: none; 
+        } 
+    
+        #main {
+            max-width: 60%;
+            width: 100%;
+            padding: 20px;
+            min-height: 500px;
+            background-color:rgb(243,243,243);
+            border-radius: 8px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            color: #33414f;
+            position: relative;
+            overflow: hidden;
+            /* display: none; */
+            border:none
+            
+        }
+        .left_cont {
+            box-shadow: 0 0 1px 2px rgb(222,222,222);
+            width: 45%;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+            background: #fff;
+        }
+        .promo {
+            height: 500px;
+            padding: 35px;
+            text-align: center;
+            font-size: 16px;
+        
+            display: flex;
+        
+            flex-direction: column;
+        
+            align-items: center;
+        
+            justify-content: center;
+        }
+    
+        .close {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 30px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+        .close1 {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 30px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+        .right_cont {
+            
+            width: 55%;
+            padding: 20px;
+            text-align: center;
+
+        }
+        .right_cont p {
+            font-weight: 600;
+        }
+        .facebook {
+            width: 65%;
+            height: 30px;
+            margin: auto;
+            padding: 10px;
+            background-color: #4267B2;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 1px 2px #e0dfdf;
+            text-align: center center;
+        }
+        .google {
+            width: 65%;
+            height: 30px;
+            margin: auto;
+            padding: 10px;
+            background-color: #f4425a;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 1px 2px #e0dfdf;
+        }
+        input {
+            width: 67%;
+            height: 30px;
+            border-radius: 3px;
+            margin-top: 50px;
+            border: 1px solid black; 
+        }
+
+        #next {
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .left_cont img{
+            margin-top: 30%;
+                width: 40%;
+        }
+        .dot{
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            margin-top: 25%;
+            margin-bottom: 25%;
+            display: inline-block;
+            background-color: rgb(182,213,164);
+        }
+        #blue{
+            background-color: rgb(51,65,79);
+        }
+        #next{
+            margin-bottom: 8%;
+            border: none;
+        }
+        /* #next{
+            width: 100%;
+        } */
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .promo1 h1{
+            font-size: 25px;
+        }
+        .promo2 h1{
+            font-size: 25px;
+        }
+        .promo3 h1{
+            font-size: 25px;
+        }
+
+        #submit {   
+        background-color: #3619db;
+        color: white;
+        cursor: default;
+        height: 40px;
+        padding: 10px;
+        }
+        
+        #main1{    
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #fff;
+        max-width: 60%;
+        width: 100%;
+        min-height: 500px;
+        margin: 0 auto;
+        position: relative;
+        display: grid;
+        flex-direction: row;
+        color: #33414f;
+        text-align: center;
+        overflow: hidden;
+           
+        }
+        .logo_cont {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        }
+        .otp_image_cont {
+        width: 100px;
+        height: 100px;
+        }
+      
+        .img_cont {
+            margin-top: 20px;
+        }
+        form{
+            margin-top: 50px;
+        }
+        #login_submit_button{
+            width: 150px;
+            height: 30px;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border-radius: 4px;
+            margin: auto;
+        }
         #nav {
-            background-color: rgb(41, 43, 61);
+            background-color: rgb(51,65,78);
             margin: 0% 0%;
             padding: 2%;
             height: 15%;
@@ -55,7 +282,7 @@
         
         .intro {
             text-align: center;
-            margin: 8%;
+            margin: 10%;
             font-family: "arial";
         }
         
@@ -107,6 +334,33 @@
             width: 200px;
         }
         
+        #work>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 150px;
+            margin: 1%;
+            margin-left: 3%;
+        }
+        .flex_2_1 {
+            display: flex;
+            height: 119%;
+    width: 81%;
+    margin-bottom: -11%;
+    margin-left: 150px;
+}
+        #users {
+            background-color: white;
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            margin-top: 4%;
+            margin-left: -2%;
+            padding: 2%;
+            height: 250px;
+            width: 100%;
+        }
+        
+       
         #work>.flex_1_1>div {
             width: 20%;
             align-items: center;
@@ -121,61 +375,49 @@
             margin: 1%;
             margin-left: 3%;
         }
-        #users {
-            background-color: white;
-            align-items: center;
-            text-align: center;
-            margin: 0% 0%;
-            margin-top: 4%;
-            margin-left: -2%;
-            padding: 2%;
-            height: 250px;
-            width: 100%;
-        }
-        
-        #footers {
-            background-color: rgb(41, 43, 61);
-            align-items: center;
-            text-align: center;
-            margin: 0% 0%;
-            padding: 2%;
-            height: 100px;
-            margin-left: -2%;
-            margin-top: 1px;
-            width: 100%;
-            color: white;
-        }
-        
         .flex_1_1 {
             display: flex;
             height: 69%;
-    margin-bottom: -11.5%;
+            margin-bottom: -14%;
         }
         .flex_1_2 {
             display: flex;
-            height: 69%;
-    margin-bottom: -11.5%;
-        }
+    height: 68%;
+    margin-bottom: -14.5%;
+}
+        
         #info>.flex>div {
           
+          align-items: center;
+        
+          margin: 1%;
+          margin-left: -0.5%;
+      }
+      
+      .flex_2_2{
+          display: flex;
+          width: 104%;
+          height: 443px;
+              margin-bottom: -7.9%;
+      }
+        #info>.flex>div {
+            width: 20%;
             align-items: center;
-          
+            height: 35%;
             margin: 1%;
-            margin-left: -0.5%;
+            margin-left: 12%;
         }
-        .flex_2_1 {
+        .flex{
             display: flex;
-    height: 105%;
-    width: 81%;
-    margin-bottom: -11%;
-    margin-left: 150px;
-}
-        .flex_2_2{
-            display: flex;
+    height: 10px;
+    width: 1019px;
+    margin-left: 230px;
         }
-        .flex_footer{
-            display: flex;
+        .size {
+            height: 100px;
+            width: 100px;
         }
+        
         button {
             outline: none;
             border: none;
@@ -192,10 +434,10 @@
         /* Dropdown button */
         
         .dropdown {
-            float: left;
-            overflow: hidden;
-            margin: -11px 0px 0px 0px !important;
-        }
+    float: left;
+    overflow: hidden;
+    margin: -11px 0px 0px 0px !important;
+}
         
         .dropdown .dropbtn {
             font-size: 16px;
@@ -261,7 +503,8 @@
     height: 27px;
 }
         
-        #serac_bar_default {
+        
+#serac_bar_default {
             background-color: white;
     border: 1px solid rgb(44, 43, 43);
     border-radius: 6px;
@@ -275,7 +518,9 @@
         
         body {
             font-family: "arial";
-            width: 99%;
+    width: 95.6%;
+    padding: 0px 0px 0px 0px;
+    background: rgb(249,249,249);
     margin: 0px 0px 0px 0px;
         }
         #start{
@@ -289,6 +534,690 @@
     font-weight: 100;
     font-family: sans-serif;
 }
+        /* Extra small devices (phones, 600px and down) */
+        
+        @media only screen and (max-width: 600px) {
+            #nav {
+                background-color: rgb(41, 43, 61);
+                margin: 0% 0%;
+                padding: 2%;
+                height: 15%;
+                color: white;
+                width: 580px;
+            }
+            #nav>div {
+                margin: 0% 0.5%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 10px;
+            }
+            #main-cont {
+                background-image: url(maincont.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 580px;
+                height: 500px;
+                margin: 0% 0%;
+                padding: 2%;
+                border: 5px;
+                color: white;
+            }
+            .intro {
+                text-align: center;
+                margin: 10%;
+                font-family: "arial";
+            }
+            .intro>p {
+                margin-top: 1%;
+            }
+            #city {
+                border: 0px;
+                background-color: transparent;
+                font-size: 10px;
+                color: rgb(41, 38, 38);
+            }
+            #slide {
+                width: 580px;
+                height: 600px;
+            }
+            #p,
+            #p_name {
+                font-size: 15px;
+            }
+            #info {
+                height: 700px;
+                width: 580px;
+            }
+            #work {
+                height: 400px;
+                width: 580px;
+            }
+            #work>.size {
+                height: 200px;
+                width: 200px;
+            }
+            #work>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 150px;
+                margin: 1%;
+                margin-left: 1.5%;
+            }
+            #users {
+                background-color: white;
+                align-items: center;
+                text-align: center;
+                margin: 0% 0%;
+                margin-top: 4%;
+                margin-left: -2%;
+                padding: 2%;
+                height: 300px;
+                width: 580px;
+            }
+            #footers {
+                background-color: rgb(41, 43, 61);
+                align-items: center;
+                text-align: center;
+                margin: 0% 0%;
+                padding: 2%;
+                height: 150px;
+                margin-left: -2%;
+                margin-top: 1px;
+                width: 580px;
+                color: white;
+            }
+            #info>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 40%;
+                margin: 1%;
+                margin-left: 8%;
+            }
+            .size {
+                height: 100px;
+                width: 100px;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 580px;
+                display: flex;
+                height: 80px;
+                flex-direction: row;
+                background: white;
+                margin-left: -193px;
+                box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+            }
+            .serachbar_pro_img {
+    margin-left: -472px;
+    margin-top: 20px;
+    width: 107px;
+    height: 27px;
+}
+            #serac_bar_default {
+                background-color: white;
+                border: 1px solid rgb(44, 43, 43);
+                border-radius: 6px;
+                height: 50px;
+                width: 200px;
+                color: rgb(49, 45, 45);
+                margin-left: 30%;
+                font-size: 12px;
+                align-items: center;
+            }
+            #flow {
+                width: 130%;
+            }
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        
+        @media only screen and (min-width: 600px) {
+            #nav {
+                background-color: rgb(41, 43, 61);
+                margin: 0% 0%;
+                padding: 2%;
+                height: 15%;
+                color: white;
+                width: 100%;
+            }
+            #nav>div {
+                margin: 0% 0.5%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 10px;
+            }
+            #main-cont {
+                background-image: url(maincont.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 100%;
+                height: 500px;
+                margin: 0% 0%;
+                padding: 2%;
+                border: 5px;
+                color: white;
+            }
+            .intro {
+                text-align: center;
+                margin: 10%;
+                font-family: "arial";
+            }
+            .intro>p {
+                margin-top: 1%;
+            }
+            #city {
+                border: 0px;
+                background-color: transparent;
+                font-size: 12px;
+                color: rgb(41, 38, 38);
+            }
+            #slide {
+                width: 100%;
+                height: 600px;
+            }
+            #p,
+            #p_name {
+                font-size: 18px;
+            }
+            #info {
+                height: 600px;
+                width: 100%;
+            }
+            #work {
+                height: 400px;
+                width: 100%;
+            }
+            #work>.size {
+                height: 200px;
+                width: 200px;
+            }
+            #work>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 150px;
+                margin: 1%;
+                margin-left: 1.5%;
+            }
+            #users {
+                background-color: white;
+                align-items: center;
+                text-align: center;
+                margin: 0% 0%;
+                margin-top: 4%;
+                margin-left: -2%;
+                padding: 2%;
+                height: 300px;
+                width: 100%;
+            }
+            #footers {
+                background-color: rgb(41, 43, 61);
+                align-items: center;
+                text-align: center;
+                margin: 0% 0%;
+                padding: 2%;
+                height: 150px;
+                margin-left: -2%;
+                margin-top: 1px;
+                width: 100%;
+                color: white;
+            }
+            #info>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 40%;
+                margin: 1%;
+                margin-left: 8%;
+            }
+            .size {
+                height: 100px;
+                width: 100px;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                height: 80px;
+                flex-direction: row;
+                background: white;
+                margin-left: -193px;
+                box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+            }
+            .serachbar_pro_img {
+    margin-left: -472px;
+    margin-top: 20px;
+    width: 107px;
+    height: 27px;
+}
+            #serac_bar_default {
+                background-color: white;
+                border: 1px solid rgb(44, 43, 43);
+                border-radius: 6px;
+                height: 50px;
+                width: 250px;
+                color: rgb(49, 45, 45);
+                margin-left: 30%;
+                font-size: 15px;
+                align-items: center;
+            }
+            #flow {
+                width: 110%;
+            }
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        
+        @media only screen and (min-width: 768px) {
+            #nav {
+                background-color: rgb(41, 43, 61);
+                margin: 0% 0%;
+                padding: 2%;
+                height: 15%;
+                color: white;
+                width: 100%;
+            }
+            #nav>div {
+                margin: 0% 0.5%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 10px;
+            }
+            #main-cont {
+                background-image: url(maincont.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 100%;
+                height: 500px;
+                margin: 0% 0%;
+                padding: 2%;
+                border: 5px;
+                color: white;
+            }
+            .intro {
+                text-align: center;
+                margin: 10%;
+                font-family: "arial";
+            }
+            .intro>p {
+                margin-top: 1%;
+            }
+            #city {
+                border: 0px;
+                background-color: transparent;
+                font-size: 12px;
+                color: rgb(41, 38, 38);
+            }
+            #slide {
+                width: 100%;
+                height: 600px;
+            }
+            #p,
+            #p_name {
+                font-size: 18px;
+            }
+            #info {
+                height: 600px;
+                width: 100%;
+            }
+            #work {
+                height: 400px;
+                width: 100%;
+            }
+            #work>.size {
+                height: 200px;
+                width: 200px;
+            }
+            #work>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 150px;
+                margin: 1%;
+                margin-left: 1.5%;
+            }
+            #users {
+                background-color: white;
+                align-items: center;
+                text-align: center;
+                margin: 0% 0%;
+                margin-top: 4%;
+                margin-left: -2%;
+                padding: 2%;
+                height: 300px;
+                width: 100%;
+            }
+            #footers {
+                background-color: rgb(41, 43, 61);
+                align-items: center;
+                text-align: center;
+                margin: 0% 0%;
+                padding: 2%;
+                height: 150px;
+                margin-left: -2%;
+                margin-top: 1px;
+                width: 100%;
+                color: white;
+            }
+            #info>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 40%;
+                margin: 1%;
+                margin-left: 8%;
+            }
+            .size {
+                height: 100px;
+                width: 100px;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                height: 80px;
+                flex-direction: row;
+                background: white;
+                margin-left: -193px;
+                box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+            }
+            .serachbar_pro_img {
+    margin-left: -472px;
+    margin-top: 20px;
+    width: 107px;
+    height: 27px;
+}
+            #serac_bar_default {
+                background-color: white;
+                border: 1px solid rgb(44, 43, 43);
+                border-radius: 6px;
+                height: 50px;
+                width: 250px;
+                color: rgb(49, 45, 45);
+                margin-left: 30%;
+                font-size: 15px;
+                align-items: center;
+            }
+            #flow {
+                width: 110%;
+            }
+        }
+        /* Large devices (laptops/desktops, 992px and up) */
+        
+        @media only screen and (min-width: 992px) {
+            #nav {
+                background-color: rgb(41, 43, 61);
+                margin: 0% 0%;
+                padding: 2%;
+                height: 15%;
+                color: white;
+                width: 100%;
+            }
+            #nav>div {
+                margin: 0% 0.5%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 15px;
+            }
+            #main-cont {
+                background-image: url(maincont.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 100%;
+                height: 500px;
+                margin: 0% 0%;
+                padding: 2%;
+                border: 5px;
+                color: white;
+            }
+            .intro {
+                text-align: center;
+                margin: 10%;
+                font-family: "arial";
+            }
+            .intro>p {
+                margin-top: 1%;
+            }
+            #city {
+                border: 0px;
+                background-color: transparent;
+                font-size: 12px;
+                color: rgb(41, 38, 38);
+            }
+            #slide {
+                width: 100%;
+                height: 600px;
+            }
+            #p,
+            #p_name {
+                font-size: 18px;
+            }
+            #info {
+                height: 600px;
+                width: 100%;
+            }
+            #work {
+                height: 400px;
+                width: 100%;
+            }
+            #work>.size {
+                height: 200px;
+                width: 200px;
+            }
+            #work>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 150px;
+                margin: 1%;
+                margin-left: 1.5%;
+            }
+            #users {
+                background-color: white;
+                align-items: center;
+                text-align: center;
+                margin: 0% 0%;
+                margin-top: 4%;
+                margin-left: -2%;
+                padding: 2%;
+                height: 300px;
+                width: 100%;
+            }
+            #footers {
+                background-color: rgb(41, 43, 61);
+                align-items: center;
+                text-align: center;
+                margin: 0% 0%;
+                padding: 2%;
+                height: 150px;
+                margin-left: -2%;
+                margin-top: 1px;
+                width: 100%;
+                color: white;
+            }
+            #info>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 40%;
+                margin: 1%;
+                margin-left: 8%;
+            }
+            .size {
+                height: 100px;
+                width: 100px;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                height: 80px;
+                flex-direction: row;
+                background: white;
+                margin-left: -193px;
+                box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+            }
+            .serachbar_pro_img {
+    margin-left: -472px;
+    margin-top: 20px;
+    width: 107px;
+    height: 27px;
+}
+            #serac_bar_default {
+                background-color: white;
+                border: 1px solid rgb(44, 43, 43);
+                border-radius: 6px;
+                height: 50px;
+                width: 250px;
+                color: rgb(49, 45, 45);
+                margin-left: 30%;
+                font-size: 18px;
+                align-items: center;
+            }
+            #flow {
+                width: 110%;
+            }
+        }
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        
+        @media only screen and (min-width: 1000px) {
+            #nav {
+                background-color: rgb(51,65,78);
+                margin: 0% 0%;
+                padding: 1% 2% 1% 2%;
+                height: 15%;
+                color: white;
+                width: 100.6%;
+            }
+            #nav>div {
+                margin: 0% 0.5%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 20px;
+            }
+            #main-cont {
+                background-image: url(maincont.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 100.6%;
+                height: 500px;
+                margin: 0% 0%;
+                padding: 2%;
+                border: 5px;
+                color: white;
+            }
+            .intro {
+                text-align: center;
+                margin: 10%;
+                font-family: "arial";
+            }
+            .intro>p {
+                margin-top: 1%;
+            }
+            #city {
+                border: 0px;
+                background-color: transparent;
+                font-size: 15px;
+                color: rgb(41, 38, 38);
+            }
+          
+                #slide {
+    width: 100%;
+    padding-right: 67px;
+    height: 540px;
+
+            }
+            #p,
+            #p_name {
+                font-size: 20px;
+            }
+          
+                #info {
+    height: 600px;
+    width: 100.6%;
+    background: rgb(238,238,238);
+
+            }
+            #work {
+                height: 400px;
+                width: 100%;
+            }
+            #work>.size {
+                height: 200px;
+                width: 200px;
+            }
+            #work>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 150px;
+                margin: 1%;
+                margin-left: 1.5%;
+            }
+            #users {
+                background-color: rgb(249,249,249);
+    align-items: center;
+    text-align: center;
+    margin: 0% 0%;
+    margin-top: 23%;
+    margin-left: -2%;
+    padding: 2%;
+    height: 300px;
+    width: 100%;
+            }
+            #footers {
+                background-color: rgb(67,79,91);
+    align-items: center;
+    text-align: center;
+    margin: 0% 0%;
+    padding: 2%;
+    height: 113px;
+    /* margin-left: -2%; */
+    margin-top: 0px;
+    width: 100%;
+    margin-left: -2px;
+    /* margin-right: 130px; */
+    padding-right: 40px;
+    color: white;
+            }
+            #info>.flex>div {
+                width: 20%;
+                align-items: center;
+                height: 40%;
+                margin: 1%;
+                margin-left: 8%;
+            }
+            .size {
+                height: 100px;
+                width: 100px;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                height: 80px;
+                flex-direction: row;
+                background: white;
+                margin-left: -193px;
+                box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+            }
+            .serachbar_pro_img {
+    margin-left: -472px;
+    margin-top: 20px;
+    width: 107px;
+    height: 27px;
+}
+            #serac_bar_default {
+                background-color: #fff;
+                box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+    border-radius: 6px;
+    height: 58px;
+    width: 538px;
+    color: rgb(49, 45, 45);
+    margin-left: 28%;
+    font-size: 20px;
+    align-items: center;
+        }
+            #flow {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -301,14 +1230,14 @@
 
         <div class="float-r">
 
-            <a href="#">LOGIN</a>
+            <a onclick="signup_roh()">LOGIN</a>
 
         </div>
         <div class=" float-r ">
-            <a href="#">SIGNUP</a>
+            <a onclick="signup_roh()">SIGNUP</a>
         </div>
         <div class=" float-r" style="height: -10px;margin-top: 0px;">
-            <div class="dropbtn float-r dropdown" style="font-size: 20px; background-color: transparent;margin-top: 0px;">MOBILE APP
+            <div class="dropbtn float-r dropdown" style="font-size: 20px; background-color: transparent;margin-top: 0px;" id="app">MOBILE APP
 
                 <!-- <i class="fa fa-caret-down"></i>-->
 
@@ -339,7 +1268,7 @@
     <div id="main-cont">
         <!--Main Cont Start-->
         <div class="intro">
-            <p style="font-size: 45px;">DRIVE IN SANITIZED ZOOMCAR</p>
+            <p style="font-size: 45px;" id="bold">DRIVE IN SANITIZED ZOOMCAR</p>
             <p style="font-size: 20px;">Self Drive Car Rental in <label for="city">    </label>
 
                 <select name="city" id="city">
@@ -440,89 +1369,115 @@
             </div>
 
         </div>
+        <p style="font-size: 25px;
+        color: rgb(61, 56, 56);
+        margin: 52px 0px 0px -29.6px !important;
+        padding: 32px 0px 0px 0px;
+        width: 104%;
+        background-color: rgb(249,249,249);">HOW ZOOMCAR WORKS</p>
+        <p style="color: rgb(61, 56, 56);padding-bottom: 23px;">Drive yourself to an adventure and back in 5 simple steps </p>
+        <div class="flex_2_1">
+            <div style="height: 32%;width: 50%;background-color: white; margin-right: 18px; border-radius: 10px;
+            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
+                <img src="https://www.zoomcar.com/build/img/book.f804056bb2429eeabf95836bdf8865e1.svg" style="height: 60px;width: 60px;margin-top: 10%;">
+                <p style="    font-size: 14px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #323a44;">BOOK</p>
+                <p style="margin: 4%;text-align: center;">Search for and book a car on our site!</p>
+            </div>
+            <div style="height: 32%;width:50%;            background-color: white; margin-right: 18px;border-radius: 10px;
+            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
+                <img src="https://www.zoomcar.com/build/img/dl.99966c7703663379725f13d45663b372.svg" style="height: 60px;width: 60px; margin-top: 10%;">
+                <p style="    font-size: 14px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #323a44;">UPLOAD LICENSE</p>
+                <p style="margin: 4%;text-align: center;">Upload your driver’s license, and pay a small security deposit.</p>
+            </div>
+            <div style="height: 32%;width: 50%;background-color: white;margin-right: 18px;border-radius: 10px;
+            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4eaA6vNcTIdPiWfJ84AmoFfZfOUBusFGHYA&usqp=CAU" style="height: 60px;width: 60px; margin-top: 10%;">
+                <p style="    font-size: 14px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #323a44;">UNLOCK</p>
+                <p style="margin: 4%;text-align: center;">We SMS your car details 20 minutes before pickup. Unlock it via the Zoomcar app.</p>
+            </div>
+            <div style="height: 32%;width: 50%;            background-color: white;margin-right: 18px;border-radius: 10px;
+            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
+                <img src="https://www.zoomcar.com/build/img/zoom.db4f328f3f4b83596bb3f2aefd04a864.svg" style="height: 60px;width: 60px; margin-top: 10%;">
+                <p style="    font-size: 14px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #323a44;">ZOOM</p>
+                <p style="margin: 4%;text-align: center;">Fill the start checklist in the Zoomcar app. Grab the keys from the glove-box and drive.</p>
+            </div>
+            <div style="height: 32%;width: 50%;            background-color: white;margin-right: 18px;border-radius: 10px;
+            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
+                <img src="https://www.zoomcar.com/build/img/return.c50e35f6ae4b2891e95c121082d968f0.svg" style="height: 60px;width: 60px; margin-top: 10%;">
+                <p style="    font-size: 14px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #323a44;">RETURN</p>
+                <p style="margin: 4%;text-align: center;">Return the car to the same location and fill the end checklist to end your trip.</p>
+            </div>
+        </div>
         <!--ZOOMCAR ADVANTAGE END-->
     </div>
 
-    <div id="work">
-        <!--ZOOMCAR WORK DESCRIPTION Start-->
-        <p style="font-size: 25px;color: rgb(61, 56, 56);">HOW ZOOMCAR WORKS</p>
-        <p style="color: rgb(61, 56, 56);">Drive yourself to an adventure and back in 5 simple steps </p>
-        <div class="flex_2_1">
-            <div style="height: 50%;width: 50%;background-color: white; margin-right: 18px; border-radius: 10px;
-            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
-                <img src="https://www.zoomcar.com/build/img/book.f804056bb2429eeabf95836bdf8865e1.svg" style="height: 50px;width: 50px;margin-top: 3%;">
-                <p style="font-size: 14px; ">BOOK</p>
-                <p style="margin: 1%;text-align: center;">Search for and book a car on our site!</p>
-            </div>
-            <div style="height: 50%;width:50%;            background-color: white; margin-right: 18px;border-radius: 10px;
-            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
-                <img src="https://www.zoomcar.com/build/img/dl.99966c7703663379725f13d45663b372.svg" style="height: 50px;width: 50px; margin-top: 3%;">
-                <p style="font-size: 14px; ">UPLOAD LICENSE</p>
-                <p style="margin: 1%;text-align: center;">Upload your driver’s license, and pay a small security deposit.</p>
-            </div>
-            <div style="height: 50%;width: 50%;background-color: white;margin-right: 18px;border-radius: 10px;
-            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4eaA6vNcTIdPiWfJ84AmoFfZfOUBusFGHYA&usqp=CAU" style="height: 50px;width: 50px; margin-top: 3%;">
-                <p style="font-size: 14px; ">UNLOCK</p>
-                <p style="margin: 1%;text-align: center;">We SMS your car details 20 minutes before pickup. Unlock it via the Zoomcar app.</p>
-            </div>
-            <div style="height: 50%;width: 50%;            background-color: white;margin-right: 18px;border-radius: 10px;
-            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
-                <img src="https://www.zoomcar.com/build/img/zoom.db4f328f3f4b83596bb3f2aefd04a864.svg" style="height: 50px;width: 50px; margin-top: 3%;">
-                <p style="font-size: 14px; ">ZOOM</p>
-                <p style="margin: 1%;text-align: center;">Fill the start checklist in the Zoomcar app. Grab the keys from the glove-box and drive.</p>
-            </div>
-            <div style="height: 50%;width: 50%;            background-color: white;margin-right: 18px;border-radius: 10px;
-            ;box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);" class="size">
-                <img src="https://www.zoomcar.com/build/img/return.c50e35f6ae4b2891e95c121082d968f0.svg" style="height: 50px;width: 50px; margin-top: 3%;">
-                <p style="font-size: 14px; ">RETURN</p>
-                <p style="margin: 1%;text-align: center;">Return the car to the same location and fill the end checklist to end your trip.</p>
-            </div>
-        </div>
+    
         <!--ZOOMCAR WORK DESCRIPTION END-->
 
-
-
-        <!--ZOOMCAR Details start-->
         <div id="users">
             <!--ZOOMCAR WORK DESCRIPTION Start-->
 
             <div class="flex_2_2">
-                <div style="height:70%;width: 50%;background-color: white;" class="size">
+                <div style="height:70%;width: 50%;background-color: 
+                rgb(249,249,249);" class="size">
                     <img src="https://www.zoomcar.com/build/img/steering-wheel.121c23ffa50aa2da7a1e1f829048dd90.svg" style="height: 120px;width: 70px;margin-top: 3%;">
                     <h3 style="font-size: 20px; ">3,000+</h3>
-                    <p style="margin: 1%;text-align: center;">Rides Daily</p>
+                    <p style="margin: 10%;text-align: center;">Rides Daily</p>
                 </div>
-                <div style="height: 70%;width:50%;            background-color: white;" class="size">
+                <div style="height: 70%;width:50%;            background-color: 
+                rgb(249,249,249);" class="size">
                     <img src="https://www.zoomcar.com/build/img/happy.c650409b5435456374eca19943b697f0.svg" style="height: 120px;width: 70px; margin-top: 3%;">
                     <h3 style="font-size: 20px; ">48,00,000+</h3>
-                    <p style="margin: 1%;text-align: center;">Happy Users</p>
+                    <p style="margin: 10%;text-align: center;">Happy Users</p>
                 </div>
-                <div style="height: 70%;width: 50%;background-color: white;" class="size">
+                <div style="height: 70%;width: 50%;background-color: 
+                rgb(249,249,249);" class="size">
                     <img src="https://www.zoomcar.com/build/img/kms.4dc69060e383492afc70514e93ca766c.svg" style="height: 120px;width: 70px; margin-top: 3%;">
                     <h3 style="font-size: 20px; ">36,00,00,000+</h3>
-                    <p style="margin: 1%;text-align: center;">Km Travelled (enough for 470 round trips to the moon!)</p>
+                    <p style="margin: 10%;text-align: center;">Km Travelled (enough for 470 round trips to the moon!)</p>
                 </div>
-                <div style="height: 70%;width: 50%;            background-color: white;" class="size">
+                <div style="height: 70%;width: 50%;            background-color: 
+                rgb(249,249,249);" class="size">
                     <img src="https://www.zoomcar.com/build/img/cars.fcc55acb001edaad3d14055517a1e1b4.svg" style="height: 120px;width:70px; margin-top: 3%;">
                     <h3 style="font-size: 20px; ">6,500+</h3>
-                    <p style="margin: 1%;text-align: center;">Number of Zoomcars</p>
+                    <p style="margin: 10%;text-align: center;">Number of Zoomcars</p>
                 </div>
-                <div style="height: 70%;width: 50%;            background-color: white;" class="size">
+                <div style="height: 70%;width: 50%;            background-color: w
+                rgb(249,249,249)hite;" class="size">
                     <img src="https://www.zoomcar.com/build/img/star_rating.5999c91406d9adad8f35df39ef055ec5.svg" style="height: 120px;width: 70px; margin-top: 3%;">
                     <h3 style="font-size: 20px; ">Rating 4.7/5.0</h3>
-                    <p style="margin: 1%;text-align: center;">Rated by 3,00,000+ customers over 10,00,000+ bookings</p>
+                    <p style="margin: 10%;text-align: center;">Rated by 3,00,000+ customers over 10,00,000+ bookings</p>
                 </div>
             </div>
-
-
-        </div>
+        <!--ZOOMCAR Details start-->
+       
         <!--ZOOMCAR WORK DESCRIPTION End-->
         <!--Zoomcar sliding review start-->
         <div id="slide">
             <div style="align-items: center;margin-left: 600px;height:40px;width: 50px;margin-top: 25px;margin-bottom: 1px;">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMkO4p2w-6Y1wXgtIgdJGP6vIMhjlGLg9heQ&usqp=CAU" style="width: 100px;height: 100px;" id="qoutation"> </div>
-            <div style="display: flex;margin-top: 0px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMkO4p2w-6Y1wXgtIgdJGP6vIMhjlGLg9heQ&usqp=CAU" style="width: 100px;
+                height: 100px;
+                align-self: center;
+                border-radius: 50px;
+                margin: 58px 0px 0px 57px;" id="qoutation"> </div>
+            <div style="display: flex;
+            margin-left: 108px;
+            margin-top: 52px;">
                 <button style="font-size: 100px;width: 15%;margin: 10%;background-color: transparent;color: white;margin-top:1%;" onclick="prev()">
             < </button>
                 <div style="font-size: 25px;width: 100%;margin: 10%;text-align: center;">
@@ -539,7 +1494,7 @@
         <div id="footers">
             <!--ZOOMCAR footers Start-->
 
-            <div class="flex_footer">
+            <div class="flex">
                 <div style="height: 50%;width: 50%;" class="size">
                     <img src="https://www.zoomcar.com/build/img/zc-works.2adcbe18edb84c7c1fdf0c8d6c894f8b.svg" style="height: 50px;width: 50px;margin-top: 3%;">
 
@@ -566,6 +1521,142 @@
 
         </div>
         <!--ZOOMCAR footers End-->
+        <div class="cont2" >
+            <div id="main1">
+                <div>
+                    <div class="logo_cont">
+                        <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png" alt="logo">
+                    </div>
+                    <div >
+                        <img src="https://www.zoomcar.com/build/img/otp-icon.94be1fd5319930b86e7fbae7cdb1bec3.png" alt="" class="otp_image_cont">
+                    </div>
+                    <p>We have sent your requested OTP</p>
+                    <form action="new.html" onsubmit="return validateotp()" >
+                    <div >
+                        <input style="text-align: center; width: 30%;" type="password" id="otp-cont">
+                        <br>
+                       <label id="otplabel" style="color: red; visibility: hidden;">Valid</label>
+                       <br>
+                    </div>
+                    <div class="img_cont">
+                    <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" id="otp">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="cont" >
+            <div id="main">
+                <div class="close">+</div>
+                <div class="left_cont">
+                    <div class="promo">
+                        <div class="promo1">
+                            <img src="https://www.zoomcar.com/build/img/promo-1.1a6e5812962b16014f7311ed801fbf71.png" alt="zoom1">
+                            <h1>REFER & EARN</h1>
+                            <p>Refer or invite your friends to zoomcar and earn free rides, free Z points and more.</p>
+                            <span class="dot"></span>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot" id="blue"></span>
+                        </div>
+                        <div class="promo2">
+                            <img src="https://www.zoomcar.com/build/img/promo_supermiler.7a597371bd16587f1d46a66dbff6b72e.svg" alt="zoom2">
+                            <h1>SUPERMILER CLUB</h1>
+                            <p>Premium club which rewards you everytime you drive with us.</p>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot"></span>
+                            <span class="dot" id="blue"></span>
+                            
+                        </div>
+                        <div class="promo3">
+                            <img src="https://www.zoomcar.com/build/img/promo-3.f243fadd09ecdd1d9cb70694fa1be058.png" alt="zoom3">
+                            <h1>FREE FUEL</h1>
+                            <p>The fuel is on us for your complete trip.In case you re-fuel a zoomcar, we will re-fill your pockets and that’s a promise.</p>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_cont">
+                    <div>
+                    <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png" alt="logo">
+                    <p>Continue with</p>
+                    <div class="facebook">
+                        <a href="https://www.facebook.com/zoomcar.in/">FACEBOOK</a>
+                    </div>
+                    <div class="google">
+                        <a href="https://accounts.google.com/">GOOGLE</a>
+                        </div>
+                    </div>
+                    <form onsubmit="validateEmail()">
+                        <input type="text" placeholder="Enter your Email or Mobile number" id="input_format">
+                        <br>
+                       <label id="lbltext" style="color: red; visibility: hidden;">Please Enter a Valid Phone Number</label>
+                       <br>
+                       <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next"> 
+                        <!-- <input type="image" name="submit" src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next"> -->
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="cont1" >
+            <div id="main">
+                <div class="close1">+</div>
+                <div class="left_cont">
+                    <div class="promo">
+                        <div class="promo4">
+                            <img src="https://www.zoomcar.com/build/img/promo-1.1a6e5812962b16014f7311ed801fbf71.png" alt="zoom1">
+                            <h1>REFER & EARN</h1>
+                            <p>Refer or invite your friends to zoomcar and earn free rides, free Z points and more.</p>
+                            <span class="dot"></span>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot" id="blue"></span>
+                        </div>
+                        <div class="promo5">
+                            <img src="https://www.zoomcar.com/build/img/promo_supermiler.7a597371bd16587f1d46a66dbff6b72e.svg" alt="zoom2">
+                            <h1>SUPERMILER CLUB</h1>
+                            <p>Premium club which rewards you everytime you drive with us.</p>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot"></span>
+                            <span class="dot" id="blue"></span>
+                            
+                        </div>
+                        <div class="promo6">
+                            <img src="https://www.zoomcar.com/build/img/promo-3.f243fadd09ecdd1d9cb70694fa1be058.png" alt="zoom3">
+                            <h1>FREE FUEL</h1>
+                            <p>The fuel is on us for your complete trip.In case you re-fuel a zoomcar, we will re-fill your pockets and that’s a promise.</p>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_cont">
+                    <div>
+                    <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png" alt="logo">
+                    <form onsubmit="form_details()" >
+                        <input type="text" placeholder="Mobile number" id="phone1">
+                        <input type="text" placeholder="Enter your Email" id="email">
+                        <br>
+                       <label id="lbltext1" style="color: red; visibility: hidden;">Please Enter a  Valid Email</label>
+                       <br>
+                        <input type="text" placeholder="Name on Driving Licence" id="drive">
+                        <input type="password" placeholder="Password(minimum 8 characters" id="min8">
+                        <br>
+                        <label id="lbltext2" style="color: red; visibility: hidden;">Please Enter a  minmum 8 Character Password</label>
+                        <br>
+                        <span id="message"></span>
+                        <div id="login_submit_button">Sign Up</div>
+                        <!-- <input onclick="form_details()" type="submit" value="Sign Up" id="submit"> -->
+                    </form>
+                    <!-- <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next">     -->
+                </div>
+            </div>
+        </div>
+    </div>
+        
         <script>
             var msg_arr = ["At the outset, let me thank you for introducing Zoomcar in Bangalore and for giving me an opportunity to use your service. Your customer support was impeccable and vehicle was well-maintained and top-notch.", "I just wanted to let you know that I really appreciate the efforts you are making personally, to ensure that the customer is satisfied... I really hope you carry forward this culture and make a model for other companies.", "You certainly do have a very regular customer here... Must say, Greg went that extra mile... You have a great journey together!", "It was great pleasure use zoom service, As all process being online it was really hassle free experience. good service please keep it going."];
             var msg_name = ["- D. Samuel", "- Yekula Santosh", "- Sunil Rastogi", "- Rohit R"];
@@ -646,6 +1737,175 @@
                     div_seracxh.style.margin = "0% 0% 0% 30%";
                 }
             }
+            var slides1 = document.querySelector('.promo1')
+    var slides2 = document.querySelector('.promo2')
+    var slides3 = document.querySelector('.promo3')
+   
+    var slides_arr = [slides1, slides2, slides3]
+  
+     
+
+    var time = 2000;
+    var j = 0;
+    function changeImg(){
+        slides3.style.display = "none"
+        slides1.style.display = "none"
+        slides2.style.display = "none"
+        slides_arr[j].style.display = "block"
+        if(j < slides_arr.length - 1){
+             j++; 
+        } else { 
+            j = 0;
+        }
+        setTimeout("changeImg()", time);
+    }
+
+    function signup_roh() {
+        
+        document.querySelector('.cont').style.display = "flex"
+        
+    }
+   
+        
+    
+
+    document.querySelector(".close").addEventListener("click", function(){
+        document.querySelector('.cont').style.display = "none"
+    })
+
+
+    var slides4 = document.querySelector('.promo4')
+    var slides5 = document.querySelector('.promo5')
+    var slides6 = document.querySelector('.promo6')
+   
+    var slides_arr1 = [slides4, slides5, slides6]
+    var time = 2000;
+    var i = 0;
+    function changeImg1(){
+        slides6.style.display = "none"
+        slides4.style.display = "none"
+        slides5.style.display = "none"
+        slides_arr1[i].style.display = "block"
+        if(i < slides_arr1.length - 1){
+        i++; 
+        } else { 
+            i = 0;
+        }
+        setTimeout("changeImg1()", time);
+        
+    }
+    window.onload = function(){
+        changeImg()
+        changeImg1()
+    }
+    
+
+    
+    function validateEmail() {
+        
+        var phone = document.getElementById('input_format').value
+        var mailFormat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})|([0-9]{10})+$/;
+        if (phone == "") {
+            document.getElementById("lbltext").innerHTML = "Please enter a valid email address or mobile number."
+            document.getElementById("lbltext").style.visibility = "visible";
+            document.getElementById("lbltext").style.color = "red";
+            // return false;
+        }
+        else if (!mailFormat.test(phone)) {
+            document.getElementById("lbltext").innerHTML = "Please enter a valid email address or mobile number."
+            document.getElementById("lbltext").style.visibility = "visible";
+            document.getElementById("lbltext").style.color = "red";
+            // return false;
+        }
+        else {
+            document.querySelector('.cont1').style.display = "flex"
+            document.querySelector('.cont').style.display = "none"
+            document.querySelector('.cont2').style.display = "none"
+            // return true; 
+           
+        }
+        var phone_json = JSON.stringify(phone)
+        localStorage.setItem("phone", phone_json)
+        var phone1 = localStorage.getItem("phone")
+        // console.log('phone1:', phone1)
+        phone1 = JSON.parse(phone1)
+        console.log(phone1);
+
+        document.getElementById("phone1").value = phone1
+
+        // console.log("jay"); 
+       
+    } 
+
+    document.getElementById("next").addEventListener('click', validateEmail)
+    document.querySelector(".close1").addEventListener("click", function(){
+                document.querySelector('.cont1').style.display = "none"
+    })
+
+    function form_details(){
+        // e.preventDefault();
+        const form = {
+            email: document.getElementById("email").value,
+            name: document.getElementById("drive").value,
+            password: document.getElementById("min8").value,
+        }
+        var mailFormat1 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})|([0-9]{10})+$/;
+        if (form.email == "") {
+            document.getElementById("lbltext1").innerHTML = "Please enter a valid email address."
+            document.getElementById("lbltext1").style.visibility = "visible";
+            document.getElementById("lbltext1").style.color = "red";
+            // return false;
+        }
+        else if (!mailFormat1.test(form.email)) {
+            document.getElementById("lbltext1").innerHTML = "Please enter a valid email address."
+            document.getElementById("lbltext1").style.visibility = "visible";
+            document.getElementById("lbltext1").style.color = "red";
+            // return false;
+        }
+        else if (form.password.length < 8) {
+            document.getElementById("lbltext2").innerHTML = "Please enter a Minimum 8 Character Password."
+            document.getElementById("lbltext2").style.visibility = "visible";
+            document.getElementById("lbltext2").style.color = "red";
+            // return false;   
+        }
+        else {
+            document.querySelector('.cont2').style.display = "flex"
+            document.querySelector('.cont').style.display = "none"
+            document.querySelector('.cont1').style.display = "none"
+            
+            // true;
+        }
+        const form_json = JSON.stringify(form)
+        localStorage.setItem("form_details", form_json)
+        var otp = Math.round(Math.random() *999999)+1;
+        if(otp > 99999){
+            
+            const otp_json = JSON.stringify(otp);
+            localStorage.setItem("otp", otp_json);
+            alert(otp)
+        }       
+    }
+    document.getElementById("login_submit_button").addEventListener('click', form_details)
+
+    function validateotp() {
+        var otp_local = localStorage.getItem("otp");
+        var otp_input = document.getElementById("otp-cont").value
+        // console.log(otp_input);
+        if(otp_input != otp_local){
+            document.getElementById("otplabel").innerHTML = "Invalid"
+            document.getElementById("otplabel").style.visibility = "visible";
+            document.getElementById("otplabel").style.color = "red";
+        }
+        else {
+            document.querySelector('.cont2').style.display = "none"
+            true
+        }
+    }
+    document.getElementById("otp").addEventListener('click', validateotp)
+    
+
+
+   
         </script>
 </body>
 

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
     <title>Self Drive Car Rentals |Book ZoomCar & Feel Safe!zoomcar.com</title>
+    <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <style>
+        body * {
+            font-family: "Open Sans",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif!important;
+           
+        }
         #nav {
             background-color: rgb(41, 43, 61);
             margin: 0% 0%;
@@ -24,7 +27,12 @@
             margin-bottom: 5px;
             font-size: 20px;
         }
-        
+        .zms  {
+            color: white;
+        }
+        .amigo{
+            color: white;
+        }
         a:link {
             text-decoration: none;
         }
@@ -40,85 +48,6 @@
         .float-r {
             float: right;
         }
-        
-        #payment {
-            margin: 5% 30%;
-            text-align: center;
-            align-items: center;
-            height: 70%;
-            width: 50%;
-            margin-top: 1px;
-            background-color: rgb(41, 43, 61);
-        }
-        
-        #payment>img {
-            width: 100%;
-            height: 90%;
-        }
-        
-        .vl {
-            border-left: 4px solid black;
-            height: 39%;
-            position: absolute;
-            right: 65%;
-        }
-        
-        form {
-            text-align: left;
-            font-size: 18px;
-            margin: 2%;
-            height: 100%;
-        }
-        
-        form>label {
-            margin: 2% 0%;
-        }
-        
-        form>input {
-            margin: 2% 0%;
-        }
-        
-        #submit {
-            margin: 10% 10%;
-            height: 30px;
-            width: 150px;
-            font-size: 20px;
-            /* background-color: chocolate;*/
-        }
-        
-        #footers {
-            background-color: rgb(41, 43, 61);
-            align-items: center;
-            text-align: center;
-            padding: 2%;
-            height: 100px;
-            width: 97%;
-            color: white;
-        }
-        
-        .flex {
-            display: flex;
-        }
-        
-        #info>.flex>div {
-            width: 20%;
-            align-items: center;
-            height: 35%;
-            margin: 1%;
-            margin-left: 12%;
-        }
-        
-        .size {
-            height: 100px;
-            width: 100px;
-        }
-        
-        button {
-            outline: none;
-            border: none;
-            cursor: pointer;
-        }
-        
         .dropbtn {
             background-color: #04AA6D;
             color: white;
@@ -130,9 +59,8 @@
         .dropdown {
             float: left;
             overflow: hidden;
+            margin: -12px 0px 0px 0px !important;
         }
-        /* Dropdown button */
-        
         .dropdown .dropbtn {
             font-size: 16px;
             border: none;
@@ -174,33 +102,336 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        #checkout_cont {
+            max-width: 60%;
+            padding: 20px;
+            min-height: 400px;
+            background-color: rgb(247,247,247);
+            border-radius: 8px;
+            margin: 50px auto ;   
+        }
+        .payment_cont {
+            width: 60%;
+            background-color: white;
+            border: 1px solid #ccc;
+            float: left;
+        }
+
+        .checkout_div {
+            padding: 15px 10px;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+        }
+        .book_div {
+            padding: 15px 10px;
+          
+            border-bottom: 1px solid #eee;
+        }
+        .booking {
+            
+            font-size: 16px;
+        }
+        .rupees_paid {
+            font-size: 16px;
+            color: #00AEFF;
+        }
+        .promotion {
+            border-bottom: 1px solid #eee;
+            padding: 15px 10px;
+            margin-bottom: 10px;
+
+        }
+        .refund_cont {
+            padding: 15px 10px;
+            /* margin-bottom: 10px; */
+            border-bottom: 1px solid #eee;
+        }
+        .coupon_btn{
+            background-color: #70AD4D;
+            border-radius: 3px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .total{
+            padding: 15px 10px;
+            background-color: #F2F8ED;
+        } 
+        .car_cont {
+            width: 35%;
+            background-color: white;
+            border: 1px solid #ccc;
+            float: right;  
+        }
+        .summary {
+            padding: 10px 0px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .f_l {
+            float: left;
+    font-weight: 600;
+        }
+        .f_r {
+            float:right;
+        }
+        .clear {
+            clear: both;
+        }
+        .Car_details{
+            text-align: center;
+        }
+        .btn_cont {
+           
+            width: 60%;
+            text-align: center;
+            margin: 20px 20px 0px 0px;
+        }
+        #checkout_btn{
+            cursor: pointer;
+    background-color: #70AD4D;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    border: none;
+    padding: 10px 25px;
+    margin: 81px 0px 0px 131px;
+        }
+        .border {
+            border-bottom: 1px solid #eee;
+        }
+
+        .start_end_cont {
+            margin: 0px 8px;
+            padding: 10px 0px;
+            text-align: center;
+        }
+       
+        .start {
+            font-size: 18px;
+            color: #666666;
+            display: inline-block;
+        }
+        .start_time {
+            font-size: 11px;
+            font-weight: 100;
+        }
+        .to {
+            background: url(https://assets.zoomcar.com/assets/home/to-027eb439c7db0a0ce1cb1fe2c2535cc1.svg) no-repeat 45.8% 52.6%;
+            height: 33px;
+            width: 50px;
+            display: inline-block;
+        }
+        .end {
+            font-size: 18px;
+            color: #666666;
+            display: inline-block;
+
+        }
+        .end_time {
+            font-size: 11px;
+            font-weight: 100;
+        }
+        #footers {
+            background-color: rgb(67,79,91);
+            align-items: center;
+            text-align: center;
+            padding: 2%;
+            height: 100px;
+            width: 97%;
+            color: white;
+        }
+         p {
+            /* color: white; */
+        }
+        .flex {
+    display: flex;
+    height: 10px;
+    width: 1019px;
+    margin-left: 230px;}
+    #nav {
+        background-color: rgb(67,79,91);
+    margin: 0% 0%;
+    padding: 1% 2% 1% 2%;
+    height: 15%;
+    color: white;
+    width: 97%;
+}
+        #info>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 35%;
+            margin: 1%;
+            margin-left: 12%;
+        }
         
-        body {
-            font-family: "arial";
+        .size {
+            height: 100px;
+            width: 100px;
+        }
+.car_img_prop{
+    height: 100%;
+    width: 100%;
+}
+
+
+#data_flex{
+            display: flex;
+
+        } 
+        #data_flex>div{
+            flex-direction: row;
+        }
+        #date_start{
+            width: 50%;
+            height: 80px;
+            background-color: white;
+            border: 1px solid #d8d8d8;
+        }
+        .dat_head_h5{
+    margin: 8px 0px 0px 22px !important;
+}
+.p_info{
+            display: flex;
+        }
+        .p_info>div{
+            flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+        }
+        .left_date ,.right_date{
+        margin: 0px 0px 0px 22px;
+    font-size: 34px;
+    text-align: center;
+}
+h6.p_day,.d_day {
+    margin: 6px 0px 0px 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+p.s_time_date,.e_time_date {
+    margin: 0px 0px 0px 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+#date_end{
+            width: 50%;
+            height: 80px;
+            background-color: white;
+            border: 1px solid #d8d8d8;
+        } 
+        .dat_head_h5{
+    margin: 8px 0px 0px 22px !important;
+}
+p.s_time_date,.e_time_date {
+    margin: 0px 0px 0px 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+        #d_p_point{
+            display: flex;
+            flex-direction: row;
+        }
+        #star_point{
+            width: 50%;
+    height: 80px;
+    border: 1px solid #d8d8d8;
+    background-color: white;
+        }
+        #drop_point{
+            width: 50%;
+    height: 80px;
+    background-color: white;
+    border: 1px solid #d8d8d8;
+        }
+        .pick_city{
+            font-size: 18px;
+    font-weight: 700;
+    opacity: .87;
+    text-transform: capitalize;
+    margin: 7px 0px 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323a44;
+        }
+        .drop_city{
+            font-size: 18px;
+    font-weight: 700;
+    opacity: .87;
+    text-transform: capitalize;
+    margin: 7px 0px 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323a44;
+        }
+        .p_point_car,.d_point_car{
+            margin: 0px 0px 0px 10px;
+    font-size: 11px;
+    color: #000;
+    opacity: .54;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: 16px;
+    max-height: 16px;
+}
+body{
+    background-color: rgb(247,247,247);
+}
+h5{
+            font-family: Open Sans;
+            height: 15px;
+            width: 112px;
+    align-items: center;
+    opacity: .54;
+    font-size: 11px;
+    color: #000;
+    margin: 9px 0px 0px 10px;
+        }
+        .booking {
+            font-size: 16px;
+        }
+        #payment {
+            margin: 5% 30%;
+            text-align: center;
+            align-items: center;
+            height: 70%;
+            width: 50%;
+            margin-top: 1px;
+            background-color: #fff;
+        }
+        
+        #payment>img {
+            width: 100%;
+            height: 90%;
+        }
+        .payment_cont {
+            width: 60%;
+            background-color: white;
+            border: 1px solid #ccc;
+            float: left;
+        }
+        #payment{
+            width: 300px;
         }
     </style>
 </head>
-
 <body>
-    <!--NAV BAR Start-->
     <div id="nav">
+
         <img src="https://www.zoomcar.com/build/img/logo.f0c7a9744cfeb3fb5c90eafda61dd2ce.svg" style="height: 80%;width: 10%;">
 
 
-
-        <div class="float-r">
-            <a href="login.html">LOGIN</a>
-        </div>
-        <div class=" float-r ">
-            <a href="login.html">SIGNUP</a>
-        </div>
-        <div class=" float-r" style="height: -1px;margin-top: 0px;">
-            <div class="dropbtn float-r dropdown" style="font-size: 20px; background-color: transparent;margin-top: 0px;">MOBILE APP
+        
+        <div class=" float-r" style="height: -10px;margin-top: 0px;">
+            <div class="dropbtn float-r dropdown" style="font-size: 20px; background-color: transparent;margin-top: 0px;" id="app">MOBILE APP
 
                 <!-- <i class="fa fa-caret-down"></i>-->
 
                 <div class="dropdown-content">
-                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7QYicbC68K1SLmUUtoVci5YswGfPnCisjtA&usqp=CAU" style="height: 35px;width: 100%;"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJj8LuevwdQYk2S3w1B3EeDskXk7LvtcHOkzlQQnWO3NMDX6qwH7bCnGHqCR_t_aFmtw&usqp=CAU" style="height: 35px;width: 92%;"></a>
+                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7QYicbC68K1SLmUUtoVci5YswGfPnCisjtA&usqp=CAU" style="height: 35px;width: 100%;"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJj8LuevwdQYk2S3w1B3EeDskXk7LvtcHOkzlQQnWO3NMDX6qwH7bCnGHqCR_t_aFmtw&usqp=CAU" style="height: 35px;width: 88%;"></a>
                     <a href="https://itunes.apple.com/us/app/zoomcar-self-drive-cars/id889910218?mt=8&utm_source=home%20page&utm_medium=header%20links&utm_content=iOS&utm_campaign=installs">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAFKoUEGpPjP79LPi6r9bFfem3GIOQawWVV75SkXyBwevJd183Bvw_wI9duOdX5rTccU&usqp=CAU" style="height: 35px;width: 100%;">
                     </a>
@@ -215,53 +446,148 @@
             AMIGO
         </div>
         <div class="float-r ">
-            <a href="login.html">SUBSCRIPTION</a>
+            <a href="#">SUBSCRIPTION</a>
         </div>
         <div class="float-r ">
             <a href="offer.html">OFFERS</a>
         </div>
 
     </div>
-    <!--NAV BAR END-->
-    <!--Payment content start-->
-    <div style="display: flex;margin:5% 9%;width:75%;height: 75%;width: 1200px;">
-        <div style="width:900px;margin-right: 2%;">
-            <div style="background-color: turquoise;height: 40px;width: 50%;margin:5px 30% ;margin-bottom: 1px;">
-                <p style="float: left;font-size: medium;">Total Payment Amount</p>
-                <p style="float: right;font-size: medium;"></p>
+    <div id="checkout_cont">
+      
+        <div style="width: 575px;
+        height: 482px;
+        margin-right: 0%;
+        float: left;
+    
+        ">
+            <div style="background-color: rgb(247,247,247);
+            height: 40px;
+            width: 62%;
+            margin: 0% 8% 3% 0%;
+            border: 1px solid tan;
+            margin-bottom: 1px;
+            border: 1px solid #ccc;
+            padding: 0% 0% 0% 38%;">
+                <p style="    float: left;
+                font-size: medium;
+                float: left;
+                font-size: 20px;
+                color: #008000;
+                width: 105%;
+                /* text-align: center; */
+                margin-top: 5px;
+                margin-left: 26px;" id="amount"></p>
+                <p style="float: right;font-size: medium;;" id="pa"></p>
             </div>
             <br>
-            <div style="height: 40px;width: 50%;margin:0% 30% ;margin-bottom: 0px;border: 1px solid black;padding: 0%;">
-                <p style="float: left;font-size:20px;color: green;">Payment Method</p>
-                <p style="float: right;font-size:20px;" id="booking"> </p>
+            <div style="       height: 40px;
+            width: 100%;
+            margin: 0% 0%;
+            margin-bottom: 0px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 0%;
+        ">
+                <p style="   float: left;
+                font-size: 20px;
+                color: #008000;
+                width: 45%;
+                /* text-align: center; */
+                margin-top: 5px;
+                margin-left: 218px;">Payment Method</p>
+                <p style="float: right;font-size:15px;color: black;width: 45%;" id="booking"> </p>
             </div>
-            <div style="display: flex; border: 1px solid rgb(129, 106, 106);    height: 70%; padding: 0%;   width: 50%;margin:0% 30%; margin-bottom: 0px;   margin-top: 1px;">
+            <div style="display: flex;
+            border: 1px solid rgb(129, 106, 106);
+            height: 21%;
+            padding: 0%;
+            width: 58%;
+            margin: 3% 22%;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            padding-top: 0px;
+            padding-right: 0%;">
 
-                <div style="text-align: initial;margin-top: 0%;">Card Payment</div>
-                <div class="vl"></div>
-                <div id="payment" style="width: 100%;height:97%;margin:1px;">
+
+                <div id="payment" style="    width: 99%;
+                height: 97%;
+                margin: 1px;">
                     <!--Payment form start-->
-                    <form style="width: 100%;height: 100%;margin-right: 0%;margin-left: 10px;" onsubmit="pay()">
+                    <form style="width: 100%;height: 100%;margin-right: 0%;margin-left: 10px;
+                    margin-top: 20px;" >
 
-                        <input type="number" placeholder="Enter Card Number" id="card_number"><br>
+                        <input type="number" style="     width: 300px;
+                        margin-left: -19px;" placeholder="Enter Card Number" id="card_number"><br>
 
+                        <div style="    display: flex;
+                            margin-left: 2px; ">
+                        <input type="text" style="width: 114px;
+                        margin-top: 12px;"  placeholder="MM /YYY" id="card_expiry"><br>
 
-                        <input type="text" placeholder="MM /YYY" id="card_expiry"><br>
-
-                        <input type="password" placeholder="CVV" id="card_CVV"><br>
-                        <input type="submit" value="Pay" id="submit">
+                        <input type="password" style="    margin-left: 67px;
+                        margin-top: 12px;
+                        width: 110px;" placeholder="CVV" id="card_CVV"><br>
+                    </div>
+                       
                     </form>
                     <!--Payment Form end-->
-
+                    <div class="btn_cont">
+                        <button id="checkout_btn" style="cursor: pointer;"> <a onclick="Suscces()">Pay</a> </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div style="width:20.5%;margin-left: 0%;border: 1px solid gray;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0dF8vwazUKUdsKvFDZ4i0J_BbNTIa3UM1EG9tIBf7fbX7P2WyN7SwCye3hvDJNpnClDE&usqp=CAU">
-            <p style="text-align: center;">Maruti Swift</p>
-            <p style="text-align: center;">3 seated</p>
+    
+     
+        <div class="car_cont ">
+            <div class="summary">SUMMARY</div>
+            <div id="car_img">
+                
+            </div>
+            <div class="Car_details"></div>
+            <div class="Car_details">(5 Seater)</div>
+            <div class="border"></div>
+            <div id="d_p_point">
+                <div id="star_point">
+                    <h5>STARTING POINT <span>></span></h5>
+                    <h4 class="pick_city"></h4>
+                    <p class="p_point_car"></p>
+                </div>
+                <div id="drop_point">
+                    <h5>DESTINATION<span>></span></h5>
+                    <h4 class="drop_city"></h4>
+                    <p class="d_point_car"></p>
+                </div>
+           </div>
+            <div id="data_flex">
+                <div id="date_start">
+                    <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
+                    <div class="p_info">
+                        <div class="left_date"></div>
+                        <div class="rigth_m_t">
+                            <h6 class="p_day"></h6>
+                            <p class="s_time_date"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="date_end">
+                    <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
+                    <div class="p_info">
+                        <div class="right_date"></div>
+                        <div class="rigth_m_t">
+                            <h6 class="d_day"></h6>
+                            <p class="e_time_date"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
+        <div class="clear"></div>
+
+      
     </div>
-    <!--Payment Content end-->
     <div id="footers">
         <!--ZOOMCAR footers Start-->
 
@@ -271,7 +597,7 @@
 
                 <p style="margin: 1%;text-align: center;font-size: 20px;">How Zoomcars works?</p>
             </div>
-            <div style="height: 50%;width:50%;           " class="size">
+            <div style="height: 50%;width:50%;" class="size">
                 <img src="https://www.zoomcar.com/build/img/policies.ceddb15a4eef16af85ba8666b1522741.svg" style="height: 50px;width: 50px; margin-top: 3%;">
 
                 <p style="margin: 1%;text-align: center;font-size: 20px;">Policies</p>
@@ -291,42 +617,51 @@
 
 
     </div>
-    <!--ZOOMCAR footers End-->
-    <script>
-        let book = document.getElementById("booking");
-        book.innerText = "";
-        book.innerText = "Booking id :  " + Math.floor((Math.random() * 600000));
-
-
-
-        function pay() {
-            event.preventDefault();
-            var card_number = document.getElementById("card_number").value;
-            var card_cvv = document.getElementById("card_CVV").value;
-            if ((card_number !== "") && ((card_cvv !== "")) && ((document.getElementById("card_expiry").value !== ""))) {
-                document.getElementById("submit").style.backgroundColor = "chocolate"
-
-            }
-            if (card_number.length < 12 || card_number == "") {
-                alert("Please Enter Valid Card Number");
-                return false;
-            } else if (card_cvv.length > 3 || card_cvv == "") {
-                alert("Please Enter Valid CVV");
-                return false;
-            }
-
-
-            setTimeout(function() {
-                alert(`Your payment is successful.
-                     Enjoy the Ride.`)
-                window.location.href = "home.html";
-            }, 3000);
-
-
-        }
-    </script>
+   
 </body>
-
 </html>
+<script>
+ let db_arr_2=localStorage.getItem("pick_drop_points")
+        var new_db_location=JSON.parse(db_arr_2)
+        document.querySelector(".pick_city").innerText=new_db_location[0].p_city
+        document.querySelector(".drop_city").innerText=new_db_location[0].d_city
+        document.querySelector(".d_point_car").innerText=new_db_location[0].d_location
+        document.querySelector(".p_point_car").innerText=new_db_location[0].p_location
+document.querySelector(".left_date").innerText=new_db_location[0].p_date
+        document.querySelector(".right_date").innerText=new_db_location[0].d_date
+        document.querySelector(".p_day").innerText=new_db_location[0].p_month
+        document.querySelector(".d_day").innerText=new_db_location[0].d_month
+        document.querySelector(".s_time_date").innerText=new_db_location[0].p_time
+        document.querySelector(".e_time_date").innerText=new_db_location[0].d_time
+    let db_arr=localStorage.getItem("car_cart")
+    let db_cart=JSON.parse(db_arr)
+    console.log(db_cart);
+    
+    let total=localStorage.getItem("car_price")
+console.log(total);
+document.getElementById("amount").textContent="₹ "+total
+    
+   let div_car=document.getElementById("car_img")
+   let car_img=document.createElement("img")
+   car_img.src=db_cart[2]
+   car_img.setAttribute("class","car_img_prop")
+   div_car.append(car_img)
+   let price_car=document.getElementById("price_car")
+   price_car.innerText=db_cart[1] 
+    let car_name=document.querySelector(".Car_details")
+    car_name.innerText=db_cart[0]
+    
 
-</html>
+
+
+function Suscces() {
+    if(document.getElementById("card_number").value!=="" && document.getElementById("card_expiry").value!=="" && document.getElementById("card_CVV").value!=="" ){
+    alert("Payment was Succsefull.")
+window.open("home.html","_top")
+}
+
+           else if(document.getElementById("card_number").value=="" || document.getElementById("card_expiry").value=="" || document.getElementById("card_CVV").value=="" ){
+                alert("Please enter all value correct")}
+            }
+   
+</script>

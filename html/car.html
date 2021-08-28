@@ -135,6 +135,32 @@
             box-shadow: -2px 2px 4px 2px #e0dfdf; 
             margin-bottom: 10px;
         }
+        #main_cont3{
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            background-color: white;
+            margin-top: 10px;  
+           
+        }
+         #main_cont3 .left , #main_cont3 .middle , #main_cont3 .right{
+            border: 1px dotted #e0dfdf;
+            padding: 5px;
+            box-shadow: -2px 2px 4px 2px #e0dfdf; 
+            margin-bottom: 10px;
+        }
+        #main_cont4{
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            background-color: white;
+            margin-top: 10px;  
+           
+        }
+         #main_cont4 .left , #main_cont4 .middle , #main_cont4 .right{
+            border: 1px dotted #e0dfdf;
+            padding: 5px;
+            box-shadow: -2px 2px 4px 2px #e0dfdf; 
+            margin-bottom: 10px;
+        }
         .middle .seats{
             padding: 0px;
             border-left:none ;
@@ -368,11 +394,13 @@
         text-align: center;
         background-color: white;
         border: 1px solid #d8d8d8;
+        cursor: pointer;
        }
        .manu_trs{
         text-align: center;
         background-color: white;
         border: 1px solid #d8d8d8;
+       cursor: pointer;
        }
        #trans_part{
         width: 86%;
@@ -710,7 +738,81 @@ p.s_time_date,.e_time_date {
             margin: auto;
             
         }
-    </style>
+
+
+         /* car nav */
+         #nav {
+            background-color: rgb(51,65,78);
+            margin: 0% 0%;
+            padding: 1% 2% 1% 2%;
+            height: 15%;
+            color: white;
+            width: 97%;
+        }
+        
+        #nav>div {
+            margin: 0% 1%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+ .float-r {
+            float: right;
+        }
+.dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+   .dropdown {
+    float: left;
+    overflow: hidden;
+    margin: -11px 0px 0px 0px !important;
+}
+        
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            /* Important for vertical align on mobile phones */
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        /* Links inside the dropdown */
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        /* Add a grey background color to dropdown links on hover */
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        /* Show the dropdown menu on hover */
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+</style>
 </head>
 <body>
 
@@ -721,14 +823,14 @@ p.s_time_date,.e_time_date {
 
         <div class="float-r">
 
-            <a href="#">LOGIN</a>
+            <a onclick="signup_roh()">LOGIN</a>
 
         </div>
         <div class=" float-r ">
-            <a href="#">SIGNUP</a>
+            <a onclick="signup_roh()">SIGNUP</a>
         </div>
         <div class=" float-r" style="height: -10px;margin-top: 0px;">
-            <div class="dropbtn float-r dropdown" style="font-size: 20px; background-color: transparent;margin-top: 0px;">MOBILE APP
+            <div class="dropbtn float-r dropdown" style="font-size: 20px; background-color: transparent;margin-top: 0px;" id="app">MOBILE APP
 
                 <!-- <i class="fa fa-caret-down"></i>-->
 
@@ -976,7 +1078,7 @@ p.s_time_date,.e_time_date {
             <div id="final">
                 <div class="sort_bar">
                     <label>Sort by:</label>
-                    <div class="item"> Price: Low to High </div>
+                    <div class="item" id="sortlow"> Price: Low to High </div>
                     <div class="item" id="sort"> Price: High to Low </div>
                    </div>
                    <div class="no_fuel_cont">
@@ -998,6 +1100,12 @@ p.s_time_date,.e_time_date {
                     
                     </div>
                     <div id="main_cont2">
+                    
+                    </div>
+                    <div id="main_cont3">
+                    
+                    </div>
+                    <div id="main_cont4">
                     
                     </div>
             </div>
@@ -1086,6 +1194,8 @@ p.s_time_date,.e_time_date {
 
             },
         ];
+      
+
         const cars_JSON=JSON.stringify(cars);
       //store above data in local storage
       localStorage.setItem("Mycars",cars_JSON);
@@ -1166,15 +1276,11 @@ p.s_time_date,.e_time_date {
             var p_endup=document.createElement("p");
             p_endup.innerText="Drop at "+new_db_location[0].d_location;
             var h3_endup=document.createElement("h3");
-            h3_endup.innerText="1.5 km from starting point";
+           h3_endup.innerText="1.7 km from drop point";
 
             div2_2_0_2.append(p_endup,h3_endup)
             div2_2_0.append(div2_2_0_1,div2_2_0_2);
             div2.append(div2_2_0)
-
-
-
-
 
             var div3=document.createElement("div");
             div3.setAttribute("class","right")
@@ -1193,9 +1299,207 @@ p.s_time_date,.e_time_date {
             div3.setAttribute("class","right");
             main_con.append(div1,div2,div3);
             final.append(main_con)
+
+         
+        }); 
+       
+    }  
+               
+    function showProduct4(){
+
+        var main_con3=document.getElementById("main_cont3"); 
+        var main_con4=document.getElementById("main_cont4"); 
+        Mycars.forEach(function (Product) {
+            if(Product.drive=="Automatic"){
+            var div1=document.createElement("div");
+            div1.setAttribute("class","left");
+            var image=document.createElement("img");
+            image.src=Product.img;
+            div1.append(image);
+            var div2=document.createElement("div");
+            div2.setAttribute("class","middle")
+            var h3=document.createElement("h3");
+            h3.innerHTML=Product.name;
+            div2.append(h3);
+            var div2_2=document.createElement("div");
+            div2_2.setAttribute("class","seats");
+
+            var div2_2_1=document.createElement("div");
+            var span2_2_1=document.createElement("span");
+            var img2_2_1=document.createElement("img");
+            img2_2_1.src="seat.png";
+            span2_2_1.append(img2_2_1);
+            var span2_2_2=document.createElement("span");
+            span2_2_2.innerText="5 Seater";
+            div2_2_1.append(span2_2_1);
+            div2_2_1.append(span2_2_2);
+            div2_2.append(div2_2_1);
+
+            var div2_2_3=document.createElement("div");
+            var span2_2_3=document.createElement("span");
+            var img2_2_3=document.createElement("img");
+            img2_2_3.src="car-.png";
+            span2_2_3.append(img2_2_3);
+            var span2_2_4=document.createElement("span");
+            span2_2_4.innerText=Product.drive;
+            div2_2_3.append(span2_2_3);
+            div2_2_3.append(span2_2_4);
+            div2_2.append(div2_2_3);
+
+            var div2_2_5=document.createElement("div");
+            var span2_2_5=document.createElement("span");
+            var img2_2_5=document.createElement("img");
+            img2_2_5.src="height.png";
+            span2_2_5.append(img2_2_5);
+            var span2_2_6=document.createElement("span");
+            span2_2_6.innerText=Product.bags;
+            div2_2_5.append(span2_2_5);
+            div2_2_5.append(span2_2_6);
+            div2_2.append(div2_2_5);
+
+            var  div2_2_7=document.createElement("div");
+            var span2_2_7=document.createElement("span");
+            span2_2_7.innerText="AGE-LIMIT:18+";
+            div2_2_7.append(span2_2_7);
+            div2_2.append(div2_2_7);
+
+            div2.append(div2_2)
+
+            var div2_2_0=document.createElement("div");
+            div2_2_0.setAttribute("class","pick-up");
+            var div2_2_0_1=document.createElement("div");
+            var p_pickup=document.createElement("p");
+            p_pickup.innerText="Pickup at "+new_db_location[0].p_location;
+            var h3_pickup=document.createElement("h3");
+            h3_pickup.innerText="1.5 km from starting point";
+            div2_2_0_1.append(p_pickup,h3_pickup)
+
+            var div2_2_0_2=document.createElement("div");
+            var p_endup=document.createElement("p");
+            p_endup.innerText="Drop at "+new_db_location[0].d_location;
+            var h3_endup=document.createElement("h3");
+           h3_endup.innerText="1.7 km from drop point";
+
+            div2_2_0_2.append(p_endup,h3_endup)
+            div2_2_0.append(div2_2_0_1,div2_2_0_2);
+            div2.append(div2_2_0)
+
+            var div3=document.createElement("div");
+            div3.setAttribute("class","right")
+            var h1=document.createElement("h1");
+            h1.innerText=`₹${Product.price}`;
+           
+            var p=document.createElement("p");
+            p.innerText=Product.average;
+            var btn=document.createElement("button");
+            btn.innerText="Book Now"
+            div3.append(h1,p,btn)
+           btn.onclick=function(){
+                add_to_cart(Product.name,Product.price,Product.img)
+            }
+
+            div3.setAttribute("class","right");  
+            main_con3.append(div1,div2,div3)
+                final.append(main_con3)
+            }else{
+                var div1=document.createElement("div");
+            div1.setAttribute("class","left");
+            var image=document.createElement("img");
+            image.src=Product.img;
+            div1.append(image);
+            var div2=document.createElement("div");
+            div2.setAttribute("class","middle")
+            var h3=document.createElement("h3");
+            h3.innerHTML=Product.name;
+            div2.append(h3);
+            var div2_2=document.createElement("div");
+            div2_2.setAttribute("class","seats");
+
+            var div2_2_1=document.createElement("div");
+            var span2_2_1=document.createElement("span");
+            var img2_2_1=document.createElement("img");
+            img2_2_1.src="seat.png";
+            span2_2_1.append(img2_2_1);
+            var span2_2_2=document.createElement("span");
+            span2_2_2.innerText="5 Seater";
+            div2_2_1.append(span2_2_1);
+            div2_2_1.append(span2_2_2);
+            div2_2.append(div2_2_1);
+
+            var div2_2_3=document.createElement("div");
+            var span2_2_3=document.createElement("span");
+            var img2_2_3=document.createElement("img");
+            img2_2_3.src="car-.png";
+            span2_2_3.append(img2_2_3);
+            var span2_2_4=document.createElement("span");
+            span2_2_4.innerText=Product.drive;
+            div2_2_3.append(span2_2_3);
+            div2_2_3.append(span2_2_4);
+            div2_2.append(div2_2_3);
+
+            var div2_2_5=document.createElement("div");
+            var span2_2_5=document.createElement("span");
+            var img2_2_5=document.createElement("img");
+            img2_2_5.src="height.png";
+            span2_2_5.append(img2_2_5);
+            var span2_2_6=document.createElement("span");
+            span2_2_6.innerText=Product.bags;
+            div2_2_5.append(span2_2_5);
+            div2_2_5.append(span2_2_6);
+            div2_2.append(div2_2_5);
+
+            var  div2_2_7=document.createElement("div");
+            var span2_2_7=document.createElement("span");
+            span2_2_7.innerText="AGE-LIMIT:18+";
+            div2_2_7.append(span2_2_7);
+            div2_2.append(div2_2_7);
+
+            div2.append(div2_2)
+
+            var div2_2_0=document.createElement("div");
+            div2_2_0.setAttribute("class","pick-up");
+            var div2_2_0_1=document.createElement("div");
+            var p_pickup=document.createElement("p");
+            p_pickup.innerText="Pickup at "+new_db_location[0].p_location;
+            var h3_pickup=document.createElement("h3");
+            h3_pickup.innerText="1.5 km from starting point";
+            div2_2_0_1.append(p_pickup,h3_pickup)
+
+            var div2_2_0_2=document.createElement("div");
+            var p_endup=document.createElement("p");
+            p_endup.innerText="Drop at "+new_db_location[0].d_location;
+            var h3_endup=document.createElement("h3");
+           h3_endup.innerText="1.7 km from drop point";
+
+            div2_2_0_2.append(p_endup,h3_endup)
+            div2_2_0.append(div2_2_0_1,div2_2_0_2);
+            div2.append(div2_2_0)
+
+            var div3=document.createElement("div");
+            div3.setAttribute("class","right")
+            var h1=document.createElement("h1");
+            h1.innerText=`₹${Product.price}`;
+           
+            var p=document.createElement("p");
+            p.innerText=Product.average;
+            var btn=document.createElement("button");
+            btn.innerText="Book Now"
+            div3.append(h1,p,btn)
+           btn.onclick=function(){
+                add_to_cart(Product.name,Product.price,Product.img)
+            }
+
+            div3.setAttribute("class","right");  
+                main_con4.append(div1,div2,div3)
+                final.append(main_con4)
+            }
+          
         }); 
     }
-   
+
+
+
+
     function add_to_cart(a,b,c) {
         var value=localStorage.getItem("value")
         console.log(value);
@@ -1285,7 +1589,7 @@ p.s_time_date,.e_time_date {
             var p_endup=document.createElement("p");
             p_endup.innerText="Drop at "+new_db_location[0].d_location;
             var h3_endup=document.createElement("h3");
-            h3_endup.innerText="1.5 km from starting point";
+           h3_endup.innerText="1.7 km from drop point";
 
             div2_2_0_2.append(p_endup,h3_endup)
             div2_2_0.append(div2_2_0_1,div2_2_0_2);
@@ -1300,6 +1604,9 @@ p.s_time_date,.e_time_date {
             p.innerText=Product.average;
             var btn=document.createElement("button");
             btn.innerText="Book Now"
+           btn.onclick=function(){
+                add_to_cart(Product.name,Product.price,Product.img)
+            }
             div3.append(h1,p,btn)
 
             div3.setAttribute("class","right");
@@ -1309,9 +1616,12 @@ p.s_time_date,.e_time_date {
     }
     showProduct() 
     showProduct1()
+
+
+
    var main_con2=document.getElementById("main_cont2"); 
-    document.querySelector(".item").addEventListener("click", function(){
-        var re=Mycars.reverse();
+   function showlow(){
+    var re=Mycars.reverse();
         var count=0;
         re.forEach(function (Product) {
            
@@ -1382,7 +1692,7 @@ p.s_time_date,.e_time_date {
             var p_endup=document.createElement("p");
             p_endup.innerText="Drop at "+new_db_location[0].d_location;
             var h3_endup=document.createElement("h3");
-            h3_endup.innerText="1.5 km from starting point";
+           h3_endup.innerText="1.7 km from drop point";
 
             div2_2_0_2.append(p_endup,h3_endup)
             div2_2_0.append(div2_2_0_1,div2_2_0_2);
@@ -1397,6 +1707,9 @@ p.s_time_date,.e_time_date {
             p.innerText=Product.average;
             var btn=document.createElement("button");
             btn.innerText="Book Now"
+            btn.onclick=function(){
+                add_to_cart(Product.name,Product.price,Product.img)
+            }
             div3.append(h1,p,btn)
 
             div3.setAttribute("class","right");
@@ -1406,18 +1719,41 @@ p.s_time_date,.e_time_date {
             main_con2.append(div1,div2,div3);
             final.append(main_con2) 
            
-        }); 
-        document.getElementById('main_cont2').style.display = "grid"
+        });   
+   }
+   showlow();
+   document.getElementById('main_cont2').style.display = "none"
+
+        document.getElementById("sortlow").addEventListener("click", function(){
+            document.getElementById('main_cont2').style.display = "grid"
         document.getElementById('main_cont').style.display = "none"
         document.getElementById('main_cont1').style.display = "none"
-       
-   
+        document.getElementById('main_cont3').style.display = "none"
+        document.getElementById('main_cont4').style.display = "none"
+        document.querySelector('.auto_trs').style.backgroundColor = "white"
+      document.querySelector('.manu_trs').style.backgroundColor = "white"
+
+
+        document.querySelector('.no_fuel').style.color = "white"
+        document.querySelector('.no_fuel').style.backgroundColor = "rgb(112, 173, 77)"
+        document.querySelector('.with_fuel').style.color = "black"
+        document.querySelector('.with_fuel').style.backgroundColor = "rgb(255, 255, 255)"
     })
-    
+
+
     document.getElementById("sort").addEventListener("click", function(){
         document.getElementById('main_cont2').style.display = "none"
         document.getElementById('main_cont1').style.display = "none"
         document.getElementById('main_cont').style.display = "grid"
+        document.querySelector('.auto_trs').style.backgroundColor = "white"
+      document.querySelector('.manu_trs').style.backgroundColor = "white"
+      document.getElementById('main_cont3').style.display = "none"
+        document.getElementById('main_cont4').style.display = "none"
+
+        document.querySelector('.no_fuel').style.color = "white"
+        document.querySelector('.no_fuel').style.backgroundColor = "rgb(112, 173, 77)"
+        document.querySelector('.with_fuel').style.color = "black"
+        document.querySelector('.with_fuel').style.backgroundColor = "rgb(255, 255, 255)"
     })
 
 
@@ -1425,13 +1761,63 @@ p.s_time_date,.e_time_date {
     document.querySelector('.no_fuel').style.color = "white"
 
     document.querySelector(".no_fuel").addEventListener("click", function(){
-        document.querySelector('.no_fuel').style.color = "white"
+        document.querySelector('.no_fuel').style.color = "White"
         document.querySelector('.no_fuel').style.backgroundColor = "rgb(112, 173, 77)"
         document.querySelector('.with_fuel').style.color = "black"
         document.querySelector('.with_fuel').style.backgroundColor = "rgb(255, 255, 255)"
         document.getElementById('main_cont1').style.display = "none"
         document.getElementById('main_cont').style.display = "grid"
         document.getElementById('main_cont2').style.display = "none"
+        document.querySelector('.auto_trs').style.backgroundColor = "white"
+        document.querySelector('.manu_trs').style.backgroundColor = "white"
+        document.getElementById('main_cont3').style.display = "none"
+        document.getElementById('main_cont4').style.display = "none"
+        
+    })
+
+    document.querySelector('.auto_trs').style.backgroundColor = "white"
+    document.querySelector('.manu_trs').style.backgroundColor = "white"
+
+    document.querySelector(".auto_trs").addEventListener("click", function(){
+        document.querySelector('.tran_p').style.color = "white"
+        document.querySelector('.auto_trs').style.backgroundColor = "rgb(112, 173, 77)"
+        document.querySelector('.manu_trs').style.backgroundColor = "white"
+        document.querySelector('.tran_p').style.color = "black"
+        document.getElementById('main_cont1').style.display = "none"
+        document.getElementById('main_cont').style.display = "none"
+        document.getElementById('main_cont2').style.display = "none"
+        document.getElementById('main_cont3').style.display = "grid"
+        document.getElementById('main_cont4').style.display = "none"
+        document.querySelector('.no_fuel').style.color = "white"
+        document.querySelector('.no_fuel').style.backgroundColor = "rgb(112, 173, 77)"
+        document.querySelector('.with_fuel').style.color = "black"
+        document.querySelector('.with_fuel').style.backgroundColor = "rgb(255, 255, 255)"
+    
+      
+
+        
+    })
+      showProduct4()
+      document.getElementById('main_cont3').style.display = "none"
+        document.getElementById('main_cont4').style.display = "none"
+
+
+    document.querySelector(".manu_trs").addEventListener("click", function(){
+        document.querySelector('.tran_p').style.color = "black"
+        document.querySelector('.manu_trs').style.backgroundColor = "rgb(112, 173, 77)"
+        document.querySelector('.auto_trs').style.backgroundColor = "white"
+        document.querySelector('.tran_p').style.color = "black"
+        document.getElementById('main_cont1').style.display = "none"
+        document.getElementById('main_cont').style.display = "none"
+        document.getElementById('main_cont2').style.display = "none"
+        document.getElementById('main_cont3').style.display = "none"
+        document.getElementById('main_cont4').style.display = "grid"
+        document.querySelector('.no_fuel').style.color = "white"
+        document.querySelector('.no_fuel').style.backgroundColor = "rgb(112, 173, 77)"
+        document.querySelector('.with_fuel').style.color = "black"
+        document.querySelector('.with_fuel').style.backgroundColor = "rgb(255, 255, 255)"
+     
+       
         
     })
    
@@ -1443,6 +1829,10 @@ p.s_time_date,.e_time_date {
         document.getElementById('main_cont').style.display = "none"
         document.getElementById('main_cont1').style.display = "grid"
         document.getElementById('main_cont2').style.display = "none"
+        document.querySelector('.auto_trs').style.backgroundColor = "white"
+        document.querySelector('.manu_trs').style.backgroundColor = "white"
+        document.getElementById('main_cont3').style.display = "none"
+        document.getElementById('main_cont4').style.display = "none"
     })
     
     var slides1 = document.querySelector('.promo1')
@@ -1579,7 +1969,8 @@ p.s_time_date,.e_time_date {
             
             // true;
         }
-        const form_json = JSON.stringify(form)
+        if(form.email!=="" && form.password.length >=8 && mailFormat1.test(form.email)==true){
+             const form_json = JSON.stringify(form)
         localStorage.setItem("form_details", form_json)
         var otp = Math.round(Math.random() *999999)+1;
         if(otp > 99999){
@@ -1587,7 +1978,9 @@ p.s_time_date,.e_time_date {
             const otp_json = JSON.stringify(otp);
             localStorage.setItem("otp", otp_json);
             alert(otp)
-        }       
+        }  
+        }
+           
     }
     document.getElementById("login_submit_button").addEventListener('click', form_details)
 
@@ -1611,7 +2004,12 @@ p.s_time_date,.e_time_date {
     document.getElementById("otp").addEventListener('click', validateotp)
     
 
-
+    function signup_roh() {
+        
+        document.querySelector('.cont').style.display = "flex"
+        
+    }
+   
    
 
 
