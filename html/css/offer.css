@@ -1,0 +1,147 @@
+  
+        #nav {
+            background-color: rgb(67,79,91);
+    margin: -0.6% -1%;
+    padding: 1% 2% 1% 2%;
+    height: 15%;
+    color: white;
+    width: 100%;
+        }
+        
+        #nav>div {
+            margin: 0% 1%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+        
+        a:link {
+            text-decoration: none;
+        }
+        
+        a:active {
+            color: green;
+        }
+        
+        a {
+            color: white;
+        }
+        
+        .float-r {
+            float: right;
+        }
+        
+        #offer {
+            text-align: center;
+            height: 600px;
+            margin: 0%;
+            padding: 0%;
+            margin-bottom: 100px;
+        }
+        
+        #footers {
+            background-color: rgb(67,79,91);
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+    height: 100px;
+    width: 100%;
+    margin-left: -10px;
+    color: white;
+    margin-bottom: -10px;
+}
+        
+        .flex {
+            display: flex;
+        }
+        
+        #info>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 35%;
+            margin: 1%;
+            margin-left: 12%;
+        }
+        
+        .size {
+            height: 100px;
+            width: 100px;
+        }
+        
+        button {
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        /* Dropdown button */
+        
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            /* Important for vertical align on mobile phones */
+            margin: 0;
+            /* Important for vertical align on mobile phones */
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        /* Links inside the dropdown */
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        /* Add a grey background color to dropdown links on hover */
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        /* Show the dropdown menu on hover */
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        body {
+            font-family: "arial";
+            overflow-x: hidden;
+        }
+        .dropdown {
+    float: left;
+    overflow: hidden;
+    margin: -11px 0px 0px 0px !important;
+}
+.flex_footer {
+    display: flex;
+    height: 10px;
+    width: 1019px;
+    margin-left: 230px;
+}
