@@ -260,8 +260,9 @@ input:checked + .slider:before {
 }
 .start{
     color:#bdbdbd;
-    
+
     margin: 10px 0px 2px 60px;
+    
 }
 
 .first_box_location{

@@ -42,7 +42,7 @@ h2{
   color: #9b9b9b;
   margin-left: 10px;
   cursor: pointer;
-  position: relative;
+  
 }
 .no_fuel_cont {
   margin: 10px auto;
@@ -102,7 +102,7 @@ h2{
 }
 #main_cont1{
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns:  20% 63% 17%;
     background-color: white;
     margin-top: 10px;  
    
@@ -115,7 +115,7 @@ h2{
 }
 #main_cont2{
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 20% 63% 17%;
     background-color: white;
     margin-top: 10px;  
    
@@ -128,7 +128,7 @@ h2{
 }
 #main_cont3{
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 20% 63% 17%;
     background-color: white;
     margin-top: 10px;  
    
@@ -141,7 +141,7 @@ h2{
 }
 #main_cont4{
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 20% 63% 17%;
     background-color: white;
     margin-top: 10px;  
    

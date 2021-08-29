@@ -676,7 +676,7 @@
 
 
                            var date_pciker_array_aug=["aug_29","aug_30","aug_31"]
-                           var date_pciker_array_aug_2=["aug_2_29","aug_2_30","aug_2_31"]
+                           var date_pciker_array_aug_2=["aug_2_30","aug_2_31"]
                                var pic_date=""
                                var pic_date_2=""
                // function for date picker for drop off and pick up point start...

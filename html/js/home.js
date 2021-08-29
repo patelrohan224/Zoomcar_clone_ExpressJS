@@ -66,7 +66,7 @@ function myFunction() {
         navbar.classList.add("sticky")
         navbar.append(img_scroll)
         img_scroll.style.visibility = "visible"
-        div_seracxh.style.margin = "1.5% 0% 0% 97%"
+        div_seracxh.style.margin = "1.5% 0% 0% 95%"
         navbar.style.backgroundColor = "white"
 
 
@@ -74,7 +74,7 @@ function myFunction() {
         navbar.style.backgroundColor = "transparent";
         navbar.classList.remove("sticky");
         img_scroll.style.visibility = "hidden";
-        div_seracxh.style.margin = "0% 0% 0% 30%";
+        div_seracxh.style.margin = "0% 0% 0% 24%";
     }
 }
 var slides1 = document.querySelector('.promo1')
