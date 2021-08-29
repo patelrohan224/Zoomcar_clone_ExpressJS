@@ -45,7 +45,7 @@ _A Glimpse of our cloned website_
    1. There is our Landing page where users can see all the features.
     
      
-   ![Screenshot (126)](https://raw.githubusercontent.com/vishalpatil12014017/self-drive-car-rentals/shashank/html/Screenshot%20(126).png)
+   ![Screenshot (126)](https://raw.githubusercontent.com/vishalpatil12014017/self-drive-car-rentals/Rohan/html/Screenshot%20(130).png)
 
    ![Screenshot (98)](https://raw.githubusercontent.com/vishalpatil12014017/self-drive-car-rentals/shashank/html/Screenshot%20(98).png)
 
