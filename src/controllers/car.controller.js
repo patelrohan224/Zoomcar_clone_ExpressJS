@@ -14,15 +14,16 @@ router.post("", async (req, res) => {
 // 2.get all cars
 router.get("", async (req, res) => {
     const cars = await Car.find().lean().exec()
+
     return res.status(200).json({ cars })
 })
 // router.get("/:id", async (req, res) => {
-//     const items = await Products.find().sort({ price: -1 });
-//     res.render("new.ejs", {
-//       items,
-//     });
-//     // res.send(items);
+//   const items = await Products.find().sort({ price: -1 });
+//   res.render("new.ejs", {
+//     items,
 //   });
+//   // res.send(items);
+// });
 
 // // 3. get a single car
 // router.get("/:id", async (req, res) => {
