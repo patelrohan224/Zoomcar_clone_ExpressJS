@@ -1,0 +1,1485 @@
+    body * {
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif!important;
+    }
+    
+    option {
+        background-color: white;
+        color: black;
+    }
+    
+    .cont {
+        width: 100%;
+        height: 100%;
+        ;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+    }
+    .dropbtn_child_a{
+        height: 35px;
+        width: 88%
+    }
+    .flx_1_2_img{
+        height: 50px;width: 50px;margin-top: 3%;
+    }
+    .cont1 {
+        width: 100%;
+        height: 100%;
+        ;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+    }
+    
+    .cont2 {
+        width: 100%;
+        height: 100%;
+        ;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+    }
+    
+    #main {
+        max-width: 60%;
+        width: 100%;
+        padding: 20px;
+        min-height: 500px;
+        background-color: rgb(243, 243, 243);
+        border-radius: 8px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        color: #33414f;
+        position: relative;
+        overflow: hidden;
+        /* display: none; */
+        border: none
+    }
+    
+    .left_cont {
+        box-shadow: 0 0 1px 2px rgb(222, 222, 222);
+        width: 45%;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        background: #fff;
+    }
+    
+    .promo {
+        height: 500px;
+        padding: 35px;
+        text-align: center;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .close {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 30px;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+    
+    .close1 {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 30px;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+    
+    .right_cont {
+        width: 55%;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .right_cont p {
+        font-weight: 600;
+    }
+    
+    .facebook {
+        width: 65%;
+        height: 30px;
+        margin: auto;
+        padding: 10px;
+        background-color: #4267B2;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 1px 2px #e0dfdf;
+        text-align: center center;
+    }
+    
+    .google {
+        width: 65%;
+        height: 30px;
+        margin: auto;
+        padding: 10px;
+        background-color: #f4425a;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 1px 2px #e0dfdf;
+    }
+    
+    input {
+        width: 67%;
+        height: 30px;
+        border-radius: 3px;
+        margin-top: 50px;
+        border: 1px solid black;
+    }
+    
+    #next {
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    
+    .left_cont img {
+        margin-top: 30%;
+        width: 40%;
+    }
+    
+    .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        margin-top: 25%;
+        margin-bottom: 25%;
+        display: inline-block;
+        background-color: rgb(182, 213, 164);
+    }
+    
+    #blue {
+        background-color: rgb(51, 65, 79);
+    }
+    
+    #next {
+        margin-bottom: 8%;
+        border: none;
+    }
+    /* #next{
+    width: 100%;
+} */
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .promo1 h1 {
+        font-size: 25px;
+    }
+    
+    .promo2 h1 {
+        font-size: 25px;
+    }
+    
+    .promo3 h1 {
+        font-size: 25px;
+    }
+    
+    #submit {
+        background-color: #3619db;
+        color: white;
+        cursor: default;
+        height: 40px;
+        padding: 10px;
+    }
+    
+    #main1 {
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #fff;
+        max-width: 60%;
+        width: 100%;
+        min-height: 500px;
+        margin: 0 auto;
+        position: relative;
+        display: grid;
+        flex-direction: row;
+        color: #33414f;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .logo_cont {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .otp_image_cont {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .img_cont {
+        margin-top: 20px;
+    }
+    
+    form {
+        margin-top: 50px;
+    }
+    
+    #login_submit_button {
+        width: 150px;
+        height: 30px;
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        border-radius: 4px;
+        margin: auto;
+    }
+    
+    #nav {
+        background-color: rgb(51, 65, 78);
+        margin: 0% 0%;
+        padding: 2%;
+        height: 15%;
+        color: white;
+        width: 97%;
+    }
+    
+    #nav>img {
+        height: 80%;
+        width: 10%;
+    }
+    
+    #nav>div {
+        margin: 0% 1%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+    
+    .dropdown-content img {
+        height: 35px;
+        width: 100% !important;
+    }
+    
+    .mob_div {
+        height: -10px;
+        margin-top: 0px;
+    }
+    
+    #app {
+        font-size: 20px;
+        background-color: transparent;
+        margin-top: 0px;
+    }
+    
+    .gray {
+        color: rgb(61, 56, 56);
+    }
+    
+    .flex_1_2>div>img {
+        height: 50px;
+        width: 50px;
+        margin-top: 3%;
+    }
+    
+    .flex_1_2>div>h3 {
+        color: rgb(116, 214, 116);
+    }
+    
+    .flex_1_2>div>p {
+        text-align: center;
+        margin: 1%;
+        font-size: 15px;
+    }
+    
+    .flex_1_2>div {
+        height: 50% !important;
+        width: 20%;
+        background-color: white;
+        margin-right: .5%;
+        margin-left: 0%;
+    }
+    
+    .flex_1_1>div>img {
+        height: 50px;
+        width: 50px;
+        margin-top: 3%;
+    }
+    
+    .step_head {
+        color: rgb(61, 56, 56);
+        padding-bottom: 23px;
+    }
+    
+    .flex_1_1>div>h3 {
+        color: rgb(116, 214, 116);
+    }
+    
+    .zoom_work {
+        font-size: 25px;
+        color: rgb(61, 56, 56);
+        margin: 52px 0px 0px -29.6px !important;
+        padding: 32px 0px 0px 0px;
+        width: 104%;
+        background-color: rgb(249, 249, 249);
+    }
+    
+    .flex_1_1>div>p {
+        text-align: center;
+        margin: 1%;
+        font-size: 15px;
+    }
+    
+    .flex_1_1>div {
+        height: 50% !important;
+        width: 20%;
+        background-color: white;
+        margin-right: .5%;
+            
+    }
+    
+    .flex_2_1>div {
+        
+        width: 50%;
+        background-color: white;
+        margin-right: 18px;
+        border-radius: 10px;
+        height: 28% !important;
+        box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);
+    }
+    
+    .flex_2_1>div>img {
+        height: 60px;
+        width: 60px;
+        margin-top: 10%;
+    }
+    
+    .flex_2_2>div {
+        height: 70%;
+        width: 50%;
+        background-color: rgb(249, 249, 249);
+    }
+    
+    #slide1 {
+        display: flex;
+        margin-left: 108px;
+        margin-top: 52px;
+    }
+    
+    #slide1>button {
+        font-size: 100px;
+        width: 15%;
+        margin: 10%;
+        background-color: transparent;
+        margin-top: 1%;
+        color: white;
+    }
+    
+    #slide>div:nth-child(1) {
+        align-items: center;
+        margin-left: 600px;
+        height: 40px;
+        width: 50px;
+        margin-top: 25px;
+        margin-bottom: 1px;
+    }
+    
+    #review {
+        font-size: 25px;
+        width: 100%;
+        margin: 12%;
+        text-align: center;
+    }
+    
+    #p_name {
+        color: green;
+    }
+    
+    #qoutation {
+        width: 100px;
+        height: 100px;
+        align-self: center;
+        border-radius: 50px;
+        margin: 58px 0px 0px 57px;
+    }
+    
+    .flex_2_2>img {
+        height: 120px;
+        width: 70px;
+        margin-top: 3%;
+    }
+    
+    .flex_2_2>p {
+        margin: 10%;
+        text-align: center;
+    }
+    
+    .flex_2_1>div>p:nth-child(even) {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: sans-serif;
+        color: #323a44;
+    }
+    
+    .flex_2_1>div>p:nth-child(odd) {
+        margin: 4%;
+        text-align: center;
+    }
+    
+    .cursor {
+        cursor: pointer;
+    }
+    
+    #ad_p {
+        font-size: 25px;
+        color: rgb(61, 56, 56);
+    }
+    
+    #arrow {
+        margin-left: 91%;
+        margin-top: -33px;
+        font-size: 25px;
+        color: rgb(32, 30, 30);
+    }
+    
+    .font20 {
+        font-size: 20px;
+    }
+    
+    #bold {
+        font-size: 45px;
+    }
+    
+    a:link {
+        text-decoration: none;
+    }
+    
+    a:active {
+        color: green;
+    }
+    
+    a {
+        color: white;
+    }
+    
+    .float-r {
+        float: right;
+    }
+    
+    #main-cont {
+        background-image: url(maincont.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 97%;
+        height: 500px;
+        margin: 0% 0%;
+        padding: 2%;
+        border: 5px;
+        color: white;
+    }
+    
+    .intro {
+        text-align: center;
+        margin: 10%;
+        font-family: "arial";
+    }
+    
+    .intro>p {
+        margin-top: 1%;
+    }
+    
+    #city {
+        border: 0px;
+        background-color: transparent;
+        font-size: 20px;
+        color: rgb(41, 38, 38);
+    }
+    
+    #slide {
+        background-image: url(https://www.zoomcar.com/build/img/testimonial_bg.499d1dd2876b931e9cf0509e3d1884f5.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 500px;
+        margin: 0% 0%;
+        margin-left: -2%;
+        padding: 2%;
+        color: white;
+    }
+    
+    #info {
+        background-color: rgb(201, 198, 198);
+        align-items: center;
+        text-align: center;
+        margin: 0% 0%;
+        padding: 2%;
+        height: 500px;
+        width: 97%;
+    }
+    
+    #work {
+        background-color: rgb(201, 198, 198);
+        align-items: center;
+        text-align: center;
+        margin: 0% 0%;
+        padding: 2%;
+        height: 340px;
+        width: 97%;
+    }
+    
+    #work>.size {
+        height: 150px;
+        width: 200px;
+    }
+    
+    #work>.flex>div {
+        width: 20%;
+        align-items: center;
+        height: 150px;
+        margin: 1%;
+        margin-left: 3%;
+    }
+    
+    .flex_2_1 {
+        display: flex;
+        height: 119%;
+        width: 81%;
+        margin-bottom: -11%;
+        margin-left: 150px;
+    }
+    
+    #users {
+        background-color: white;
+        align-items: center;
+        text-align: center;
+        margin: 0% 0%;
+        margin-top: 4%;
+        margin-left: -2%;
+        padding: 2%;
+        height: 250px;
+        width: 100%;
+    }
+    
+    #work>.flex_1_1>div {
+        width: 20%;
+        align-items: center;
+        height: 150px;
+        margin: 1%;
+        margin-left: 3%;
+    }
+    
+    #work>.flex_1_2>div {
+        width: 20%;
+        align-items: center;
+        height: 150px;
+        margin: 1%;
+        margin-left: 3%;
+    }
+    
+    .flex_1_1 {
+        display: flex;
+        height: 69%;
+        width: 107%;
+        margin-left: 17.5%;
+        margin-bottom: -13.7%;
+    }
+    
+    .flex_1_2 {
+        display: flex;
+        height: 69%;
+        width: 107%;
+        margin-left: 17.5%;
+        margin-bottom: -12.2%;
+    }
+    
+    #info>.flex>div {
+        align-items: center;
+        margin: 1%;
+        margin-left: -0.5%;
+    }
+    
+    .flex_2_2 {
+        display: flex;
+        width: 104%;
+        height: 443px;
+        margin-bottom: -12.9%;
+    }
+    
+    #info>.flex>div {
+        width: 20%;
+        align-items: center;
+        height: 35%;
+        margin: 1%;
+        margin-left: 12%;
+    }
+    
+    .flex {
+        display: flex;
+        height: 10px;
+        width: 1019px;
+        margin-left: 230px;
+    }
+    
+    #otp-cont {
+        text-align: center;
+        width: 30%;
+    }
+    
+    #lbltext1,
+    #lbltext2 {
+        color: red;
+        visibility: hidden;
+    }
+    
+    #lbltext {
+        color: red;
+        visibility: hidden;
+    }
+    
+    #otplabel {
+        color: red;
+        visibility: hidden;
+    }
+    
+    .size {
+        height: 55% !important;
+        width: 50%;
+    }
+    
+    .flex>div {
+        width: 400px;
+    }
+    
+    .size>img {
+        height: 50px;
+        width: 50px;
+        margin-top: 3%;
+    }
+    
+    .size>p {
+        margin: 1%;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .dropbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+    /* Dropdown button */
+    
+    .dropdown {
+        float: left;
+        overflow: hidden;
+        margin: -16px -13px 0px -9px !important;
+    }
+    
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        /* Important for vertical align on mobile phones */
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    /* Links inside the dropdown */
+    
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    /* Add a grey background color to dropdown links on hover */
+    
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    /* Show the dropdown menu on hover */
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    #flow {
+        overflow: hidden;
+        background-color: transparent;
+    }
+    
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 105%;
+        display: flex;
+        height: 80px;
+        flex-direction: row;
+        background: white;
+        margin-left: -193px;
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+    }
+    
+    .serachbar_pro_img {
+        margin-left: -472px;
+        margin-top: 20px;
+        width: 107px;
+        height: 27px;
+    }
+    
+    #serac_bar_default {
+        background-color: white;
+        border: 1px solid rgb(44, 43, 43);
+        border-radius: 6px;
+        height: 58px;
+        width: 538px;
+        color: rgb(49, 45, 45);
+        margin-left: 28%;
+        font-size: 20px;
+        align-items: center;
+    }
+    
+    body {
+        font-family: "arial";
+        width: 95.6%;
+        padding: 0px 0px 0px 0px;
+        background: rgb(249, 249, 249);
+        margin: 0px 0px 0px 0px;
+        overflow-x: hidden;
+    }
+    
+    #start {
+        margin: 14px 0px 0px -248px;
+        padding: 0px 0px 0px 0px;
+    }
+    
+    .p_class_flow {
+        text-align: center;
+        font-size: 12px;
+        padding-left: 7px;
+        padding-right: 9px;
+        font-weight: 100;
+        font-family: sans-serif;
+    }
+    /* Extra small devices (phones, 600px and down) */
+    
+    @media only screen and (max-width: 600px) {
+        #nav {
+            background-color: rgb(41, 43, 61);
+            margin: 0% 0%;
+            padding: 2%;
+            height: 15%;
+            color: white;
+            width: 580px;
+        }
+        #nav>div {
+            margin: 0% 0.5%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 10px;
+        }
+        #main-cont {
+            background-image: url(https://www.zoomcar.com/build/img/intro_bg.59b15d84c75cf310e76cc40155b90dc6.jpg) !important;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 580px;
+            height: 500px;
+            margin: 0% 0%;
+            padding: 2%;
+            border: 5px;
+            color: white;
+        }
+        .intro {
+            text-align: center;
+            margin: 10%;
+            font-family: "arial";
+        }
+        .intro>p {
+            margin-top: 1%;
+        }
+        #city {
+            border: 0px;
+            background-color: transparent;
+            font-size: 10px;
+            color: rgb(41, 38, 38);
+        }
+        #slide {
+            width: 580px;
+            height: 600px;
+        }
+        #p,
+        #p_name {
+            font-size: 15px;
+        }
+        #info {
+            height: 700px;
+            width: 580px;
+        }
+        #work {
+            height: 400px;
+            width: 580px;
+        }
+        #work>.size {
+            height: 200px;
+            width: 200px;
+        }
+        #work>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 150px;
+            margin: 1%;
+            margin-left: 1.5%;
+        }
+        #users {
+            background-color: white;
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            margin-top: 4%;
+            margin-left: -2%;
+            padding: 2%;
+            height: 300px;
+            width: 580px;
+        }
+        #footers {
+            background-color: rgb(41, 43, 61);
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            padding: 2%;
+            height: 150px;
+            margin-left: -2%;
+            margin-top: 1px;
+            width: 580px;
+            color: white;
+        }
+        #info>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 40%;
+            margin: 1%;
+            margin-left: 8%;
+        }
+        .size {
+            height: 100px;
+            width: 100px;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 580px;
+            display: flex;
+            height: 80px;
+            flex-direction: row;
+            background: white;
+            margin-left: -193px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+        }
+        .serachbar_pro_img {
+            margin-left: -472px;
+            margin-top: 20px;
+            width: 107px;
+            height: 27px;
+        }
+        #serac_bar_default {
+            background-color: white;
+            border: 1px solid rgb(44, 43, 43);
+            border-radius: 6px;
+            height: 50px;
+            width: 200px;
+            color: rgb(49, 45, 45);
+            margin-left: 30%;
+            font-size: 12px;
+            align-items: center;
+        }
+        #flow {
+            width: 130%;
+        }
+    }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    
+    @media only screen and (min-width: 600px) {
+        #nav {
+            background-color: rgb(41, 43, 61);
+            margin: 0% 0%;
+            padding: 2%;
+            height: 15%;
+            color: white;
+            width: 100%;
+        }
+        #nav>div {
+            margin: 0% 0.5%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 10px;
+        }
+        #main-cont {
+            background-image: url(https://www.zoomcar.com/build/img/intro_bg.59b15d84c75cf310e76cc40155b90dc6.jpg) !important;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 500px;
+            margin: 0% 0%;
+            padding: 2%;
+            border: 5px;
+            color: white;
+        }
+        .intro {
+            text-align: center;
+            margin: 10%;
+            font-family: "arial";
+        }
+        .intro>p {
+            margin-top: 1%;
+        }
+        #city {
+            border: 0px;
+            background-color: transparent;
+            font-size: 12px;
+            color: rgb(41, 38, 38);
+        }
+        #slide {
+            width: 100%;
+            height: 600px;
+        }
+        #p,
+        #p_name {
+            font-size: 18px;
+        }
+        #info {
+            height: 600px;
+            width: 100%;
+        }
+        #work {
+            height: 400px;
+            width: 100%;
+        }
+        #work>.size {
+            height: 200px;
+            width: 200px;
+        }
+        #work>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 150px;
+            margin: 1%;
+            margin-left: 1.5%;
+        }
+        #users {
+            background-color: white;
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            margin-top: 4%;
+            margin-left: -2%;
+            padding: 2%;
+            height: 300px;
+            width: 100%;
+        }
+        #footers {
+            background-color: rgb(41, 43, 61);
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            padding: 2%;
+            height: 150px;
+            margin-left: -2%;
+            margin-top: 1px;
+            width: 100%;
+            color: white;
+        }
+        #info>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 40%;
+            margin: 1%;
+            margin-left: 8%;
+        }
+        .size {
+            height: 100px;
+            width: 100px;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            height: 80px;
+            flex-direction: row;
+            background: white;
+            margin-left: -193px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+        }
+        .serachbar_pro_img {
+            margin-left: -472px;
+            margin-top: 20px;
+            width: 107px;
+            height: 27px;
+        }
+        #serac_bar_default {
+            background-color: white;
+            border: 1px solid rgb(44, 43, 43);
+            border-radius: 6px;
+            height: 50px;
+            width: 250px;
+            color: rgb(49, 45, 45);
+            margin-left: 30%;
+            font-size: 15px;
+            align-items: center;
+        }
+        #flow {
+            width: 110%;
+        }
+    }
+    /* Medium devices (landscape tablets, 768px and up) */
+    
+    @media only screen and (min-width: 768px) {
+        #nav {
+            background-color: rgb(41, 43, 61);
+            margin: 0% 0%;
+            padding: 2%;
+            height: 15%;
+            color: white;
+            width: 100%;
+        }
+        #nav>div {
+            margin: 0% 0.5%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 10px;
+        }
+        #main-cont {
+            background-image: url(https://www.zoomcar.com/build/img/intro_bg.59b15d84c75cf310e76cc40155b90dc6.jpg) !important;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 500px;
+            margin: 0% 0%;
+            padding: 2%;
+            border: 5px;
+            color: white;
+        }
+        .intro {
+            text-align: center;
+            margin: 10%;
+            font-family: "arial";
+        }
+        .intro>p {
+            margin-top: 1%;
+        }
+        #city {
+            border: 0px;
+            background-color: transparent;
+            font-size: 12px;
+            color: rgb(41, 38, 38);
+        }
+        #slide {
+            width: 100%;
+            height: 600px;
+        }
+        #p,
+        #p_name {
+            font-size: 18px;
+        }
+        #info {
+            height: 600px;
+            width: 100%;
+        }
+        #work {
+            height: 400px;
+            width: 100%;
+        }
+        #work>.size {
+            height: 200px;
+            width: 200px;
+        }
+        #work>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 150px;
+            margin: 1%;
+            margin-left: 1.5%;
+        }
+        #users {
+            background-color: white;
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            margin-top: 4%;
+            margin-left: -2%;
+            padding: 2%;
+            height: 300px;
+            width: 100%;
+        }
+        #footers {
+            background-color: rgb(41, 43, 61);
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            padding: 2%;
+            height: 150px;
+            margin-left: -2%;
+            margin-top: 1px;
+            width: 100%;
+            color: white;
+        }
+        #info>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 40%;
+            margin: 1%;
+            margin-left: 8%;
+        }
+        .size {
+            height: 100px;
+            width: 100px;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            height: 80px;
+            flex-direction: row;
+            background: white;
+            margin-left: -193px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+        }
+        .serachbar_pro_img {
+            margin-left: -472px;
+            margin-top: 20px;
+            width: 107px;
+            height: 27px;
+        }
+        #serac_bar_default {
+            background-color: white;
+            border: 1px solid rgb(44, 43, 43);
+            border-radius: 6px;
+            height: 50px;
+            width: 250px;
+            color: rgb(49, 45, 45);
+            margin-left: 30%;
+            font-size: 15px;
+            align-items: center;
+        }
+        #flow {
+            width: 110%;
+        }
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    
+    @media only screen and (min-width: 992px) {
+        #nav {
+            background-color: rgb(41, 43, 61);
+            margin: 0% 0%;
+            padding: 2%;
+            height: 15%;
+            color: white;
+            width: 100%;
+        }
+        #nav>div {
+            margin: 0% 0.5%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+        #main-cont {
+            background-image: url(https://www.zoomcar.com/build/img/intro_bg.59b15d84c75cf310e76cc40155b90dc6.jpg) !important;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 500px;
+            margin: 0% 0%;
+            padding: 2%;
+            border: 5px;
+            color: white;
+        }
+        .intro {
+            text-align: center;
+            margin: 10%;
+            font-family: "arial";
+        }
+        .intro>p {
+            margin-top: 1%;
+        }
+        #city {
+            border: 0px;
+            background-color: transparent;
+            font-size: 12px;
+            color: rgb(41, 38, 38);
+        }
+        #slide {
+            width: 100%;
+            height: 600px;
+        }
+        #p,
+        #p_name {
+            font-size: 18px;
+        }
+        #info {
+            height: 600px;
+            width: 100%;
+        }
+        #work {
+            height: 400px;
+            width: 100%;
+        }
+        #work>.size {
+            height: 200px;
+            width: 200px;
+        }
+        #work>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 150px;
+            margin: 1%;
+            margin-left: 1.5%;
+        }
+        #users {
+            background-color: white;
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            margin-top: 4%;
+            margin-left: -2%;
+            padding: 2%;
+            height: 300px;
+            width: 100%;
+        }
+        #footers {
+            background-color: rgb(41, 43, 61);
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            padding: 2%;
+            height: 150px;
+            margin-left: -2%;
+            margin-top: 1px;
+            width: 100%;
+            color: white;
+        }
+        #info>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 40%;
+            margin: 1%;
+            margin-left: 8%;
+        }
+        .size {
+            height: 100px;
+            width: 100px;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            height: 80px;
+            flex-direction: row;
+            background: white;
+            margin-left: -193px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+        }
+        .serachbar_pro_img {
+            margin-left: -472px;
+            margin-top: 20px;
+            width: 107px;
+            height: 27px;
+        }
+        #serac_bar_default {
+            background-color: white;
+            border: 1px solid rgb(44, 43, 43);
+            border-radius: 6px;
+            height: 50px;
+            width: 250px;
+            color: rgb(49, 45, 45);
+            margin-left: 30%;
+            font-size: 18px;
+            align-items: center;
+        }
+        #flow {
+            width: 114%;
+        }
+    }
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    
+    @media only screen and (min-width: 1000px) {
+        #nav {
+            background-color: #33414f;
+            margin: 0% 0%;
+            padding: 1% 2% 1% 2%;
+            height: 15%;
+            color: white;
+            width: 100.6%
+        }
+        #nav>div {
+            margin: 0% 0.5%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+        #main-cont {
+            background-image: url(https://www.zoomcar.com/build/img/intro_bg.59b15d84c75cf310e76cc40155b90dc6.jpg) !important;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100.6%;
+            height: 500px;
+            margin: 0% 0%;
+            padding: 2%;
+            border: 5px;
+            color: white;
+        }
+        .intro {
+            text-align: center;
+            margin: 10%;
+            font-family: "arial";
+        }
+        .intro>p {
+            margin-top: 1%;
+        }
+        #city {
+            border: 0px;
+            background-color: transparent;
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+        }
+        #slide {
+            width: 100%;
+            padding-right: 67px;
+            height: 540px;
+        }
+        #p,
+        #p_name {
+            font-size: 20px;
+            width: 186%;
+            margin-left: -46%;  
+        }
+        #info {
+            height: 600px;
+            width: 100.6%;
+            background: rgb(238, 238, 238);
+        }
+        #work {
+            height: 400px;
+            width: 100%;
+        }
+        #work>.size {
+            height: 200px;
+            width: 200px;
+        }
+        #work>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 150px;
+            margin: 1%;
+            margin-left: 1.5%;
+        }
+        #users {
+            background-color: rgb(249, 249, 249);
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+          
+            margin-left: -2%;
+            padding: 2%;
+            height: 300px;
+            width: 100%;
+            margin-top: 27%;
+        }
+        #footers {
+            background-color: #33414f;
+            align-items: center;
+            text-align: center;
+            margin: 0% 0%;
+            padding: 2%;
+            height: 113px;
+            /* margin-left: -2%; */
+            margin-top: 0px;
+            width: 100%;
+            margin-left: -2px;
+            /* margin-right: 130px; */
+            padding-right: 40px;
+            color: white;
+        }
+        #info>.flex>div {
+            width: 20%;
+            align-items: center;
+            height: 40%;
+            margin: 1%;
+            margin-left: 8%;
+        }
+        .size {
+            height: 100px;
+            width: 100px;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            height: 80px;
+            flex-direction: row;
+            background: white;
+            margin-left: -193px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+        }
+        .serachbar_pro_img {
+            margin-left: -472px;
+            margin-top: 20px;
+            width: 107px;
+            height: 27px;
+        }
+        #serac_bar_default {
+            background-color: #fff;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+            border-radius: 6px;
+            height: 58px;
+            width: 538px;
+            color: rgb(49, 45, 45);
+            margin-left: 24%;
+            font-size: 20px;
+            align-items: center;
+        }
+        #flow {
+            width: 114%;
+        }
+    }

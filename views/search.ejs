@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Car In Kolkata | Rent Cars @ Most Affordable Rates - Zoomcar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" type="image">
+
+    <link rel="stylesheet" href="search.css">
+</head>
+
+<body>
+    <!-- top animation start-->
+    <div id="status_head">
+        <div id="circle_box">
+            <div class="first_circle">
+                <div class="first_fillup"></div>
+            </div>
+            <p class="circle_p">Starting Point</p>
+
+        </div>
+        <div class="line"></div>
+        <div id="circle_box">
+            <div class="second_circle">
+                <div class="second_fillup"></div>
+            </div>
+            <p class="circle_p_2">Pickup Time</p>
+        </div>
+        <div class="line_2"></div>
+        <div id="circle_box">
+            <div class="third_circle">
+                <div class="third_fillup"></div>
+            </div>
+            <p class="circle_p_2">Dropoff Time</p>
+        </div>
+        <img src="https://www.zoomcar.com/assets/component-images/home-icon.148123dbffda052b1327ffd47f245138.png" class="home" onclick="Home()">
+    </div>
+    <!-- top animation end-->
+
+
+    <div id="page">
+        <!-- serch city start -->
+        <div id="search">
+            <h1 class="title">Tell us your Starting Point</h1>
+            <div id="input_part">
+                <div class="box_shadow"><input type="text" placeholder="Enter city" id="first_1" list="city_list" oninput="city_1()">
+                    <datalist id="city_list">
+                <option value="Banglore"></option>
+                <option >Kolkata</option>    
+                <option>Chennai</option>
+                <option>Ahemdabad</option>
+                <option>Vadododra</option>
+            </datalist> </div>
+                <div class="box_shadow"><input type="text" placeholder="Enter city in banglore" id="first_2" list="city_list_2" oninput="bang()">
+                    <datalist id="city_list_2">
+                <option value="Bangalore Palace" >Banglore</option>
+                <option value="U R Rao Satellite Centre">Banglore</option>
+                <option value="Kempegowda International Airport">Banglore</option>
+                <option value="Chennai International Airport">Chennai</option>
+                <option value="University of Madras">Chennai</option>
+                <option value="Netaji Subhash Chandra Bose International Airport">Kolkata</option>
+            </div>
+            <div class="map"  id="box_shadow"><img src="https://www.zoomcar.com/assets/component-images/location.4f83fc7a3f686c9a14dc757b7a0b9b07.png" alt="" srcset=""> <div class="map_locate">Locate me</div></div>
+           </div>
+           <div id="alert_wrong_input"></div>
+     
+        <div id="add"><p>I want to drop my car in a different city</p>
+           <div id="switch"> <label class="switch">
+                <input type="checkbox" id="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+            </div>
+        <div id="input_part_2">
+            <div  class="box_shadow"><input type="text" placeholder="Enter city" id="second_1" list="city_list_2_1" oninput="city_2()">
+                <datalist id="city_list_2_1">
+                  
+                    <option>Kolkata</option>
+                    <option>Chennai</option>
+                   
+                </datalist> </div>
+                <div class="box_shadow"><input type="text" placeholder="Enter city" id="second_2" list="city_list_2_2" oninput="bang_2()">
+                    <datalist id="city_list_2_2">
+                <option value="Chennai International Airport">Chennai</option>
+                <option value="University of Madras">Chennai</option>
+                <option value="Netaji Subhash Chandra Bose International Airport">Kolkata</option></div>
+                <div class="map"  id="box_shadow"><img src="https://www.zoomcar.com/assets/component-images/location.4f83fc7a3f686c9a14dc757b7a0b9b07.png" alt="" srcset=""> <div class="map_locate">Locate me</div></div>
+            </div>
+            <div id="alert_wrong_input_2"></div>
+            <div id="div_space"></div>
+        </div>
+</div>
+ <!-- serch city end -->
+
+ <!-- pickup page start -->
+<div id="pickup_page">
+    <div><p class="date_pick">From When do you need a Zoomcar?</p></div>
+    <div id="month_div">
+        <p class="month_p">SELECT A MONTH</p>
+        <div id="month">
+            <div id="aug"  onclick="aug_month()">AUG</div>
+            <div id="sep"  onclick="Sep_month()">SEP</div>
+            <div id="oct" onclick="oct_month()">OCT</div>
+            <div id="nov">NOV</div>
+            <div id="dec">DEC</div>
+            <div id="jan">JAN</div>
+            <div id="feb">FEB</div>
+        </div>
+    </div>  
+    <div id="date_div">
+        <div><p class="date_p">START DATE (Prices will be higher than usual on Weekends/Festive days)</p></div>
+       <div id="aug_date">        
+        <!-- <div onclick="date_picker_aug(id)" id="aug_28">SAT<br><h6>28</h6></div> -->
+        <div onclick="date_picker_aug(id)" id="aug_29">SUN<br><h6>29</h6></div>
+        <div onclick="date_picker_aug(id)" id="aug_30">MON<br><h6>30</h6></div>
+        <div onclick="date_picker_aug(id)" id="aug_31">TUE<br><h6>31</h6></div>
+       </div>
+       <div id="sep_date">
+        <div onclick="date_picker_sep(id)" id="sep_1">WED<br><h6>1</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_2">THU<br><h6>2</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_3">FRI<br><h6>3</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_4">SAT<br><h6>4</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_5">SUN<br><h6>5</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_6">MON<br><h6>6</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_7">TUE<br><h6>7</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_8">WED<br><h6>8</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_9">THU<br><h6>9</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_10">FRI<br><h6>10</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_11">SAT<br><h6>11</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_12">SUN<br><h6>12</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_13">MON<br><h6>11</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_14">TUE<br><h6>14</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_15">WED<br><h6>15</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_16">THU<br><h6>16</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_17">FRI<br><h6>17</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_18">SAT<br><h6>18</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_19">SUN<br><h6>19</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_20">MON<br><h6>20</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_21">TUE<br><h6>21</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_22">WED<br><h6>22</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_23">THU<br><h6>23</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_24">FRI<br><h6>24</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_25">SAT<br><h6>25</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_26">SUN<br><h6>26</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_27">MON<br><h6>27</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_28">TUE<br><h6>28</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_29">WED<br><h6>29</h6></div>
+        <div onclick="date_picker_sep(id)" id="sep_30">THU<br><h6>30</h6></div>
+       </div>
+       
+       <div id="oct_date">
+        <div  onclick="date_picker_oct(id)" id="oct_1">FRI<br><h6>1</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_2">SAT<br><h6>2</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_3">SUN<br><h6>3</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_4">MON<br><h6>4</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_5">TUE<br><h6>5</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_6">WED<br><h6>6</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_7">THU<br><h6>7</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_8">FRI<br><h6>8</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_9">SAT<br><h6>9</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_10">SUN<br><h6>10</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_11">MON<br><h6>11</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_12">TUE<br><h6>12</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_13">WED<br><h6>11</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_14">THU<br><h6>14</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_15">FRI<br><h6>15</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_16">SAT<br><h6>16</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_17">SUN<br><h6>17</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_18">MON<br><h6>18</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_19">TUE<br><h6>19</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_20">WED<br><h6>20</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_21">THU<br><h6>21</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_22">FRI<br><h6>22</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_23">SAT<br><h6>23</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_24">SUN<br><h6>24</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_25">MON<br><h6>25</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_26">TUE<br><h6>26</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_27">WED<br><h6>27</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_28">THU<br><h6>28</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_29">FRI<br><h6>29</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_30">SAT<br><h6>30</h6></div>
+        <div  onclick="date_picker_oct(id)" id="oct_31">SUN<br><h6>31</h6></div>
+       </div>
+    </div>
+    <div id="time_div_pickup">
+        <div><p class="time_p">SELECT TIME</p></div>
+        <div id="time_pickup">
+        <div onclick="on_pickup_time_a()" id="a">09:00 PM</div>
+        <div onclick="on_pickup_time_b()" id="b">12:00 PM</div>
+        <div onclick="on_pickup_time_c()" id="c">03:00 PM</div>
+        <div onclick="on_pickup_time_d()" id="d">06:00 PM</div>
+        <div onclick="on_pickup_time_e()" id="e">09:00 AM</div>
+        <div onclick="on_pickup_time_f()" id="f">12:00 AM</div>
+        <div onclick="on_pickup_time_g()" id="g">03:00 AM</div>
+        <div onclick="on_pickup_time_h()" id="h">06:00 AM</div>
+    </div>
+    </div>
+</div>
+<!-- pickup page end -->
+
+
+<!-- dropoff page start -->
+<div id="dropoff_page">
+    <div><p class="date_pick_2">Till when do you need it?</p></div>
+    <div id="month_div_2">
+        <p class="month_p_2">SELECT A MONTH</p>
+        <div id="month_2">
+            <div id="aug_second"  onclick="aug_month_2()">AUG</div>
+            <div id="sep_second"  onclick="Sep_month_2()">SEP</div>
+            <div id="oct_second" onclick="oct_month_2()">OCT</div>
+            <div id="nov_2">NOV</div>
+            <div id="dec_2">DEC</div>
+            <div id="jan_2">JAN</div>
+            <div id="feb_2">FEB</div>
+        </div>
+    </div>  
+    <div id="date_div_2">
+        <div><p class="date_p_2">START DATE (Prices will be higher than usual on Weekends/Festive days)</p></div>
+       <div id="aug_date_2">        
+        <!-- <div onclick="date_picker_aug_2(id)" id="aug_2_28">SAT<br><h6>28</h6></div> -->
+        <!-- <div onclick="date_picker_aug_2(id)" id="aug_2_29">SUN<br><h6>29</h6></div> -->
+        <div onclick="date_picker_aug_2(id)" id="aug_2_30">MON<br><h6>30</h6></div>
+        <div onclick="date_picker_aug_2(id)" id="aug_2_31">TUE<br><h6>31</h6></div>
+       </div>
+       <div id="sep_date_2">
+        <div onclick="date_picker_sep_2(id)" id="sep_2_1">WED<br><h6>1</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_2">THU<br><h6>2</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_3">FRI<br><h6>3</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_4">SAT<br><h6>4</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_5">SUN<br><h6>5</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_6">MON<br><h6>6</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_7">TUE<br><h6>7</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_8">WED<br><h6>8</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_9">THU<br><h6>9</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_10">FRI<br><h6>10</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_11">SAT<br><h6>11</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_12">SUN<br><h6>12</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_13">MON<br><h6>11</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_14">TUE<br><h6>14</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_15">WED<br><h6>15</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_16">THU<br><h6>16</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_17">FRI<br><h6>17</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_18">SAT<br><h6>18</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_19">SUN<br><h6>19</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_20">MON<br><h6>20</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_21">TUE<br><h6>21</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_22">WED<br><h6>22</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_23">THU<br><h6>23</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_24">FRI<br><h6>24</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_25">SAT<br><h6>25</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_26">SUN<br><h6>26</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_27">MON<br><h6>27</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_28">TUE<br><h6>28</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_29">WED<br><h6>29</h6></div>
+        <div onclick="date_picker_sep_2(id)" id="sep_2_30">THU<br><h6>30</h6></div>
+       </div>
+       
+       <div id="oct_date_2">
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_1">FRI<br><h6>1</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_2">SAT<br><h6>2</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_3">SUN<br><h6>3</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_4">MON<br><h6>4</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_5">TUE<br><h6>5</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_6">WED<br><h6>6</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_7">THU<br><h6>7</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_8">FRI<br><h6>8</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_9">SAT<br><h6>9</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_10">SUN<br><h6>10</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_11">MON<br><h6>11</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_12">TUE<br><h6>12</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_13">WED<br><h6>11</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_14">THU<br><h6>14</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_15">FRI<br><h6>15</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_16">SAT<br><h6>16</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_17">SUN<br><h6>17</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_18">MON<br><h6>18</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_19">TUE<br><h6>19</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_20">WED<br><h6>20</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_21">THU<br><h6>21</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_22">FRI<br><h6>22</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_23">SAT<br><h6>23</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_24">SUN<br><h6>24</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_25">MON<br><h6>25</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_26">TUE<br><h6>26</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_27">WED<br><h6>27</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_28">THU<br><h6>28</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_29">FRI<br><h6>29</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_30">SAT<br><h6>30</h6></div>
+        <div  onclick="date_picker_oct_2(id)" id="oct_2_31">SUN<br><h6>31</h6></div>
+       </div>
+    </div>
+    <div id="time_div_pickup_2">
+        <div><p class="time_p_2">SELECT TIME</p></div>
+        <div id="time_pickup_2">
+        <div onclick="on_pickup_time_a_2()" id="a_2">09:00 PM</div>
+        <div onclick="on_pickup_time_b_2()" id="b_2">12:00 PM</div>
+        <div onclick="on_pickup_time_c_2()" id="c_2">03:00 PM</div>
+        <div onclick="on_pickup_time_d_2()" id="d_2">06:00 PM</div>
+        <div onclick="on_pickup_time_e_2()" id="e_2">09:00 AM</div>
+        <div onclick="on_pickup_time_f_2()" id="f_2">12:00 AM</div>
+        <div onclick="on_pickup_time_g_2()" id="g_2">03:00 AM</div>
+        <div onclick="on_pickup_time_h_2()" id="h_2">06:00 AM</div>
+    </div>
+    </div>
+</div>
+<!-- dropoff page end -->
+
+<!-- bottom status start -->
+<div id="status_bottom">
+        <div class="first_box">
+            <p class="start">STARTING POINT</p>
+            <p class="first_box_location">Select Pick-up Location</p>
+        </div>
+        <div class="tr-box"></div>
+        <div class="trwhite-box"></div>
+        <div class="second_box">
+            <p class="start_2"></p>
+            <p class="second_box_location"></p>
+        </div>
+        <div class="tr-box_2"></div>
+        <div class="trwhite-box_2"></div>
+        <div class="third_box">
+            <p class="start_3"></p>
+            <p class="third_box_location_3"></p>
+        </div>
+        <div class="tr-box_3"></div>
+        <div class="trwhite-box_3"></div>
+        <div id="click_month_btn"><button onclick="time_page()">NEXT</button> </div>
+</div>
+<!-- bottom status end -->
+
+</body >
+            <script src="search.js">
+     
+
+            </script>
+</html>

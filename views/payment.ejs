@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Drive Car Rentals |Book ZoomCar & Feel Safe!zoomcar.com</title>
+    <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div id="nav">
+        <img src="https://www.zoomcar.com/build/img/logo.f0c7a9744cfeb3fb5c90eafda61dd2ce.svg" class="nav_img">
+        <div class=" float-r flot_r">
+            <div class="dropbtn float-r dropdown" id="app">MOBILE APP
+                <div class="dropdown-content">
+                    <a href="https://play.google.com/store/apps/details?id=com.zoomcar&referrer=utm_source%3Dhome%2520page%26utm_medium%3Dheader%2520links%26utm_content%3Dandroid%26utm_campaign%3Dinstalls">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJj8LuevwdQYk2S3w1B3EeDskXk7LvtcHOkzlQQnWO3NMDX6qwH7bCnGHqCR_t_aFmtw&usqp=CAU"></a>
+                    <a href="https://itunes.apple.com/us/app/zoomcar-self-drive-cars/id889910218?mt=8&utm_source=home%20page&utm_medium=header%20links&utm_content=iOS&utm_campaign=installs">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAFKoUEGpPjP79LPi6r9bFfem3GIOQawWVV75SkXyBwevJd183Bvw_wI9duOdX5rTccU&usqp=CAU">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="float-r ">
+            ZMS
+        </div>
+        <div class="float-r ">
+            AMIGO
+        </div>
+        <div class="float-r ">
+            <a href="#">SUBSCRIPTION</a>
+        </div>
+        <div class="float-r ">
+            <a href="../Offer/offer.html">OFFERS</a>
+        </div>
+
+    </div>
+    <div id="checkout_cont">
+      
+        <div class="checkout_div_child">
+            <div class="checkout_div_child_child">
+                <p class="checkout_div_child_child_p" id="amount"></p>
+                <p class="checkout_div_child_child_p2" id="pa"></p>
+            </div>
+            <br>
+            <div class="checkout_div_child_child2">
+                <p class="checkout_div_child_child2_p1">Payment Method</p>
+                <p class="checkout_div_child_child2_p2" id="booking"> </p>
+            </div>
+            <div class="checkout_div_child_child3">
+
+
+                <div id="payment" class="payment_div_" >
+                    <!--Payment form start-->
+                    <form class="form_"  >
+                        <input type="number" class="form_input"  placeholder="Enter Card Number" id="card_number"><br>
+
+                        <div class="form_child_div" >
+                        <input type="text" class="form_child_input"  placeholder="MM /YYY" id="card_expiry"><br>
+
+                        <input type="password" class="form_child_input2" placeholder="CVV" id="card_CVV"><br>
+                    </div>
+                       
+                    </form>
+                    <!--Payment Form end-->
+                    <div class="btn_cont">
+                        <button id="checkout_btn" class="cursor_point"> <a onclick="Suscces()">Pay</a> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+     
+        <div class="car_cont ">
+            <div class="summary">SUMMARY</div>
+            <div id="car_img">
+                
+            </div>
+            <div class="Car_details"></div>
+            <div class="Car_details">(5 Seater)</div>
+            <div class="border"></div>
+            <div id="d_p_point">
+                <div id="star_point">
+                    <h5>STARTING POINT <span>></span></h5>
+                    <h4 class="pick_city"></h4>
+                    <p class="p_point_car"></p>
+                </div>
+                <div id="drop_point">
+                    <h5>DESTINATION<span>></span></h5>
+                    <h4 class="drop_city"></h4>
+                    <p class="d_point_car"></p>
+                </div>
+           </div>
+            <div id="data_flex">
+                <div id="date_start">
+                    <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
+                    <div class="p_info">
+                        <div class="left_date"></div>
+                        <div class="rigth_m_t">
+                            <h6 class="p_day"></h6>
+                            <p class="s_time_date"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="date_end">
+                    <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
+                    <div class="p_info">
+                        <div class="right_date"></div>
+                        <div class="rigth_m_t">
+                            <h6 class="d_day"></h6>
+                            <p class="e_time_date"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="clear"></div>
+
+      
+    </div>
+    <div id="footers">
+        <!--ZOOMCAR footers Start-->
+
+        <div class="flex">
+            <div  class="size">
+                <img src="https://www.zoomcar.com/build/img/zc-works.2adcbe18edb84c7c1fdf0c8d6c894f8b.svg" class="div_size_child" >
+
+                <p class="div_size_child_p">How Zoomcars works?</p>
+            </div>
+            <div  class="size">
+                <img src="https://www.zoomcar.com/build/img/policies.ceddb15a4eef16af85ba8666b1522741.svg" class="div_size_child"  >
+
+                <p class="div_size_child_p">Policies</p>
+            </div>
+            <div class="size">
+                <img src="https://www.zoomcar.com/build/img/help-support.acf244c0683e201bd2d978f1ddc5d33d.svg"  class="div_size_child"  >
+
+                <p class="div_size_child_p">Help-Support</p>
+            </div>
+            <div  class="size">
+                <img src="https://www.zoomcar.com/build/img/safety.127607759cd86e3d75f5698a641d5b83.svg" class="div_size_child"  >
+
+                <p class="div_size_child_p">Zoom in Safety</p>
+            </div>
+
+        </div>
+
+
+    </div>
+   
+</body>
+</html>
+<script src="payment.js"></script>
+
+   
+
