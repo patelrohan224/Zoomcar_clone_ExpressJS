@@ -269,6 +269,7 @@
             </div>
         </div>
         <!--ZOOMCAR footers End-->
+<!-- otp page starts here -->
         <div class="cont2">
             <div id="main1">
                 <div>
@@ -293,6 +294,7 @@
                 </div>
             </div>
         </div>
+<!-- otp page ends here -->
 <!-- signup page starts here -->
         <div class="cont">
             <div id="main">
@@ -337,18 +339,24 @@
                             <a href="https://accounts.google.com/">GOOGLE</a>
                         </div>
                     </div>
+<!-- signup form starts here -->
                     <form action="/signup" onsubmit="validateEmail()" method="POST">
-                        <input type="text" placeholder="Enter your Email or Mobile number" id="input_format" name="phone_num" value="">
+                        <input type="text" placeholder="Enter your Email or Mobile number" id="input_format" name="phone_num" >
                         <br>
                         <label id="lbltext">Please Enter a Valid Phone Number</label>
                         <br>
-                        <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next">
+                        <button type="submit" value="submit"><img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next"></button>
+                        <!-- <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next"> -->
+                        
                         <!-- <input type="image" name="submit" src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next"> -->
                     </form>
+<!-- signup form ends here -->
 
                 </div>
             </div>
         </div>
+<!-- signup page ends here -->
+<!-- login page starts here -->
         <div class="cont1">
             <div id="main">
                 <div class="close1">+</div>
@@ -384,14 +392,15 @@
                 <div class="right_cont">
                     <div>
                         <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png" alt="logo">
-                        <form onsubmit="form_details()">
+                        <form action=`http://localhost:3535/signup/${signup._id}`
+                         onsubmit="form_details()" method="PATCH">
                             <input type="text" placeholder="Mobile number" id="phone1">
-                            <input type="text" placeholder="Enter your Email" id="email">
+                            <input type="text" placeholder="Enter your Email" id="email" name="email">
                             <br>
                             <label id="lbltext1">Please Enter a  Valid Email</label>
                             <br>
-                            <input type="text" placeholder="Name on Driving Licence" id="drive">
-                            <input type="password" placeholder="Password(minimum 8 characters" id="min8">
+                            <input type="text" placeholder="Name on Driving Licence" id="drive" name="name">
+                            <input type="password" placeholder="Password(minimum 8 characters" id="min8" name="password">
                             <br>
                             <label id="lbltext2">Please Enter a  minmum 8 Character Password</label>
                             <br>
@@ -404,7 +413,9 @@
                 </div>
             </div>
         </div>
+<!-- login page ends here -->
         <script src="/js/home.js"></script>
+
 
 </body>
 
