@@ -12,34 +12,54 @@ router.post("", async (req, res) => {
 })
 
 // 2.get all cars
-router.get("", async (req, res) => {
-    const cars = await Car.find().lean().exec()
+let items;
 
-    return res.status(200).json({ cars })
+router.get("", async (req, res) => {
+    items = await Car.find().lean().exec();
+    return res.render("car.ejs", {
+        items
+    })
 })
-// router.get("/:id", async (req, res) => {
-//   const items = await Products.find().sort({ price: -1 });
-//   res.render("new.ejs", {
-//     items,
-//   });
-//   // res.send(items);
-// });
+
+//decending order
+router.get("", async (req, res) => {
+    items = await Car.find().sort({ price: -1}).lean().exec();
+    return res.render("car.ejs", {
+        items
+    })
+})
+//assending order
+router.get("", async (req, res) => {
+    items = await Car.find().sort({ price: 1 }).lean().exec();
+    return res.render("car.ejs", {
+        items
+    })
+})
+// automatic transmission
+router.get("", async (req, res) => {
+    items = await Car.find({ drive: "Automatic"}).lean().exec();
+    return res.render("car.ejs", {
+        items
+    })
+})
+//manual transmission
+router.get("", async (req, res) => {
+    items = await Car.find({ drive: "manual"}).lean().exec();
+    return res.render("car.ejs", {
+        items
+    })
+})
+//with fual decending
+router.get("", async (req, res) => {
+    items = await Car.find().sort({ price1: -1}).lean().exec();
+    return res.render("car.ejs", {
+        items
+    })
+})
 
 // // 3. get a single car
 // router.get("/:id", async (req, res) => {
 //     const car = await Car.find(req.params.id).lean().exec()
-//     return res.status(200).json({ car })
-// })
-
-// // 4. update a car
-// router.patch("/:id", async (req, res) => {
-//     const car = await Car.findByIdAndUpdate(req.params.id, req.body, { new: true })
-//     return res.status(201).json({ car })
-// })
-
-// // 5 . delete a car 
-// router.delete("/:id", async (req, res) => {
-//     const car = await Car.findByIdAndDelete(req.params.id)
 //     return res.status(200).json({ car })
 // })
 
