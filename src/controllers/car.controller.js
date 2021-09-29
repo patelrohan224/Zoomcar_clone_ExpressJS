@@ -22,44 +22,43 @@ router.get("", async (req, res) => {
 })
 
 //decending order
-router.get("", async (req, res) => {
+router.get("/sort", async (req, res) => {
     items = await Car.find().sort({ price: -1}).lean().exec();
     return res.render("car.ejs", {
         items
     })
 })
 //assending order
-router.get("", async (req, res) => {
+router.get("/sorted", async (req, res) => {
     items = await Car.find().sort({ price: 1 }).lean().exec();
     return res.render("car.ejs", {
         items
     })
 })
 // automatic transmission
-router.get("", async (req, res) => {
+router.get("/automatic", async (req, res) => {
     items = await Car.find({ drive: "Automatic"}).lean().exec();
     return res.render("car.ejs", {
         items
     })
 })
 //manual transmission
-router.get("", async (req, res) => {
+router.get("/manual", async (req, res) => {
     items = await Car.find({ drive: "manual"}).lean().exec();
     return res.render("car.ejs", {
         items
     })
 })
 //with fual decending
-router.get("", async (req, res) => {
+router.get("/withfuel", async (req, res) => {
     items = await Car.find().sort({ price1: -1}).lean().exec();
+    for(let i=0;i<items.length;i++){
+        items[i].price=items[i].price1
+    }
     return res.render("car.ejs", {
         items
     })
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 
 
 // router.get("/:id", async (req, res) => {
@@ -69,10 +68,6 @@ router.get("", async (req, res) => {
 //   });
 //   // res.send(items);
 // });
-=======
->>>>>>> 92576707e25c0b04369107092919a3c56d660431
-=======
->>>>>>> 92576707e25c0b04369107092919a3c56d660431
 
 // // 3. get a single car
 // router.get("/:id", async (req, res) => {
