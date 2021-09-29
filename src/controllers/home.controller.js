@@ -22,6 +22,12 @@ router.get("", async(req, res) => {
 //     return res.status(200).send({ signup })
 // })
 
+router.get("/offers", async(req, res) => {
+
+    return res.render("offer.ejs")
+})
+
+
 router.patch("/:id", async(req, res) => {
 
     // const signup = await Signup.findByIdAndUpdate(req.params.id, req.body, ({ new: true })).lean().exec();

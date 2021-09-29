@@ -11,388 +11,335 @@
     <link rel="stylesheet" href="/css/car.css">
 </head>
 <style>
+
 </style>
 
 <body>
-    <div id="nav">
-        <img src="https://www.zoomcar.com/build/img/logo.f0c7a9744cfeb3fb5c90eafda61dd2ce.svg" class="nav_img">
-        <div class="float-r">
-            <a onclick="signup_roh()">LOGIN</a>
-        </div>
-        <div class=" float-r ">
-            <a onclick="signup_roh()">SIGNUP</a>
-        </div>
-        <div class=" float-r nav_class_div">
-            <div class="dropbtn float-r dropdown nav_class" id="app">MOBILE APP
-                <!-- <i class="fa fa-caret-down"></i>-->
-                <div class="dropdown-content">
-                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7QYicbC68K1SLmUUtoVci5YswGfPnCisjtA&usqp=CAU"
-                        class="nav_img_a"> <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJj8LuevwdQYk2S3w1B3EeDskXk7LvtcHOkzlQQnWO3NMDX6qwH7bCnGHqCR_t_aFmtw&usqp=CAU"
-                            class="nav_img_child_a"></a>
-                    <a
-                        href="https://itunes.apple.com/us/app/zoomcar-self-drive-cars/id889910218?mt=8&utm_source=home%20page&utm_medium=header%20links&utm_content=iOS&utm_campaign=installs">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwAFKoUEGpPjP79LPi6r9bFfem3GIOQawWVV75SkXyBwevJd183Bvw_wI9duOdX5rTccU&usqp=CAU"
-                            class="nav_img_a">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="float-r nav_bar_cursor">
-            ZMS
-        </div>
-        <div class="float-r nav_bar_cursor">
-            AMIGO
-        </div>
-        <div class="float-r ">
-            <a href="#">SUBSCRIPTION</a>
-        </div>
-        <div class="float-r ">
-            <a href="../Offer/offer.html">OFFERS</a>
-        </div>
-
-    </div>
-    <div class="cont2">
-        <div id="main1">
-            <div>
-                <div class="logo_cont">
-                    <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png"
-                        alt="logo">
-                </div>
+    <%- include('partials/navbar') %>
+        <div class="cont2">
+            <div id="main1">
                 <div>
-                    <img src="https://www.zoomcar.com/build/img/otp-icon.94be1fd5319930b86e7fbae7cdb1bec3.png" alt=""
-                        class="otp_image_cont">
-                </div>
-                <p>We have sent your requested OTP</p>
-                <form action="new.html" onsubmit="return validateotp()">
+                    <div class="logo_cont">
+                        <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png" alt="logo">
+                    </div>
                     <div>
-                        <input type="password" id="otp-cont">
-                        <br>
-                        <label id="otplabel">Valid</label>
-                        <br>
+                        <img src="https://www.zoomcar.com/build/img/otp-icon.94be1fd5319930b86e7fbae7cdb1bec3.png" alt="" class="otp_image_cont">
                     </div>
-                    <div class="img_cont">
-                        <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg"
-                            id="otp">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="cont">
-        <div id="main">
-            <div class="close">+</div>
-            <div class="left_cont">
-                <div class="promo">
-                    <div class="promo1">
-                        <img src="https://www.zoomcar.com/build/img/promo-1.1a6e5812962b16014f7311ed801fbf71.png"
-                            alt="zoom1">
-                        <h1>REFER & EARN</h1>
-                        <p>Refer or invite your friends to zoomcar and earn free rides, free Z points and more.</p>
-                        <span class="dot"></span>
-                        <span class="dot" id="blue"></span>
-                        <span class="dot" id="blue"></span>
-                    </div>
-                    <div class="promo2">
-                        <img src="https://www.zoomcar.com/build/img/promo_supermiler.7a597371bd16587f1d46a66dbff6b72e.svg"
-                            alt="zoom2">
-                        <h1>SUPERMILER CLUB</h1>
-                        <p>Premium club which rewards you everytime you drive with us.</p>
-                        <span class="dot" id="blue"></span>
-                        <span class="dot"></span>
-                        <span class="dot" id="blue"></span>
-
-                    </div>
-                    <div class="promo3">
-                        <img src="https://www.zoomcar.com/build/img/promo-3.f243fadd09ecdd1d9cb70694fa1be058.png"
-                            alt="zoom3">
-                        <h1>FREE FUEL</h1>
-                        <p>The fuel is on us for your complete trip.In case you re-fuel a zoomcar, we will re-fill your
-                            pockets and that’s a promise.</p>
-                        <span class="dot" id="blue"></span>
-                        <span class="dot" id="blue"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="right_cont">
-                <div>
-                    <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png"
-                        alt="logo">
-                    <p>Continue with</p>
-                    <div class="facebook">
-                        <a href="https://www.facebook.com/zoomcar.in/">FACEBOOK</a>
-                    </div>
-                    <div class="google">
-                        <a href="https://accounts.google.com/">GOOGLE</a>
-                    </div>
-                </div>
-                <form onsubmit="validateEmail()">
-                    <input type="text" placeholder="Enter your Email or Mobile number" id="input_format">
-                    <br>
-                    <label id="lbltext">Please Enter a Valid Phone Number</label>
-                    <br>
-                    <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg"
-                        alt="next" id="next">
-                    <!-- <input type="image" name="submit" src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next"> -->
-                </form>
-
-            </div>
-        </div>
-    </div>
-    <div class="cont1">
-        <div id="main">
-            <div class="close1">+</div>
-            <div class="left_cont">
-                <div class="promo">
-                    <div class="promo4">
-                        <img src="https://www.zoomcar.com/build/img/promo-1.1a6e5812962b16014f7311ed801fbf71.png"
-                            alt="zoom1">
-                        <h1>REFER & EARN</h1>
-                        <p>Refer or invite your friends to zoomcar and earn free rides, free Z points and more.</p>
-                        <span class="dot"></span>
-                        <span class="dot" id="blue"></span>
-                        <span class="dot" id="blue"></span>
-                    </div>
-                    <div class="promo5">
-                        <img src="https://www.zoomcar.com/build/img/promo_supermiler.7a597371bd16587f1d46a66dbff6b72e.svg"
-                            alt="zoom2">
-                        <h1>SUPERMILER CLUB</h1>
-                        <p>Premium club which rewards you everytime you drive with us.</p>
-                        <span class="dot" id="blue"></span>
-                        <span class="dot"></span>
-                        <span class="dot" id="blue"></span>
-
-                    </div>
-                    <div class="promo6">
-                        <img src="https://www.zoomcar.com/build/img/promo-3.f243fadd09ecdd1d9cb70694fa1be058.png"
-                            alt="zoom3">
-                        <h1>FREE FUEL</h1>
-                        <p>The fuel is on us for your complete trip.In case you re-fuel a zoomcar, we will re-fill your
-                            pockets and that’s a promise.</p>
-                        <span class="dot" id="blue"></span>
-                        <span class="dot" id="blue"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="right_cont">
-                <div>
-                    <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png"
-                        alt="logo">
-                    <form onsubmit="form_details()">
-                        <input type="text" placeholder="Mobile number" id="phone1">
-                        <input type="text" placeholder="Enter your Email" id="email">
-                        <br>
-                        <label id="lbltext1">Please Enter a Valid Email</label>
-                        <br>
-                        <input type="text" placeholder="Name on Driving Licence" id="drive">
-                        <input type="password" placeholder="Password(minimum 8 characters" id="min8">
-                        <br>
-                        <label id="lbltext2">Please Enter a minmum 8 Character Password</label>
-                        <br>
-                        <span id="message"></span>
-                        <div id="login_submit_button">Sign Up</div>
-                        <!-- <input onclick="form_details()" type="submit" value="Sign Up" id="submit"> -->
+                    <p>We have sent your requested OTP</p>
+                    <form action="new.html" onsubmit="return validateotp()">
+                        <div>
+                            <input type="password" id="otp-cont">
+                            <br>
+                            <label id="otplabel">Valid</label>
+                            <br>
+                        </div>
+                        <div class="img_cont">
+                            <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" id="otp">
+                        </div>
                     </form>
-                    <!-- <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next">     -->
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="main_vishal">
-
-        <div class="left_coloum">
-
-
-            <div id="start_drop_location">
-                <div class="heading">
-
-                    <img src="https://thumbs.dreamstime.com/b/tick-mark-icon-flat-illustration-check-mark-vector-tick-mark-icon-flat-illustration-check-mark-vector-164317151.jpg"
-                        alt="">
-
-                    <span>START AND DESTINATION</span>
-
-                </div>
-
-                <div id="d_p_point">
-                    <div id="star_point">
-                        <h5>STARTING POINT <span>></span></h5>
-                        <h4 class="pick_city"></h4>
-                        <p class="p_point_car"></p>
-                    </div>
-                    <div id="drop_point">
-                        <h5>DESTINATION<span>></span></h5>
-                        <h4 class="drop_city"></h4>
-                        <p class="d_point_car"></p>
-                    </div>
-                </div>
-            </div>
-            <div id="date_select">
-                <div class="dates_s_e">
-
-                    <img src="https://thumbs.dreamstime.com/b/tick-mark-icon-flat-illustration-check-mark-vector-tick-mark-icon-flat-illustration-check-mark-vector-164317151.jpg"
-                        alt="">
-
-                    <span>SELECT DATE AND TIME FOR YOUR TRIP</span>
-
-                </div>
-                <div id="data_flex">
-                    <div id="date_start">
-                        <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
-                        <div class="p_info">
-                            <div class="left_date"></div>
-                            <div class="rigth_m_t">
-                                <h6 class="p_day"></h6>
-                                <p class="s_time_date"></p>
-                            </div>
+        <div class="cont">
+            <div id="main">
+                <div class="close">+</div>
+                <div class="left_cont">
+                    <div class="promo">
+                        <div class="promo1">
+                            <img src="https://www.zoomcar.com/build/img/promo-1.1a6e5812962b16014f7311ed801fbf71.png" alt="zoom1">
+                            <h1>REFER & EARN</h1>
+                            <p>Refer or invite your friends to zoomcar and earn free rides, free Z points and more.</p>
+                            <span class="dot"></span>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot" id="blue"></span>
                         </div>
-                    </div>
-                    <div id="date_end">
-                        <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
-                        <div class="p_info">
-                            <div class="right_date"></div>
-                            <div class="rigth_m_t">
-                                <h6 class="d_day"></h6>
-                                <p class="e_time_date"></p>
-                            </div>
+                        <div class="promo2">
+                            <img src="https://www.zoomcar.com/build/img/promo_supermiler.7a597371bd16587f1d46a66dbff6b72e.svg" alt="zoom2">
+                            <h1>SUPERMILER CLUB</h1>
+                            <p>Premium club which rewards you everytime you drive with us.</p>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot"></span>
+                            <span class="dot" id="blue"></span>
+
+                        </div>
+                        <div class="promo3">
+                            <img src="https://www.zoomcar.com/build/img/promo-3.f243fadd09ecdd1d9cb70694fa1be058.png" alt="zoom3">
+                            <h1>FREE FUEL</h1>
+                            <p>The fuel is on us for your complete trip.In case you re-fuel a zoomcar, we will re-fill your pockets and that’s a promise.</p>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot"></span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="trans_part">
-                <span>TRANSMISSION</span>
-                <div id="transimtion">
-                    <div class="auto_trs" onclick="window.location.href = '/cars/automatic'">
-                        <img id="img_tra" src="../Images/auto.PNG" alt="">
-                        <p class="tran_p">
-                            AUTOMATIC
-                        </p>
+                <div class="right_cont">
+                    <div>
+                        <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png" alt="logo">
+                        <p>Continue with</p>
+                        <div class="facebook">
+                            <a href="https://www.facebook.com/zoomcar.in/">FACEBOOK</a>
+                        </div>
+                        <div class="google">
+                            <a href="https://accounts.google.com/">GOOGLE</a>
+                        </div>
                     </div>
-                    <div class="manu_trs" onclick="window.location.href = '/cars/manual'">
-                        <img id="img_tra" src="../Images/manual.PNG" alt="">
-                        <p class="tran_p">
-                            MANUAL
-                        </p>
-                    </div>
+                    <form onsubmit="validateEmail()">
+                        <input type="text" placeholder="Enter your Email or Mobile number" id="input_format">
+                        <br>
+                        <label id="lbltext">Please Enter a Valid Phone Number</label>
+                        <br>
+                        <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next">
+                        <!-- <input type="image" name="submit" src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next"> -->
+                    </form>
+
                 </div>
             </div>
-
         </div>
-        <div class="right_coloum">
-            <div class="title">
-                <h2><svg xmlns="http://www.w3.org/2000/svg" width="12" height="19" viewBox="0 0 12 19">
+        <div class="cont1">
+            <div id="main">
+                <div class="close1">+</div>
+                <div class="left_cont">
+                    <div class="promo">
+                        <div class="promo4">
+                            <img src="https://www.zoomcar.com/build/img/promo-1.1a6e5812962b16014f7311ed801fbf71.png" alt="zoom1">
+                            <h1>REFER & EARN</h1>
+                            <p>Refer or invite your friends to zoomcar and earn free rides, free Z points and more.</p>
+                            <span class="dot"></span>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot" id="blue"></span>
+                        </div>
+                        <div class="promo5">
+                            <img src="https://www.zoomcar.com/build/img/promo_supermiler.7a597371bd16587f1d46a66dbff6b72e.svg" alt="zoom2">
+                            <h1>SUPERMILER CLUB</h1>
+                            <p>Premium club which rewards you everytime you drive with us.</p>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot"></span>
+                            <span class="dot" id="blue"></span>
+
+                        </div>
+                        <div class="promo6">
+                            <img src="https://www.zoomcar.com/build/img/promo-3.f243fadd09ecdd1d9cb70694fa1be058.png" alt="zoom3">
+                            <h1>FREE FUEL</h1>
+                            <p>The fuel is on us for your complete trip.In case you re-fuel a zoomcar, we will re-fill your pockets and that’s a promise.</p>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot" id="blue"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_cont">
+                    <div>
+                        <img src="https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png" alt="logo">
+                        <form onsubmit="form_details()">
+                            <input type="text" placeholder="Mobile number" id="phone1">
+                            <input type="text" placeholder="Enter your Email" id="email">
+                            <br>
+                            <label id="lbltext1">Please Enter a Valid Email</label>
+                            <br>
+                            <input type="text" placeholder="Name on Driving Licence" id="drive">
+                            <input type="password" placeholder="Password(minimum 8 characters" id="min8">
+                            <br>
+                            <label id="lbltext2">Please Enter a minmum 8 Character Password</label>
+                            <br>
+                            <span id="message"></span>
+                            <div id="login_submit_button">Sign Up</div>
+                            <!-- <input onclick="form_details()" type="submit" value="Sign Up" id="submit"> -->
+                        </form>
+                        <!-- <img src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next">     -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main_vishal">
+
+            <div class="left_coloum">
+
+
+                <div id="start_drop_location">
+                    <div class="heading">
+
+                        <img src="https://thumbs.dreamstime.com/b/tick-mark-icon-flat-illustration-check-mark-vector-tick-mark-icon-flat-illustration-check-mark-vector-164317151.jpg" alt="">
+
+                        <span>START AND DESTINATION</span>
+
+                    </div>
+
+                    <div id="d_p_point">
+                        <div id="star_point">
+                            <h5>STARTING POINT <span>></span></h5>
+                            <h4 class="pick_city"></h4>
+                            <p class="p_point_car"></p>
+                        </div>
+                        <div id="drop_point">
+                            <h5>DESTINATION<span>></span></h5>
+                            <h4 class="drop_city"></h4>
+                            <p class="d_point_car"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="date_select">
+                    <div class="dates_s_e">
+
+                        <img src="https://thumbs.dreamstime.com/b/tick-mark-icon-flat-illustration-check-mark-vector-tick-mark-icon-flat-illustration-check-mark-vector-164317151.jpg" alt="">
+
+                        <span>SELECT DATE AND TIME FOR YOUR TRIP</span>
+
+                    </div>
+                    <div id="data_flex">
+                        <div id="date_start">
+                            <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
+                            <div class="p_info">
+                                <div class="left_date"></div>
+                                <div class="rigth_m_t">
+                                    <h6 class="p_day"></h6>
+                                    <p class="s_time_date"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="date_end">
+                            <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
+                            <div class="p_info">
+                                <div class="right_date"></div>
+                                <div class="rigth_m_t">
+                                    <h6 class="d_day"></h6>
+                                    <p class="e_time_date"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="trans_part">
+                    <span>TRANSMISSION</span>
+                    <div id="transimtion">
+                        <div class="auto_trs" onclick="window.location.href = '/cars/automatic'">
+                            <img id="img_tra" src="../Images/auto.PNG" alt="">
+                            <p class="tran_p">
+                                AUTOMATIC
+                            </p>
+                        </div>
+                        <div class="manu_trs" onclick="window.location.href = '/cars/manual'">
+                            <img id="img_tra" src="../Images/manual.PNG" alt="">
+                            <p class="tran_p">
+                                MANUAL
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right_coloum">
+                <div class="title">
+                    <h2><svg xmlns="http://www.w3.org/2000/svg" width="12" height="19" viewBox="0 0 12 19">
                         <path fill=" rgb(238,90,87)" fill-rule="nonzero"
                             d="M11.908 7.688a.753.753 0 0 0-.658-.38H7.579L8.246.804a.73.73 0 0 0-.5-.763.762.762 0 0 0-.877.294L.119 10.566a.714.714 0 0 0-.027.745.753.753 0 0 0 .658.381h3.671l-.667 6.505a.73.73 0 0 0 .5.762.755.755 0 0 0 .878-.295l6.75-10.23a.715.715 0 0 0 .026-.746z"
                             </path>
-                    </svg>
-                    Book Early, Book Cheaper!
-                </h2>
-            </div>
-
-
-            <div id="final">
-                <div class="sort_bar">
-                    <label>Sort by:</label>
-                    <div class="item" id="sortlow" onclick="window.location.href = '/cars/sorted'">
-                        Price: Low to High
-                    </div>
-                    <div class="item" id="sort" onclick="window.location.href = '/cars/sort'">
-                        Price: High to Low
-                    </div>
+                    </svg> Book Early, Book Cheaper!
+                    </h2>
                 </div>
-                <div class="no_fuel_cont">
-                    <div class="no_fuel-block">
-                        <div class="no_fuel" onclick="window.location.href = '/cars'">
-                            <div>WITHOUT FUEL</div>
-                            <div>(prices exclude fuel cost)</div>
+
+
+                <div id="final">
+                    <div class="sort_bar">
+                        <label>Sort by:</label>
+                        <div class="item" id="sortlow" onclick="window.location.href = '/cars/sorted'">
+                            Price: Low to High
                         </div>
-                        <div class="with_fuel" onclick="window.location.href = '/cars/withfuel'">
-                            <div>WITH FUEL</div>
-                            <div>(prices include fuel cost)</div>
+                        <div class="item" id="sort" onclick="window.location.href = '/cars/sort'">
+                            Price: High to Low
                         </div>
                     </div>
-
-                    <div id="main_cont">
-                        <% items.forEach(function (Product) { %>
-                            <div class="left">
-                                <img src="<%=Product.img%>" alt="">
+                    <div class="no_fuel_cont">
+                        <div class="no_fuel-block">
+                            <div class="no_fuel" onclick="window.location.href = '/cars'">
+                                <div>WITHOUT FUEL</div>
+                                <div>(prices exclude fuel cost)</div>
                             </div>
-                            <div class="middle">
-                                <h3>
-                                    <%=Product.name%>
-                                </h3>
-                                <div class="seats">
-                                    <div>
-                                        <span>
+                            <div class="with_fuel" onclick="window.location.href = '/cars/withfuel'">
+                                <div>WITH FUEL</div>
+                                <div>(prices include fuel cost)</div>
+                            </div>
+                        </div>
+
+                        <div id="main_cont">
+                            <% items.forEach(function (Product) { %>
+                                <div class="left">
+                                    <img src="<%=Product.img%>" alt="">
+                                </div>
+                                <div class="middle">
+                                    <h3>
+                                        <%=Product.name%>
+                                    </h3>
+                                    <div class="seats">
+                                        <div>
+                                            <span>
                                             <img src="../Images/seat.png" alt="">
                                         </span>
-                                        <span>
+                                            <span>
                                             "5 Seater"
                                         </span>
-                                    </div>
-                                    <div>
-                                        <span>
+                                        </div>
+                                        <div>
+                                            <span>
                                             <img src="../Images/car-.png" alt="">
                                         </span>
-                                        <span>
+                                            <span>
                                             <%=Product.drive%>
                                         </span>
-                                    </div>
-                                    <div>
-                                        <span>
+                                        </div>
+                                        <div>
+                                            <span>
                                             <img src="../Images/height.png" alt="">
 
                                         </span>
-                                        <span>
+                                            <span>
                                             <%=Product.bags%>
                                         </span>
-                                    </div>
-                                    <div>
-                                        <span>
-                                            AGE-LIMIT:18+
-                                        </span>
-                                    </div>
-
-
-                                    <div class="pick-up">
-                                        <div>
-                                            <p>
-                                                <!-- p_pickup.innerText="Pickup at "+new_db_location[0].p_location; -->
-                                            </p>
-                                            <h3>
-                                                <!-- h3_pickup.innerText="1.5 km from starting point";   -->
-                                            </h3>
                                         </div>
                                         <div>
-                                            <p>
-                                                <!-- p_endup.innerText="Drop at "+new_db_location[0].d_location; -->
-                                            </p>
-                                            <h3>
-                                                <!-- h3_endup.innerText="1.7 km from drop point"; -->
-                                            </h3>
+                                            <span>
+                                            AGE-LIMIT:18+
+                                        </span>
+                                        </div>
+
+
+                                        <div class="pick-up">
+                                            <div>
+                                                <p>
+                                                    <!-- p_pickup.innerText="Pickup at "+new_db_location[0].p_location; -->
+                                                </p>
+                                                <h3>
+                                                    <!-- h3_pickup.innerText="1.5 km from starting point";   -->
+                                                </h3>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <!-- p_endup.innerText="Drop at "+new_db_location[0].d_location; -->
+                                                </p>
+                                                <h3>
+                                                    <!-- h3_endup.innerText="1.7 km from drop point"; -->
+                                                </h3>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="right">
-                                <h1>
-                                    <%=`₹${Product.price}`%>
-                                </h1>
-                                <p>
-                                    <%=Product.average%>
-                                </p>
-                                <button>
+                                <div class="right">
+                                    <h1>
+                                        <%=`₹${Product.price}`%>
+                                    </h1>
+                                    <p>
+                                        <%=Product.average%>
+                                    </p>
+                                    <button>
                                     Book Now
                                 </button>
 
-                            </div>
-                            <% }) %>
+                                </div>
+                                <% }) %>
 
-                    </div>
-                    <!-- <div id="main_cont1">
+                        </div>
+                        <!-- <div id="main_cont1">
                     
                     </div>
                     <div id="main_cont2">
@@ -404,11 +351,11 @@
                     <div id="main_cont4">
                     
                     </div> -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="js/car.js"></script>
+        <script src="js/car.js"></script>
 
 </body>
 
