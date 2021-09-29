@@ -16,6 +16,8 @@ app.use('/cars', carController)
 app.use("/signup", homeController);
 
 
+
+app.use('/cars', carController)
 app.listen(3535, async (req, res) => {
   await connect();
   console.log("Listening on port 3535....");
