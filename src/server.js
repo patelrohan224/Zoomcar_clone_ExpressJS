@@ -11,9 +11,11 @@ app.use(express.static("public"));
 
 const carController = require('./controllers/car.controller')
 const homeController= require("./controllers/home.controller")
+const searchController = require("./controllers/search.controllers");
 
 app.use('/cars', carController)
 app.use("/signup", homeController);
+app.use("/search", searchController);
 
 
 

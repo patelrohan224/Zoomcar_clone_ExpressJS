@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" type="image">
 
-    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="./css/search.css">
 </head>
 
 <body>
@@ -58,13 +58,13 @@
             </datalist> </div>
                 <div class="box_shadow"><input type="text" placeholder="Enter city in banglore" id="first_2" list="city_list_2" oninput="bang()">
                     <datalist id="city_list_2">
-                <option value="Bangalore Palace" >Banglore</option>
-                <option value="U R Rao Satellite Centre">Banglore</option>
-                <option value="Kempegowda International Airport">Banglore</option>
-                <option value="Chennai International Airport">Chennai</option>
-                <option value="University of Madras">Chennai</option>
-                <option value="Netaji Subhash Chandra Bose International Airport">Kolkata</option>
-            </div>
+                        <% items.forEach(function (items) { %>
+                            <option value="<%= items.location %>" ><%= items.city %></option>
+                           
+                            <% }) %>
+                        </datalist>
+               
+            </div> 
             <div class="map"  id="box_shadow"><img src="https://www.zoomcar.com/assets/component-images/location.4f83fc7a3f686c9a14dc757b7a0b9b07.png" alt="" srcset=""> <div class="map_locate">Locate me</div></div>
            </div>
            <div id="alert_wrong_input"></div>
@@ -86,9 +86,15 @@
                 </datalist> </div>
                 <div class="box_shadow"><input type="text" placeholder="Enter city" id="second_2" list="city_list_2_2" oninput="bang_2()">
                     <datalist id="city_list_2_2">
-                <option value="Chennai International Airport">Chennai</option>
+                        <% items2.forEach(function (items2) { %>
+                            <option value="<%= items2.location %>" ><%= items2.city %></option>
+                           
+                            <% }) %>
+                <!-- <option value="Chennai International Airport">Chennai</option>
                 <option value="University of Madras">Chennai</option>
-                <option value="Netaji Subhash Chandra Bose International Airport">Kolkata</option></div>
+                <option value="Netaji Subhash Chandra Bose International Airport">Kolkata</option>-->
+            </datalist> 
+            </div> 
                 <div class="map"  id="box_shadow"><img src="https://www.zoomcar.com/assets/component-images/location.4f83fc7a3f686c9a14dc757b7a0b9b07.png" alt="" srcset=""> <div class="map_locate">Locate me</div></div>
             </div>
             <div id="alert_wrong_input_2"></div>
@@ -335,7 +341,7 @@
 <!-- bottom status end -->
 
 </body >
-            <script src="search.js">
+            <script src="./js/search.js">
      
 
             </script>

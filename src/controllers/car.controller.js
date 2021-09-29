@@ -56,8 +56,6 @@ router.get("", async (req, res) => {
         items
     })
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
@@ -69,10 +67,6 @@ router.get("", async (req, res) => {
 //   });
 //   // res.send(items);
 // });
-=======
->>>>>>> 92576707e25c0b04369107092919a3c56d660431
-=======
->>>>>>> 92576707e25c0b04369107092919a3c56d660431
 
 // // 3. get a single car
 // router.get("/:id", async (req, res) => {
