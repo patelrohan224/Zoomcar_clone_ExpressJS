@@ -81,6 +81,7 @@ h2{
  border-bottom-right-radius: 0;
 }
 .no_fuel,  .with_fuel {
+    color: #000;
   width: 172px;
   padding: 7px 24px;
   font-size: 10px;
@@ -137,38 +138,6 @@ h2{
     background-color: white;
     margin-top: 10px;  
    
-}
- #main_cont2 .left , #main_cont2 .middle , #main_cont2 .right{
-    border: 1px dotted #e0dfdf;
-    padding: 5px;
-    box-shadow: -2px 2px 4px 2px #e0dfdf; 
-    margin-bottom: 10px;
-}
-#main_cont3{
-    display: grid;
-    grid-template-columns: 20% 63% 17%;
-    background-color: white;
-    margin-top: 10px;  
-   
-}
- #main_cont3 .left , #main_cont3 .middle , #main_cont3 .right{
-    border: 1px dotted #e0dfdf;
-    padding: 5px;
-    box-shadow: -2px 2px 4px 2px #e0dfdf; 
-    margin-bottom: 10px;
-}
-#main_cont4{
-    display: grid;
-    grid-template-columns: 20% 63% 17%;
-    background-color: white;
-    margin-top: 10px;  
-   
-}
- #main_cont4 .left , #main_cont4 .middle , #main_cont4 .right{
-    border: 1px dotted #e0dfdf;
-    padding: 5px;
-    box-shadow: -2px 2px 4px 2px #e0dfdf; 
-    margin-bottom: 10px;
 }
 .middle .seats{
     padding: 0px;
@@ -819,9 +788,16 @@ form{
     color: red;
      visibility: hidden;
 }
-.no_fuel{
-    background-color: rgb(112, 173, 77);
+.no_fuel>div{
+    color: #000 !important;
 }
+.no_fuel:active ,.no_fuel:hover ,.with_fuel:active ,.with_fuel:hover,.auto_trs:hover,.auto_trs:active ,.manu_trs:active,.manu_trs:hover{
+    background-color: rgb(112, 173, 77);
+} 
+/* .no_fuel:hover{
+    
+    background-color: rgb(112, 173, 77);
+} */
 .with_fuel{
     background-color: rgb(247, 247, 247);
 }
