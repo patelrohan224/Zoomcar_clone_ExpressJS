@@ -5,7 +5,14 @@ const Signup = require("../models/signup.model");
 
 router.post("", async (req, res) => {
     const signup = await Signup.create(req.body);
-    return res.status(201).send({ signup })
+
+    res.redirect("/signup/:id")
+    // return res.status(201).send({ signup })
+})
+
+router.get("", async (req, res) => {
+    
+    return res.render("home.ejs")
 })
 
 router.get("/:id", async (req, res) => {

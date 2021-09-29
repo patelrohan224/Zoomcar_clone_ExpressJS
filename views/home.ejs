@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Self Drive Car Rentals |Book ZoomCar & Feel Safe!zoomcar.com</title>
 </head>
@@ -293,7 +293,7 @@
                 </div>
             </div>
         </div>
-
+<!-- signup page starts here -->
         <div class="cont">
             <div id="main">
                 <div class="close">+</div>
@@ -337,8 +337,8 @@
                             <a href="https://accounts.google.com/">GOOGLE</a>
                         </div>
                     </div>
-                    <form onsubmit="validateEmail()">
-                        <input type="text" placeholder="Enter your Email or Mobile number" id="input_format">
+                    <form action="/signup" onsubmit="validateEmail()" method="POST">
+                        <input type="text" placeholder="Enter your Email or Mobile number" id="input_format" name="phone_num" value="">
                         <br>
                         <label id="lbltext">Please Enter a Valid Phone Number</label>
                         <br>
@@ -404,7 +404,7 @@
                 </div>
             </div>
         </div>
-        <script src="home.js"></script>
+        <script src="/js/home.js"></script>
 
 </body>
 

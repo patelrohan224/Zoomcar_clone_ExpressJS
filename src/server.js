@@ -4,20 +4,16 @@ const connect = require("./configs/db");
 
 const app = express();
 
-
 app.use(express.json());
 // app.use(express.urlencoded());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-
-
-
 const carController = require('./controllers/car.controller')
-const signupController= require("./controllers/signup.controller")
+const homeController= require("./controllers/home.controller")
 
 app.use('/cars', carController)
-app.use("/signup", signupController)
+app.use("/signup", homeController);
 
 
 app.listen(3535, async (req, res) => {

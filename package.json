@@ -1,11 +1,11 @@
 {
-  "name": "zoomcar_backend",
+  "name": "Zoomcar_backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":"nodemon src/server"
+    "server": "nodemon src/server"
   },
   "repository": {
     "type": "git",

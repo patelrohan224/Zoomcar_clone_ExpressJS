@@ -7,7 +7,7 @@
     <title>Self Drive Car Rentals |Book ZoomCar & Feel Safe!zoomcar.com</title>
     <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="car.css">
+    <link rel="stylesheet" href="/css/car.css">
 </head>
 <body>
     <div id="nav">
@@ -279,9 +279,86 @@
                     </div>
 
                     <div id="main_cont">
+                        items.forEach(function (Product) {
+                            <div class="left">
+                                <img src="" alt="">
+                                <!-- image.src=Product.img; -->
+                            </div>
+                            <div class="middle">
+                                <h3>
+                                    <!-- h3.innerHTML=Product.name; -->
+                                </h3>
+                                <div class="seats">
+                                    <div>
+                                        <span>
+                                            <img src="" alt="">
+                                            <!-- img2_2_1.src="../Images/seat.png"; -->
+                                        </span>
+                                        <span>
+                                            "5 Seater"
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <img src="" alt="">
+                                            <!-- img2_2_3.src="../Images/car-.png"; -->
+                                        </span>
+                                        <span>
+                                            <!-- span2_2_4.innerText=Product.drive; -->
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <img src="" alt="">
+                                            <!-- img2_2_5.src="../Images/height.png"; -->
+                                        </span>
+                                        <span>
+                                            <!-- span2_2_6.innerText=Product.bags; -->
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <!-- span2_2_7.innerText="AGE-LIMIT:18+"; -->
+                                        </span>
+                                    </div>
+
+
+                                    <div class="pick-up">
+                                        <div>
+                                            <p>
+                                                <!-- p_pickup.innerText="Pickup at "+new_db_location[0].p_location; -->
+                                            </p>
+                                            <h3>
+                                                <!-- h3_pickup.innerText="1.5 km from starting point";   -->
+                                            </h3>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                <!-- p_endup.innerText="Drop at "+new_db_location[0].d_location; -->
+                                            </p>
+                                            <h3>
+                                                <!-- h3_endup.innerText="1.7 km from drop point"; -->
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h1>
+                                    <!-- h1.innerText=`₹${Product.price}`; -->
+                                </h1>
+                                <p>
+                                    p.innerText=Product.average;
+                                </p>
+                                <button>
+                                    btn.innerText="Book Now"
+                                </button>
+
+                            </div>
+                          
                     
                     </div>
-                    <div id="main_cont1">
+                    <!-- <div id="main_cont1">
                     
                     </div>
                     <div id="main_cont2">
@@ -292,12 +369,12 @@
                     </div>
                     <div id="main_cont4">
                     
-                    </div>
+                    </div> -->
             </div>
         </div> 
     </div>
 </div>
-<script src="car.js"></script>
+<script src="/js/car.js"></script>
     
 </body>
 </html>
