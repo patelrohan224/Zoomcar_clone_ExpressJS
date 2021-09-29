@@ -5,15 +5,19 @@ const connect = require("./configs/db");
 const app = express();
 
 app.use(express.json());
-// app.use(express.urlencoded());
+app.use(express.urlencoded());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 const carController = require('./controllers/car.controller')
 const homeController= require("./controllers/home.controller")
-
+const searchController = require("./controllers/search.controllers");
+const search_InputController = require("./controllers/search_input.controller");
 app.use('/cars', carController)
 app.use("/signup", homeController);
+app.use("/search", searchController);
+app.use("/seinput", search_InputController);
+
 
 
 

@@ -113,7 +113,8 @@
                    var bottom_p_location=document.querySelector('p[class="first_box_location"]')
                    box.addEventListener("click",add)
                //toggle button for choose second city
-                                function add() {                
+                                function add() {      
+                                              
                                    if(box.checked){
                                        var boxpart=document.getElementById("input_part_2")
                                        boxpart.style.visibility="visible"

@@ -61,6 +61,7 @@ router.get("/withfuel", async (req, res) => {
 })
 
 
+
 // router.get("/:id", async (req, res) => {
 //   const items = await Products.find().sort({ price: -1 });
 //   res.render("new.ejs", {
@@ -68,6 +69,7 @@ router.get("/withfuel", async (req, res) => {
 //   });
 //   // res.send(items);
 // });
+
 
 // // 3. get a single car
 // router.get("/:id", async (req, res) => {
