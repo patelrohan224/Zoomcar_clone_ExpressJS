@@ -14,12 +14,12 @@ const carController = require('./controllers/car.controller')
 const homeController = require("./controllers/home.controller")
 const searchController = require("./controllers/search.controllers");
 const search_InputController = require("./controllers/search_input.controller");
-const loginSchema= require("./controllers/login.controller")
+
 app.use('/cars', carController)
 app.use("/signup", homeController);
 app.use("/search", searchController);
 app.use("/seinput", search_InputController);
-app.use("/login",loginSchema)
+
 
 
 
