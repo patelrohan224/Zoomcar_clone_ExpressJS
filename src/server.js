@@ -16,7 +16,7 @@ const searchController = require("./controllers/search.controllers");
 const search_InputController = require("./controllers/search_input.controller");
 
 app.use('/cars', carController)
-app.use("/signup", homeController);
+app.use("/home", homeController);
 app.use("/search", searchController);
 app.use("/seinput", search_InputController);
 
