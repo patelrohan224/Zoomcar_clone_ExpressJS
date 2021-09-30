@@ -588,22 +588,7 @@
     <!-- dropoff page end -->
 
 
-    <form action="/seinput" method="POST">
-        <input type="text" id="pick_db_city" name="pick_city">
-        <input type="text" id="drop_db_city" name="drop_city">
-        <input type="text" id="pick_location_db" name="pick_location">
-        <input type="text" id="drop_location_db" name="drop_location">
-        <input type="text" id="pick_date_db" name="pick_date">
-        <input type="text" id="drop_date_db" name="drop_date">
-
-        <input type="text" id="pick_time_db" name="pick_time">
-        <input type="text" id="drop_time_db" name="drop_time">
-        <input type="text" id="pick_month_db" name="pick_month">
-        <input type="text" id="drop_month_db" name="drop_month">
-        <input type="text" id="pick_day_db" name="pick_day">
-        <input type="text" id="drop_day_db" name="drop_day">
-        <button type="submit" value="submit"><a href="/cars">Submit</a></button>
-    </form>
+   
 
 
     <!-- bottom status start -->
@@ -627,31 +612,29 @@
         <div class="tr-box_3"></div>
         <div class="trwhite-box_3"></div>
 
-        <div id="click_month_btn"><button onclick="time_page()"><a href=""></a>NEXT</a></button> </div>
+        <div id="click_month_btn">
+            <form action="/seinput" method="POST">
+                <input type="text" id="pick_db_city" name="pick_city" class="form_fb">
+                <input type="text" id="drop_db_city" class="form_fb" name="drop_city">
+                <input type="text" id="pick_location_db" class="form_fb" name="pick_location">
+                <input type="text" id="drop_location_db" class="form_fb" name="drop_location">
+                <input type="text" id="pick_date_db" class="form_fb" name="pick_date">
+                <input type="text" id="drop_date_db" class="form_fb" name="drop_date">
+        
+                <input type="text" id="pick_time_db" class="form_fb" name="pick_time">
+                <input type="text" id="drop_time_db" class="form_fb" name="drop_time">
+                <input type="text" id="pick_month_db" class="form_fb" name="pick_month">
+                <input type="text" id="drop_month_db" class="form_fb" name="drop_month">
+                <input type="text" id="pick_day_db" class="form_fb" name="pick_day">
+                <input type="text" id="drop_day_db" class="form_fb" name="drop_day">
+                <button type="submit" value="submit" class="form_fb">NEXT</button>
+            </form>
+            <button onclick="time_page()">SAVE</button> </div>
     </div>
     <!-- bottom status end -->
 
-        <div id="click_month_btn">
-            <form action="/seinput"  method="POST" >
-                <input type="text" id="pick_db_city" name="pick_city" class="form_fb">
-                <input type="text" id="drop_db_city" name="drop_city" class="form_fb">
-                <input type="text" id="pick_location_db" name="pick_location" class="form_fb">
-                <input type="text" id="drop_location_db" name="drop_location" class="form_fb">
-                <input type="text" id="pick_date_db" name="pick_date" class="form_fb">
-                <input type="text" id="drop_date_db" name="drop_date" class="form_fb">
-        
-                <input type="text" id="pick_time_db" name="pick_time" class="form_fb">
-                <input type="text" id="drop_time_db" name="drop_time" class="form_fb">
-                <input type="text" id="pick_month_db" name="pick_month" class="form_fb">
-                <input type="text" id="drop_month_db" name="drop_month" class="form_fb">
-                <input type="text" id="pick_day_db" name="pick_day" class="form_fb">
-                <input type="text" id="drop_day_db" name="drop_day" class="form_fb">
-                <button type="submit" value="submit" id="db_sb_btn" class="form_fb">NEXT</button>       
-            </form>
-            <button onclick="time_page()" id="btn_db"><a href=""></a>SAVE</a></button> </div>
-        
-</div>
-<!-- bottom status end -->
+      
+
 
 
 </body>

@@ -3,6 +3,7 @@ const express = require('express');
 
 const router = express.Router();
 const Car = require('../models/cars.model')
+const SearchInput= require("../models/search_input_model");
 //CRUD operation for car
 //1. create a car 
 
@@ -16,8 +17,12 @@ let items;
 
 router.get("", async (req, res) => {
     items = await Car.find().lean().exec();
+    input_data = await  SearchInput.find().sort({_id:-1}).limit(1).lean().exec();
+    console.log('input_data:', input_data)
+   
     return res.render("car.ejs", {
-        items
+        items,
+        input_data
     })
 })
 
@@ -77,4 +82,17 @@ router.get("/withfuel", async (req, res) => {
 //     return res.status(200).json({ car })
 // })
 
+
+router.get("/login",async (req, res)=>{
+
+    res.render("login.ejs", {
+
+    })
+})
+router.get("/singupnew",async (req, res)=>{
+
+    res.render("signupnew.ejs", {
+        
+    })
+})
 module.exports = router;

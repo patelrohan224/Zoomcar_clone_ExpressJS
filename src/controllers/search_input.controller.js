@@ -25,6 +25,7 @@ router.get("", async (req, res) => {
 
 router.post("", async(req, res) => {
     const items = await SearchInput.create(req.body);
+<<<<<<< Updated upstream
     console.log("sdeew");
     console.log(items);
     res.redirect("/cars")
@@ -35,5 +36,10 @@ router.post("", async(req, res) => {
 
   
 
+=======
+  
+ res.redirect("/cars")
+  });
+>>>>>>> Stashed changes
 
 module.exports = router;
