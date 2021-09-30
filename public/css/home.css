@@ -20,10 +20,7 @@ option {
     display: none;
 }
 
-.dropbtn_child_a {
-    height: 35px;
-    width: 88%
-}
+
 
 .flx_1_2_img {
     height: 50px;
@@ -74,228 +71,12 @@ option {
     border: none
 }
 
-.left_cont {
-    box-shadow: 0 0 1px 2px rgb(222, 222, 222);
-    width: 45%;
-    border-radius: 10px;
-    position: relative;
-    z-index: 1;
-    background: #fff;
-}
-
-.promo {
-    height: 500px;
-    padding: 35px;
-    text-align: center;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.close {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    font-size: 30px;
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-
-.close1 {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    font-size: 30px;
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-
-.right_cont {
-    width: 55%;
-    padding: 20px;
-    text-align: center;
-}
-
-.right_cont p {
-    font-weight: 600;
-}
-
-.facebook {
-    width: 65%;
-    height: 30px;
-    margin: auto;
-    padding: 10px;
-    background-color: #4267B2;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 1px 2px #e0dfdf;
-    text-align: center center;
-}
-
-.google {
-    width: 65%;
-    height: 30px;
-    margin: auto;
-    padding: 10px;
-    background-color: #f4425a;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 1px 2px #e0dfdf;
-}
-
-input {
-    width: 67%;
-    height: 30px;
-    border-radius: 3px;
-    margin-top: 50px;
-    border: 1px solid black;
-}
-
-#next {
-    margin-top: 30px;
-    cursor: pointer;
-}
-
-.left_cont img {
-    margin-top: 30%;
-    width: 40%;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    margin-top: 25%;
-    margin-bottom: 25%;
-    display: inline-block;
-    background-color: rgb(182, 213, 164);
-}
-
-#blue {
-    background-color: rgb(51, 65, 79);
-}
-
-#next {
-    margin-bottom: 8%;
-    border: none;
-}
-
-
-/* #next{
-width: 100%;
-} */
-
 a {
     text-decoration: none;
     color: white;
 }
 
-.promo1 h1 {
-    font-size: 25px;
-}
 
-.promo2 h1 {
-    font-size: 25px;
-}
-
-.promo3 h1 {
-    font-size: 25px;
-}
-
-#submit {
-    background-color: #3619db;
-    color: white;
-    cursor: default;
-    height: 40px;
-    padding: 10px;
-}
-
-#main1 {
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #fff;
-    max-width: 60%;
-    width: 100%;
-    min-height: 500px;
-    margin: 0 auto;
-    position: relative;
-    display: grid;
-    flex-direction: row;
-    color: #33414f;
-    text-align: center;
-    overflow: hidden;
-}
-
-.logo_cont {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.otp_image_cont {
-    width: 100px;
-    height: 100px;
-}
-
-.img_cont {
-    margin-top: 20px;
-}
-
-form {
-    margin-top: 50px;
-}
-
-#login_submit_button {
-    width: 150px;
-    height: 30px;
-    padding: 10px;
-    background-color: blue;
-    color: white;
-    border-radius: 4px;
-    margin: auto;
-}
-
-#nav {
-    background-color: rgb(51, 65, 78);
-    margin: 0% 0%;
-    padding: 2%;
-    height: 15%;
-    color: white;
-    width: 97%;
-}
-
-#nav>img {
-    height: 80%;
-    width: 10%;
-}
-
-#nav>div {
-    margin: 0% 1%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 20px;
-}
-
-.dropdown-content img {
-    height: 35px;
-    width: 100% !important;
-}
-
-.mob_div {
-    height: -10px;
-    margin-top: 0px;
-}
-
-#app {
-    font-size: 20px;
-    background-color: transparent;
-    margin-top: 0px;
-}
 
 .gray {
     color: rgb(61, 56, 56);
@@ -461,9 +242,7 @@ form {
     text-align: center;
 }
 
-.cursor {
-    cursor: pointer;
-}
+
 
 #ad_p {
     font-size: 25px;
@@ -483,18 +262,6 @@ form {
 
 #bold {
     font-size: 45px;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:active {
-    color: green;
-}
-
-a {
-    color: white;
 }
 
 .float-r {
@@ -655,27 +422,6 @@ a {
     margin-left: 230px;
 }
 
-#otp-cont {
-    text-align: center;
-    width: 30%;
-}
-
-#lbltext1,
-#lbltext2 {
-    color: red;
-    visibility: hidden;
-}
-
-#lbltext {
-    color: red;
-    visibility: hidden;
-}
-
-#otplabel {
-    color: red;
-    visibility: hidden;
-}
-
 .size {
     height: 55% !important;
     width: 50%;
@@ -703,68 +449,6 @@ button {
     cursor: pointer;
 }
 
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-}
-
-
-/* Dropdown button */
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-    margin: -16px -13px 0px -9px !important;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    /* Important for vertical align on mobile phones */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-
-/* Links inside the dropdown */
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-
-/* Add a grey background color to dropdown links on hover */
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-
-/* Show the dropdown menu on hover */
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 #flow {
     overflow: hidden;
@@ -1240,13 +924,13 @@ body {
 /* Large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-    #nav {
+    #navbar {
         background-color: rgb(41, 43, 61);
         margin: 0% 0%;
         padding: 2%;
         height: 15%;
         color: white;
-        width: 100%;
+        width: 101%!important;
     }
     #nav>div {
         margin: 0% 0.5%;
