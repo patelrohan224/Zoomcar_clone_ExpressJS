@@ -148,7 +148,7 @@ a {
     background-color: white;
     margin-right: 18px;
     border-radius: 10px;
-    height: 28% !important;
+    height: 35% !important;
     box-shadow: 0 12px 22px 2px rgb(0 0 0 / 10%);
 }
 
@@ -217,6 +217,7 @@ a {
     align-self: center;
     border-radius: 50px;
     margin: 58px 0px 0px 57px;
+    border-radius: 50px;
 }
 
 .flex_2_2>img {
