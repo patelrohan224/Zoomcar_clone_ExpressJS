@@ -258,43 +258,6 @@
         margin: auto;
     }
     
-    #nav {
-        background-color: rgb(51, 65, 78);
-        margin: 0% 0%;
-        padding: 2%;
-        height: 15%;
-        color: white;
-        width: 97%;
-    }
-    
-    #nav>img {
-        height: 80%;
-        width: 10%;
-    }
-    
-    #nav>div {
-        margin: 0% 1%;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        font-size: 20px;
-    }
-    
-    .dropdown-content img {
-        height: 35px;
-        width: 100% !important;
-    }
-    
-    .mob_div {
-        height: -10px;
-        margin-top: 0px;
-    }
-    
-    #app {
-        font-size: 20px;
-        background-color: transparent;
-        margin-top: 0px;
-    }
-    
     .gray {
         color: rgb(61, 56, 56);
     }
