@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-
-
 const SearchInput= require("../models/search_input_model");
 const Search = require("../models/search.model");
 
@@ -17,23 +15,10 @@ router.get("", async (req, res) => {
 
 
 
-
-
-
-
-
-
-router.post("", async(req, res) => {
+router.post("", async (req, res) => {
     const items = await SearchInput.create(req.body);
-    console.log("sdeew");
-    console.log(items);
-    res.redirect("/cars")
-    return res.send({ items })
   
-});
-
-
-  
-
+ res.redirect("/cars")
+  });
 
 module.exports = router;
