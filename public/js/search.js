@@ -832,7 +832,7 @@
                                
           // function for date picker for drop off and pick up point end.
 
-
+        
           //fatch the values 
           var db_array=[]
           
@@ -844,6 +844,20 @@
                                     if(d_ponit!=="" && p_point!==""){
                                        let first_one=document.getElementById("first_1").value
                                        let second_one=document.getElementById("second_1").value
+                                     
+                                       document.getElementById("pick_db_city").value=first_one
+                                       document.getElementById("drop_db_city").value=second_one
+                                       document.getElementById("pick_location_db").value=p_point
+                                       document.getElementById("drop_location_db").value=d_ponit
+                                       document.getElementById("pick_date_db").value=date_final_picked
+                                       document.getElementById("drop_date_db").value=date_final_drop
+                                       document.getElementById("pick_time_db").value=pick_time_value
+                                       document.getElementById("drop_time_db").value=pick_time_value_2
+                                       document.getElementById("pick_month_db").value=pick_month_value
+                                       document.getElementById("drop_month_db").value=pick_month_value_2
+                                       document.getElementById("pick_day_db").value=day_final_picked
+                                       document.getElementById("drop_day_db").value=day_final_drop
+
                                        Object={
                                            p_location:p_point,
                                            p_time:pick_time_value,
@@ -863,11 +877,26 @@
                                        console.log(db_array);
                                        const db_locations=JSON.stringify(db_array) 
                                       localStorage.setItem("pick_drop_points",db_locations);
-                                      window.open("../Car_page/car.html","_top")
+                                    //   window.open("../Car_page/car.html","_top")
                                    }
 
                                       if(d_ponit==""){
                                        let first_one=document.getElementById("first_1").value
+                                     
+
+                                       document.getElementById("pick_db_city").value=first_one
+                                       document.getElementById("drop_db_city").value=first_one
+                                       document.getElementById("pick_location_db").value=p_point
+                                       document.getElementById("drop_location_db").value=p_point
+                                       document.getElementById("pick_date_db").value=date_final_picked
+                                       document.getElementById("drop_date_db").value=date_final_drop
+                                       document.getElementById("pick_time_db").value=pick_time_value
+                                       document.getElementById("drop_time_db").value=pick_time_value_2
+                                       document.getElementById("pick_month_db").value=pick_month_value
+                                       document.getElementById("drop_month_db").value=pick_month_value_2
+                                       document.getElementById("pick_day_db").value=day_final_picked
+                                       document.getElementById("drop_day_db").value=day_final_drop
+
                                        Object={
                                            p_location:p_point,
                                            p_time:pick_time_value,
@@ -888,7 +917,7 @@
                                        const db_locations=JSON.stringify(db_array) 
                                       
                                       localStorage.setItem("pick_drop_points",db_locations);
-                                      window.open("../Car_page/car.html","_top")
+                                    //   window.open("../Car_page/car.html","_top")
                                       }
 
 
