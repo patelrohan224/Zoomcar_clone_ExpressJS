@@ -182,13 +182,24 @@ form {
 }
 
 #login_submit_button {
+    
     width: 150px;
     height: 30px;
     padding: 10px;
-    background-color: blue;
+    background-color: #70ad4d;
     color: white;
     border-radius: 4px;
     margin: auto;
+    margin-top: 30px;
+}
+
+button {
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    background: none;
+    font-weight: 600;
+
 }
 
 
