@@ -83,12 +83,5 @@ router.get("/withfuel", async (req, res) => {
 // })
 
 
-router.get("/login",async (req, res)=>{
-    res.render("login.ejs", {
-    })
-})
-router.get("/singupnew",async (req, res)=>{
-    res.render("signupnew.ejs", {
-    })
-})
+
 module.exports = router;
