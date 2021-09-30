@@ -168,7 +168,7 @@ a {
     background-image: url(https://www.zoomcar.com/build/img/testimonial_bg.499d1dd2876b931e9cf0509e3d1884f5.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 100%;
+    width: 10%;
     height: 500px;
     margin: 0% 0%;
     margin-left: -2%;
@@ -1106,10 +1106,10 @@ body {
         background-image: url(https://www.zoomcar.com/build/img/testimonial_bg.499d1dd2876b931e9cf0509e3d1884f5.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        width: 100%;
+        width: 102%;
         height: 500px;
         margin: 0% 0%;
-        margin-left: -2%;
+        margin-left: -1%;
         padding: 2%;
         color: white;
     }
@@ -1151,20 +1151,20 @@ body {
         margin-top: 27%;
     }
     #footers {
-        background-color: #33414f;
+        background-color: #33414f !important;
         align-items: center;
         text-align: center;
-        margin: 0% 0%;
         padding: 2%;
-        height: 113px;
-        /* margin-left: -2%; */
-        margin-top: 0px;
+        height: 75px;
         width: 100%;
-        margin-left: -2px;
-        /* margin-right: 130px; */
-        padding-right: 40px;
+        margin-left: -10px;
         color: white;
+        margin-bottom: -10px;
     }
+    
+      
+
+
     #info>.flex>div {
         width: 20%;
         align-items: center;
