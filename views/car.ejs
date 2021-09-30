@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self Drive Car Rentals |Book ZoomCar & Feel Safe!zoomcar.com</title>
     <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/car.css">
     <link rel="stylesheet" href="/css/navbar.css">
@@ -25,6 +26,8 @@
 
                 <div class="left_coloum">
 
+                    <% input_data.forEach(function (inpt) { %>
+
 
                     <div id="start_drop_location">
                         <div class="heading">
@@ -39,6 +42,7 @@
                         <div id="d_p_point">
                             <div id="star_point">
                                 <h5>STARTING POINT <span>></span></h5>
+
                                 <h4 class="pick_city"></h4>
                                 <p class="p_point_car"></p>
                             </div>
@@ -46,6 +50,15 @@
                                 <h5>DESTINATION<span>></span></h5>
                                 <h4 class="drop_city"></h4>
                                 <p class="d_point_car"></p>
+
+                                <h4 class="pick_city"> <%=inpt.pick_city%></h4>
+                                <p class="p_point_car"><%=inpt.pick_location%></p>
+                            </div>
+                            <div id="drop_point">
+                                <h5>DESTINATION<span>></span></h5>
+                                <h4 class="drop_city"><%=inpt.drop_city%></h4>
+                                <p class="d_point_car"><%=inpt.drop_location%></p>
+
                             </div>
                         </div>
                     </div>
@@ -62,20 +75,34 @@
                             <div id="date_start">
                                 <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
                                 <div class="p_info">
+
                                     <div class="left_date"></div>
                                     <div class="rigth_m_t">
                                         <h6 class="p_day"></h6>
                                         <p class="s_time_date"></p>
+
+                                    <div class="left_date"><%=inpt.pick_date%></div>
+                                    <div class="rigth_m_t">
+                                        <h6 class="p_day"><%=inpt.pick_day%></h6>
+                                        <p class="s_time_date"><%=inpt.pick_time%></p>
+
                                     </div>
                                 </div>
                             </div>
                             <div id="date_end">
                                 <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
                                 <div class="p_info">
+
                                     <div class="right_date"></div>
                                     <div class="rigth_m_t">
                                         <h6 class="d_day"></h6>
                                         <p class="e_time_date"></p>
+
+                                    <div class="right_date"><%=inpt.drop_date%></div>
+                                    <div class="rigth_m_t">
+                                        <h6 class="d_day"><%=inpt.drop_day%></h6>
+                                        <p class="e_time_date"><%=inpt.drop_time%></p>
+
                                     </div>
                                 </div>
                             </div>
@@ -98,6 +125,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <% }) %>
 
                 </div>
                 <div class="right_coloum">
@@ -159,6 +188,7 @@
                                                     <%=Product.drive%>
                                                 </span>
                                             </div>
+
                                             <div>
                                                 <span>
                                                     <img src="../Images/height.png" alt="">
@@ -193,6 +223,42 @@
                                                     </h3>
                                                 </div>
                                             </div>
+
+                                            <div>
+                                                <span>
+                                                    <img src="../Images/height.png" alt="">
+
+                                                </span>
+                                                <span>
+                                                    <%=Product.bags%>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    AGE-LIMIT:18+
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="pick-up">
+                                            <% input_data.forEach(function (inpt) { %>
+                                            <div>
+                                                <p>
+                                                    <%=inpt.pick_location%>
+                                                </p>
+                                                <h3>
+                                                   1.5 km from starting point
+                                                </h3>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    <%=inpt.drop_location%>
+                                                </p>
+                                                <h3>
+                                                   1.7 km from drop point"
+                                                </h3>
+                                            </div>
+                                            <% }) %>
+
                                         </div>
                                     </div>
                                     <div class="right">
