@@ -857,7 +857,8 @@
                                        document.getElementById("drop_month_db").value=pick_month_value_2
                                        document.getElementById("pick_day_db").value=day_final_picked
                                        document.getElementById("drop_day_db").value=day_final_drop
-
+                                       document.getElementById("btn_db").style.display="none"
+                                       document.getElementById("db_sb_btn").style.display="block"
                                        Object={
                                            p_location:p_point,
                                            p_time:pick_time_value,
@@ -896,7 +897,9 @@
                                        document.getElementById("drop_month_db").value=pick_month_value_2
                                        document.getElementById("pick_day_db").value=day_final_picked
                                        document.getElementById("drop_day_db").value=day_final_drop
-
+                                       document.getElementById("btn_db").style.display="none"
+                                       
+                                       document.getElementById("db_sb_btn").style.display="block"
                                        Object={
                                            p_location:p_point,
                                            p_time:pick_time_value,
