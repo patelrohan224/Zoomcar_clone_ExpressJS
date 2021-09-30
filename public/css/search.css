@@ -758,3 +758,19 @@ height: 82px;
     margin-bottom: 10px;
     font-weight: 600;
 }
+#db_sb_btn{
+    padding: 10px 60px;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    background-color: #70ad4d;
+    font-size: 20px;
+    height: 47px;
+    width: 170px;
+    margin-left: 50px;
+    position: relative;
+    font-weight: 600; 
+}
+.form_fb{
+    display: none;
+}
