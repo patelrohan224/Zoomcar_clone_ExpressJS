@@ -417,10 +417,7 @@ body{
 .no_fuel:active ,.no_fuel:hover ,.with_fuel:active ,.with_fuel:hover,.auto_trs:hover,.auto_trs:active ,.manu_trs:active,.manu_trs:hover{
     background-color: rgb(112, 173, 77);
 } 
-/* .no_fuel:hover{
-    
-    background-color: rgb(112, 173, 77);
-} */
+
 .with_fuel{
     background-color: rgb(247, 247, 247);
 }
@@ -428,4 +425,7 @@ body{
 
 .nav_img{
     height: 80%;width: 10% ;
+}
+.none{
+    display: none;
 }
