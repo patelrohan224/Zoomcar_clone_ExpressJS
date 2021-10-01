@@ -55,14 +55,13 @@
                         <a href="https://accounts.google.com/">GOOGLE</a>
                     </div>
                 </div>
-                <form onsubmit="validateEmail()">
-                    <input type="email" placeholder="Enter your Email">
+                <form action="/login" method="POST" >
+                    <input type="email" placeholder="Enter your Email" name="u_email">
                     <br>
-                    <input type="password" placeholder="Enter your password">
+                    <input type="password" placeholder="Enter your password" name="pwd">
                     <br>
                     <div id="login_submit_button"><button>Login</button></div>
                     <a class="dont_acn" href="/signup">Don't have an account</a>
-                    <!-- <input type="image" name="submit" src="https://www.zoomcar.com/build/img/next-icon.5aaa7a34fca1e56685dfc1041338b9a2.svg" alt="next" id="next"> -->
                 </form>
 
             </div>
