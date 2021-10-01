@@ -382,3 +382,8 @@
  #checkout_btn {
      cursor: pointer;
  }
+ #car_img>img{
+     width: 100%;
+     height: 70%;
+     text-align: center;
+ }
