@@ -67,21 +67,5 @@ router.get("/withfuel", async (req, res) => {
 
 
 
-// router.get("/:id", async (req, res) => {
-//   const items = await Products.find().sort({ price: -1 });
-//   res.render("new.ejs", {
-//     items,
-//   });
-//   // res.send(items);
-// });
-
-
-// // 3. get a single car
-// router.get("/:id", async (req, res) => {
-//     const car = await Car.find(req.params.id).lean().exec()
-//     return res.status(200).json({ car })
-// })
-
-
 
 module.exports = router;
