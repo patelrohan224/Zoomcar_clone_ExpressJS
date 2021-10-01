@@ -10,7 +10,7 @@ router.get("", async (req, res) => {
 
 router.post("", async (req, res) => {
     const signup = await Login.create(req.body)
-    res.redirect("/cars")
+    res.redirect("/home")
 
 })
 
