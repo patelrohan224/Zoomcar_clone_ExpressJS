@@ -26,7 +26,11 @@
                         Booking fee excludes fuel cost
                     </span>
                     </span>
-                    <div class="f_r rupees_paid" id="price_car"></div>
+                    <% car_data.forEach(function (input) { %>
+                    <div class="f_r rupees_paid" id="price_car">
+                        <%=input.price%>
+                    </div>
+                    <% }) %>
                     <div class="clear"></div>
                 </div>
                 <div class="promotion">
@@ -48,46 +52,51 @@
 
             <div class="car_cont ">
                 <div class="summary">SUMMARY</div>
+                <% car_data.forEach(function (input) { %>
                 <div id="car_img">
-
+                   <img src="<%=input.img%>" alt="">
                 </div>
+                <% }) %>
                 <div class="Car_details"></div>
                 <div class="Car_details">(5 Seater)</div>
                 <div class="border"></div>
                 <div id="d_p_point">
+                    <% input_data.forEach(function (input) { %>
                     <div id="star_point">
                         <h5>STARTING POINT <span>></span></h5>
-                        <h4 class="pick_city"></h4>
-                        <p class="p_point_car"></p>
+                        <h4 class="pick_city"><%=input.pick_city%></h4>
+                        <p class="p_point_car"><%=input.pick_location%></p>
                     </div>
                     <div id="drop_point">
                         <h5>DESTINATION<span>></span></h5>
-                        <h4 class="drop_city"></h4>
-                        <p class="d_point_car"></p>
+                        <h4 class="drop_city"><%=input.drop_city%></h4>
+                        <p class="d_point_car"><%=input.drop_location%></p>
                     </div>
                 </div>
                 <div id="data_flex">
+                  
                     <div id="date_start">
                         <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
                         <div class="p_info">
-                            <div class="left_date"></div>
+                            <div class="left_date"><%=input.pick_date%></div>
                             <div class="rigth_m_t">
-                                <h6 class="p_day"></h6>
-                                <p class="s_time_date"></p>
+                                <h6 class="p_day"><%=input.pick_day%></h6>
+                                <p class="s_time_date"><%=input.pick_time%></p>
                             </div>
                         </div>
                     </div>
                     <div id="date_end">
                         <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
                         <div class="p_info">
-                            <div class="right_date"></div>
+                            <div class="right_date"><%=input.drop_date%></div>
                             <div class="rigth_m_t">
-                                <h6 class="d_day"></h6>
-                                <p class="e_time_date"></p>
+                                <h6 class="d_day"><%=input.drop_day%></h6>
+                                <p class="e_time_date"><%=input.drop_time%></p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <% }) %>
 
             </div>
             <div class="clear"></div>
@@ -102,5 +111,5 @@
 </body>
 
 </html>
-<script src="checkout_page.js">
+<script src="./js/checkout_page.js">
 </script>
