@@ -34,7 +34,7 @@ car_name.innerText=db_cart[0]
 function Suscces() {
 if(document.getElementById("card_number").value!=="" && document.getElementById("card_expiry").value!=="" && document.getElementById("card_CVV").value!=="" ){
 alert("Payment was Succsefull,Have Safe journey.")
-//window.open("/home.ejs","_top")
+window.open("../Home/home.html","_top")
 }
 
    else if(document.getElementById("card_number").value=="" || document.getElementById("card_expiry").value=="" || document.getElementById("card_CVV").value=="" ){

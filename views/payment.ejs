@@ -32,19 +32,19 @@
 
                     <div id="payment" class="payment_div_">
                         <!--Payment form start-->
-                        <form class="form_" action="/payment" method="POST">
-                            <input type="number" class="form_input" placeholder="Enter Card Number" name="card_no" id="card_number"><br>
+                        <form class="form_">
+                            <input type="number" class="form_input" placeholder="Enter Card Number" id="card_number"><br>
 
                             <div class="form_child_div">
-                                <input type="text" class="form_child_input" placeholder="MM /YYY" id="card_expiry" name="ex_date"><br>
+                                <input type="text" class="form_child_input" placeholder="MM /YYY" id="card_expiry"><br>
 
-                                <input type="password" class="form_child_input2" placeholder="CVV" id="card_CVV" name="cvv"><br>
+                                <input type="password" class="form_child_input2" placeholder="CVV" id="card_CVV"><br>
                             </div>
 
                         </form>
                         <!--Payment Form end-->
                         <div class="btn_cont">
-                            <button id="checkout_btn" class="cursor_point" onclick="Suscces()"> <a href="/home" >Pay</a> </button>
+                            <button id="checkout_btn" class="cursor_point"> <a onclick="Suscces()">Pay</a> </button>
                         </div>
                     </div>
                 </div>
@@ -104,4 +104,4 @@
 </body>
 
 </html>
-<script src="/js/payment.js"></script>
+<script src="payment.js"></script>
