@@ -18,7 +18,7 @@ router.get("", async (req, res) => {
         input_data,
         car_data
     })
-    console.log(input_data,car_data)
+   
 })
 
 module.exports = router

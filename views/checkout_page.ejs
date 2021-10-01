@@ -102,7 +102,10 @@
             <div class="clear"></div>
 
             <div class="btn_cont">
-                <button id="checkout_btn"> <a onclick="payment_page()">Checkout</a> </button>
+                <form action="/price" method="POST">
+                    <input type="text" name="price" id="total_price_db">
+                <button type="submit"  id="checkout_btn">Checkout</button>
+            </form>
             </div>
         </div>
 
