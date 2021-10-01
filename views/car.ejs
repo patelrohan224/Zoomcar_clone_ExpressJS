@@ -203,10 +203,14 @@
                                         <p>
                                             <%=Product.average%>
                                         </p>
-                                        <button>
-                                            Book Now
-                                        </button>
-
+                                        <form action="/checkout" method="POST">
+                                            <input type="text" name="img" value="<%=Product.img%>" class="none">
+                                            <input type="text" name="name" value="<%=Product.name%>" class="none">
+                                            <input type="text" name="price" value="<%=`₹${Product.price}`%>" class="none">
+                                            <button type="submit" value="submit">
+                                                Book Now
+                                            </button>
+                                        </form>
                                     </div>
                                     <% }) %>
 

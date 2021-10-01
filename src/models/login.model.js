@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const loginSchema = mongoose.Schema({
     u_name:{type:String, required:true},
     pwd:{type:String, required:true}
@@ -6,5 +7,5 @@ const loginSchema = mongoose.Schema({
     versionKey: false,
     timestamps: true
 })
-const Login= mongoose.model("SearchInput", loginSchema);
+const Login= mongoose.model("login", loginSchema);
 module.exports = Login; 

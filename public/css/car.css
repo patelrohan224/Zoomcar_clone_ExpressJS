@@ -429,3 +429,6 @@ body{
 .nav_img{
     height: 80%;width: 10% ;
 }
+.none{
+    display: none;
+}
