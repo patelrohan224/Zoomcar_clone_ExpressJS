@@ -3,21 +3,19 @@ const router = express.Router();
 
 const Signup = require("../models/signup.model");
 
+router.get("", async (req, res) => {
+   
+    return res.render("signup")
+})
+
 router.post("", async (req, res) => {
     const signup = await Signup.create(req.body);
-    return res.status(201).send({ signup })
+    res.redirect("/login")
 })
 
-router.get("/:id", async (req, res) => {
-    const signup = await Signup.findById(req.params.id).lean().exec();
-    return res.status(200).send({ signup })
-})
 
-router.patch("/:id", async (req, res) => {
-    const signup = await Signup.findByIdAndUpdate(req.params.id, req.body, ({ new: true })).lean().exec();
-    return res.status(200).send({ signup })
-})
+
+
 
 
 module.exports = router
-
