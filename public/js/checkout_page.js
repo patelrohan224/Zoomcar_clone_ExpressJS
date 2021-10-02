@@ -9,6 +9,7 @@ total=total+2499
 
 console.log(total);
 document.getElementById("total").innerText= `₹ ${total}`
+document.getElementById("total_price_db").value = `₹ ${total}`
 let i=0;
 
 function zoomnew() {
@@ -18,6 +19,8 @@ total = final
 total_pay=total
 
 document.getElementById("total").innerText = `₹ ${total}`
+document.getElementById("total_price_db").value = `₹ ${total}`
+
 i++
 }
 }

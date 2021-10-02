@@ -9,17 +9,19 @@
     <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/payment.css">
-    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/nav2.css">
     <link rel="stylesheet" href="/css/footer.css">
 </head>
 
 <body>
-    <%- include('partials/navbar') %>
+    <%- include('partials/navbar2') %>
         <div id="checkout_cont">
 
             <div class="checkout_div_child">
                 <div class="checkout_div_child_child">
-                    <p class="checkout_div_child_child_p" id="amount"></p>
+                    <% last_price.forEach(function (input) { %>
+                        <p class="checkout_div_child_child_p" id="amount"><%=input.price%></p>
+                        <% }) %>
                     <p class="checkout_div_child_child_p2" id="pa"></p>
                 </div>
                 <br>
@@ -32,20 +34,30 @@
 
                     <div id="payment" class="payment_div_">
                         <!--Payment form start-->
-                        <form class="form_">
-                            <input type="number" class="form_input" placeholder="Enter Card Number" id="card_number"><br>
+                        <form class="form_" action="/payment" method="POST">
+                            <input type="number" class="form_input" placeholder="Enter Card Number" id="card_number" name="card_no"><br>
 
                             <div class="form_child_div">
-                                <input type="text" class="form_child_input" placeholder="MM /YYY" id="card_expiry"><br>
+                                <input type="text" class="form_child_input" placeholder="MM /YYY" id="card_expiry" name="doe"><br>
 
-                                <input type="password" class="form_child_input2" placeholder="CVV" id="card_CVV"><br>
+                                <input type="password" class="form_child_input2" placeholder="CVV" id="card_CVV" name="cvv"><br>
                             </div>
-
-                        </form>
+                            <% input_data.forEach(function (input) { %>
+                                <% last_price.forEach(function (input) { %>
+                                    <% car_data.forEach(function (input) { %>
+                                            <input type="text" name="car" value="<%=input._id%>" class="none">
+                                            <% }) %>
+                                            <input type="text" name="price" value="<%=input._id%>" class="none">
+                                        <% }) %>
+                                        <input type="text" name="user" value="<%=input._id%>" class="none">
+                                <% }) %>
+                      
                         <!--Payment Form end-->
                         <div class="btn_cont">
-                            <button id="checkout_btn" class="cursor_point"> <a onclick="Suscces()">Pay</a> </button>
+                            <button id="checkout_btn_2" class="cursor_point" type="submit" >Pay</button>
                         </div>
+                    </form>
+                    <button id="checkout_btn" class="cursor_point" > <a onclick="Suscces()">SAVE CARD</a> </button>
                     </div>
                 </div>
             </div>
@@ -53,47 +65,52 @@
 
             <div class="car_cont ">
                 <div class="summary">SUMMARY</div>
-                <div id="car_img">
-
-                </div>
+                <% car_data.forEach(function (input) { %>
+                    
+                    <div id="car_img">
+                       <img src="<%=input.img%>" alt="">
+                    </div>
+                    <% }) %>
                 <div class="Car_details"></div>
                 <div class="Car_details">(5 Seater)</div>
                 <div class="border"></div>
                 <div id="d_p_point">
-                    <div id="star_point">
-                        <h5>STARTING POINT <span>></span></h5>
-                        <h4 class="pick_city"></h4>
-                        <p class="p_point_car"></p>
+                    <% input_data.forEach(function (input) { %>
+                        <div id="star_point">
+                            <h5>STARTING POINT <span>></span></h5>
+                            <h4 class="pick_city"><%=input.pick_city%></h4>
+                            <p class="p_point_car"><%=input.pick_location%></p>
+                        </div>
+                        <div id="drop_point">
+                            <h5>DESTINATION<span>></span></h5>
+                            <h4 class="drop_city"><%=input.drop_city%></h4>
+                            <p class="d_point_car"><%=input.drop_location%></p>
+                        </div>
                     </div>
-                    <div id="drop_point">
-                        <h5>DESTINATION<span>></span></h5>
-                        <h4 class="drop_city"></h4>
-                        <p class="d_point_car"></p>
-                    </div>
-                </div>
-                <div id="data_flex">
-                    <div id="date_start">
-                        <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
-                        <div class="p_info">
-                            <div class="left_date"></div>
-                            <div class="rigth_m_t">
-                                <h6 class="p_day"></h6>
-                                <p class="s_time_date"></p>
+                    <div id="data_flex">
+                      
+                        <div id="date_start">
+                            <h5 class="dat_head_h5">PICKUP TIME<span>></span></h5>
+                            <div class="p_info">
+                                <div class="left_date"><%=input.pick_date%></div>
+                                <div class="rigth_m_t">
+                                    <h6 class="p_day"><%=input.pick_day%></h6>
+                                    <p class="s_time_date"><%=input.pick_time%></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="date_end">
+                            <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
+                            <div class="p_info">
+                                <div class="right_date"><%=input.drop_date%></div>
+                                <div class="rigth_m_t">
+                                    <h6 class="d_day"><%=input.drop_day%></h6>
+                                    <p class="e_time_date"><%=input.drop_time%></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="date_end">
-                        <h5 class="dat_head_h5">DROP OFF TIME<span>></span></h5>
-                        <div class="p_info">
-                            <div class="right_date"></div>
-                            <div class="rigth_m_t">
-                                <h6 class="d_day"></h6>
-                                <p class="e_time_date"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                    <% }) %>
             </div>
             <div class="clear"></div>
 
@@ -104,4 +121,4 @@
 </body>
 
 </html>
-<script src="payment.js"></script>
+<script src="./js/payment.js"></script>

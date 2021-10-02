@@ -9,13 +9,13 @@
     <link rel="shortcut icon" href="https://www.zoomcar.com/build/img/favicon.d917d618529f3ffdf883e3b847e516df.png" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/checkout_page.css">
-    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/nav2.css">
     <link rel="stylesheet" href="/css/footer.css">
 </head>
 
 
 <body>
-    <%- include('partials/navbar') %>
+    <%- include('partials/navbar2') %>
         <div id="checkout_cont">
             <div class="payment_cont f_l">
                 <div class="checkout_div">Checkout</div>
@@ -102,7 +102,10 @@
             <div class="clear"></div>
 
             <div class="btn_cont">
-                <button id="checkout_btn"> <a onclick="payment_page()">Checkout</a> </button>
+                <form action="/price" method="POST">
+                    <input type="text" name="price" class="none" id="total_price_db">
+                <button type="submit"  id="checkout_btn">Checkout</button>
+            </form>
             </div>
         </div>
 

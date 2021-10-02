@@ -6,7 +6,9 @@
      border-radius: 8px;
      margin: 50px auto;
  }
- 
+ body{
+     overflow-x: hidden;
+ }
  .payment_cont {
      width: 60%;
      background-color: white;
@@ -53,7 +55,9 @@
      color: white;
      cursor: pointer;
  }
- 
+ .none{
+     display: none;
+ }
  .total {
      padding: 15px 10px;
      background-color: #F2F8ED;
