@@ -9,11 +9,6 @@ router.get("", async (req, res) => {
 })
 
 router.post("", async (req, res) => {
-<<<<<<< Updated upstream
-    const signup = await Login.create(req.body)
-    res.redirect("/home")
-
-=======
     const email = req.body.email;
     const password = req.body.password;
     const login = await Login.findOne({ email: email, password: password });
@@ -23,6 +18,5 @@ router.post("", async (req, res) => {
     else{
         res.redirect("/home")
     }
->>>>>>> Stashed changes
 })
 module.exports = router

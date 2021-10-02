@@ -19,7 +19,7 @@ let items;
 router.get("", async (req, res) => {
     items = await Car.find().lean().exec();
     input_data = await  SearchInput.find().sort({_id:-1}).limit(1).lean().exec();
-     let name = await  Signup.find().sort({_id:-1}).limit(1).lean().exec();
+    let name = await  Signup.find().sort({_id:-1}).limit(1).lean().exec();
     console.log('input_data:', input_data)
    
     res.render("car.ejs", {
@@ -78,6 +78,22 @@ router.get("/withfuel", async (req, res) => {
     })
 })
 
+
+
+// router.get("/:id", async (req, res) => {
+//   const items = await Products.find().sort({ price: -1 });
+//   res.render("new.ejs", {
+//     items,
+//   });
+//   // res.send(items);
+// });
+
+
+// // 3. get a single car
+// router.get("/:id", async (req, res) => {
+//     const car = await Car.find(req.params.id).lean().exec()
+//     return res.status(200).json({ car })
+// })
 
 
 

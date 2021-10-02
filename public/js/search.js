@@ -5,9 +5,7 @@
                               var day_final_drop=""
                               var p_point=""
                               var d_ponit=""
-               function Home() {              
-                   window.open("../Home/home.html","_top")    
-               }
+              
                
                  var city_array=["Bangalore Palace","U R Rao Satellite Centre","Kempegowda International Airport","Chennai International Airport","University of Madras","Netaji Subhash Chandra Bose International Airport"]
                  var city_array_first_input=["Banglore","Kolkata","Chennai","Ahemdabad","Vadododra"]
@@ -834,7 +832,7 @@
 
         
           //fatch the values 
-          var db_array=[]
+        
           
                                      function end_fun() {
                                     console.log(date_final_picked,day_final_picked,pick_month_value,pick_time_value)
@@ -859,26 +857,8 @@
                                        document.getElementById("drop_day_db").value=day_final_drop
                                        document.getElementById("btn_db").style.display="none"
                                        document.getElementById("db_sb_btn").style.display="block"
-                                       Object={
-                                           p_location:p_point,
-                                           p_time:pick_time_value,
-                                           p_date:date_final_picked,
-                                           p_day:day_final_picked,
-                                           p_month:pick_month_value,
-                                           p_city:first_one,
-
-                                           d_location:d_ponit,
-                                           d_time:pick_time_value_2,
-                                           d_date:date_final_drop,
-                                           d_day:day_final_drop,
-                                           d_month:pick_month_value_2,
-                                           d_city:second_one,
-                                       }
-                                       db_array.push(Object)
-                                       console.log(db_array);
-                                       const db_locations=JSON.stringify(db_array) 
-                                      localStorage.setItem("pick_drop_points",db_locations);
-                                    //   window.open("../Car_page/car.html","_top")
+                                      
+                                    
                                    }
 
                                       if(d_ponit==""){
@@ -900,27 +880,13 @@
                                        document.getElementById("btn_db").style.display="none"
                                        
                                        document.getElementById("db_sb_btn").style.display="block"
-                                       Object={
-                                           p_location:p_point,
-                                           p_time:pick_time_value,
-                                           p_date:date_final_picked,
-                                           p_day:day_final_picked,
-                                           p_month:pick_month_value,
-                                           p_city:first_one,
-
-                                           d_location:p_point,
-                                           d_time:pick_time_value_2,
-                                           d_date:date_final_drop,
-                                           d_day:day_final_drop,
-                                           d_month:pick_month_value_2,
-                                           d_city:first_one,
-                                       } 
-                                       db_array.push(Object)
-                                       console.log(db_array);
-                                       const db_locations=JSON.stringify(db_array) 
                                       
-                                      localStorage.setItem("pick_drop_points",db_locations);
-                                    //   window.open("../Car_page/car.html","_top")
+                                      
+                                      
+                                      
+                                      
+                                   
+                                   
                                       }
 
 
