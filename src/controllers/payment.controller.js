@@ -8,7 +8,6 @@ const checkout = require('../models/checkout.model')
 
 router.post("", async (req, res) => {
     const Zoom_user = await Payment.create(req.body)
-    console.log('Zoom_user:', Zoom_user)
     res.redirect("/home")
   
 })
