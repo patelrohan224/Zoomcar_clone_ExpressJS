@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 const pay= require("../models/payment.model");
 const Search= require("../models/search.model");
 
@@ -18,10 +19,16 @@ const Payment = require("../models/payment.model");
 const SearchInput= require("../models/search_input_model");
 const checkout = require('../models/checkout.model')
 >>>>>>> Stashed changes
+=======
+const Payment = require("../models/payment.model");
+const SearchInput= require("../models/search_input_model");
+const checkout = require('../models/checkout.model')
+>>>>>>> Stashed changes
 
 
 
 router.post("", async (req, res) => {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     const items = await pay.create(req.body);
   
@@ -32,8 +39,14 @@ module.exports = router;
 =======
     const Zoom_user = await Payment.create(req.body)
     console.log('Zoom_user:', Zoom_user)
+=======
+    const Zoom_user = await Payment.create(req.body)
+>>>>>>> Stashed changes
     res.redirect("/home")
   
 })
 module.exports = router
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

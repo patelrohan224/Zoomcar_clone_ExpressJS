@@ -1,10 +1,5 @@
 
 
-document.querySelector(".close1").addEventListener("click", function() {
-    document.querySelector('.cont').style.display = "none"
-})
-
-
 var slides4 = document.querySelector('.promo4')
 var slides5 = document.querySelector('.promo5')
 var slides6 = document.querySelector('.promo6')
@@ -27,7 +22,6 @@ function changeImg1() {
 
 }
 window.onload = function() {
-    // changeImg()
     changeImg1()
 }
 
