@@ -1,0 +1,122 @@
+
+#navbar {
+    background-color: #33414f;
+    margin: -9px -9px;
+    padding: 1% 2% 2% 2%;
+    height: 15%;
+    color: white;
+    width: 1495px;
+}
+#user {
+    color: skyblue;
+    font-weight: 600;
+}
+#navbar>img {
+    height: 80%;
+    width: 10%;
+}
+
+#navbar>div {
+    margin: 0% 1%;
+    font-size: 20px;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.f-r {
+    float: right;
+}
+
+.mobile_div {
+    height: -10px;
+    margin-top: 0px;
+}
+
+.dropbutton {
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+}
+
+.droppdown {
+    float: left;
+    overflow: hidden;
+    margin: -16px -13px 0px -9px !important;
+}
+
+.droppdown .dropbutton {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+  
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    /* Important for vertical align on mobile phones */
+}
+
+.dropdown-contentt {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#user>.dropdown-contentt{
+    margin-left: 0%;
+}
+/* Links inside the dropdown */
+
+.dropdown-contentt a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+/* Add a grey background color to dropdown links on hover */
+
+.dropdown-contentt a:hover {
+    background-color: aliceblue;
+   
+}
+
+
+/* Show the dropdown menu on hover */
+
+.droppdown:hover .dropdown-contentt {
+    display: block;
+   
+}
+.pointer{
+    cursor: pointer;}
+#mob_app {
+    font-size: 20px;
+    background-color: transparent;
+    margin-top: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.dropbtn_child_img {
+    height: 35px;
+    width: 100%
+}
+
+#mob_app>div {
+    width: 150px;
+    height: 50px;
+}
+.font20{font-size: 20px;
+    font-weight: 100;
+    }

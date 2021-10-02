@@ -53,7 +53,7 @@ body * {
     justify-content: center;
 }
 
-.close1 {
+.close {
     position: absolute;
     top: 0;
     right: 10px;
@@ -181,24 +181,18 @@ form {
     margin-top: 50px;
 }
 
-#login_submit_button {
-    
-    width: 150px;
-    height: 30px;
-    padding: 10px;
-    background-color: #70ad4d;
-    color: white;
-    border-radius: 4px;
-    margin: auto;
-    margin-top: 30px;
-}
-
 button {
+    width: 150px;
+    height: 47px;
+    padding: 10px ;
     color: #fff;
     border: none;
+    border-radius: 5%;
     font-size: 20px;
-    background: none;
+    background-color: #70ad4d;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
     font-weight: 600;
-
 }
 
