@@ -56,7 +56,7 @@ window.onscroll = function() {
 var navbar = document.getElementById("flow");
 var img_scroll = document.createElement("img")
 var div_seracxh = document.getElementById("serac_bar_default")
-img_scroll.src = "https://www.zoomcar.com/build/img/color-logo.f8af0af350b2f675a31a558fad8391df.svg"
+img_scroll.src = "	https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png"
 img_scroll.setAttribute("class", "serachbar_pro_img")
 img_scroll.setAttribute("width", "100%")
 var sticky = navbar.offsetTop;
