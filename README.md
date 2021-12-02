@@ -196,7 +196,7 @@ _A Glimpse of our cloned website_
   
 ## Demo
 ​
-Insert gif or link to demo
+[Go Live](https://zoomcarcom.herokuapp.com/home)
 ​
 ​
   
