@@ -1,5 +1,5 @@
 # Self-drive-car-rentals
-![image](https://www.zoomcar.com/build/img/zoom-logo-color.e3ec2e4b625f1a06ddb9a6ac765abb19.png)
+![image](https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png)
 ​
     
 # Zoomcar (Clone)
