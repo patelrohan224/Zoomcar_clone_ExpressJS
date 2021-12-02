@@ -1,4 +1,4 @@
-# Self-drive-car-rentals: - [Link](https://zoomcarcom.herokuapp.com/home)
+# Self-drive-car-rentals: - [Go live](https://zoomcarcom.herokuapp.com/home)
 ![image](https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png)
 ​
     
