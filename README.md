@@ -11,7 +11,6 @@ Zoomcar, is an Indian self-drive car rental company, headquartered in Bangalore,
  
   
 # Tech Stack
-​
 ### In this project we have used the following Tech.
 ​
 **Client:** CSS and HTML
